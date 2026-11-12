@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bicholândia Pet Shop | Vitrine Oficial</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .pulse-btn {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+      70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased pb-24">
+
+  <!-- BARRA SUPERIOR / AVISO DE QUALIDADE -->
+  <header class="bg-white border-b border-slate-100 sticky top-0 z-30 shadow-sm">
+    <div class="max-w-md mx-auto px-4 py-3 flex items-center justify-between">
+      <div>
+        <h1 class="font-extrabold text-lg text-slate-900 leading-tight">Bicholândia Pet Shop</h1>
+        <p class="text-xs text-emerald-600 font-semibold flex items-center gap-1">
+          <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+          Aberto para Atendimento
+        </p>
+      </div>
+      <a href="https://wa.me/556232881078?text=Ol%C3%A1!%20Vi%20a%20vitrine%20de%20voc%C3%AAs%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-bold px-3 py-2 rounded-full transition shadow-sm">
+        Falar no WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-md mx-auto px-4 pt-4 space-y-6">
+
+    <!-- HERO SECTION -->
+    <div class="relative rounded-3xl overflow-hidden shadow-lg border border-slate-100 bg-slate-900 text-white min-h-[340px] flex flex-col justify-end p-6">
+      <img src="https://lh3.googleusercontent.com/grass-cs/AABkmLcp_ccWQZAL8MIQn0rU3BtoQD4unGCtWlWzI5YNi0FowKewrf8GfUhZCmfB-bK0ex3csPKMlWiR6PCP6cYVOf2t-fCROsECX9T0mYLEpblR3vNQ0wdc1YSlGeEQjlV-T_Ri4eYn=w408-h407-k-no" alt="Bicholândia Pet Shop" class="absolute inset-0 w-full h-full object-cover opacity-60">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+      
+      <div class="relative z-10 space-y-3">
+        <span class="inline-block bg-white/20 backdrop-blur-md text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+          Pet Shop
+        </span>
+        <h2 class="text-2xl font-black leading-snug">
+          O melhor atendimento e cuidado que você merece.
+        </h2>
+        <div class="flex items-center gap-2 text-amber-400 text-sm font-bold">
+          <span>★ 5,0</span>
+          <span class="text-slate-300 font-normal text-xs">(0 avaliações no Google)</span>
+        </div>
+        <a href="https://wa.me/556232881078?text=Ol%C3%A1!%20Vi%20a%20vitrine%20de%20voc%C3%AAs%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="block w-full text-center bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold py-3.5 px-6 rounded-2xl shadow-lg transition transform active:scale-95 text-sm pulse-btn">
+          💬 Agendar Agora pelo WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- DIFERENCIAIS -->
+    <div class="grid grid-cols-2 gap-3">
+      <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm space-y-1">
+        <span class="text-xl">⭐</span>
+        <h3 class="font-bold text-sm text-slate-900">Qualidade Garantida</h3>
+        <p class="text-xs text-slate-500">Profissionais experientes e produtos de primeira linha.</p>
+      </div>
+      <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm space-y-1">
+        <span class="text-xl">📍</span>
+        <h3 class="font-bold text-sm text-slate-900">Fácil Acesso</h3>
+        <p class="text-xs text-slate-500">Localização privilegiada com fácil estacionamento.</p>
+      </div>
+    </div>
+
+    <!-- SERVIÇOS & DESTAQUES -->
+    <div class="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm space-y-4">
+      <div class="flex items-center justify-between">
+        <h3 class="font-bold text-slate-900 text-base">Nossos Principais Serviços</h3>
+        <span class="text-xs text-emerald-600 font-semibold">Consulte horários</span>
+      </div>
+      
+      <ul class="space-y-3 divide-y divide-slate-100 text-sm">
+        <li class="pt-2 flex justify-between items-center">
+          <div>
+            <p class="font-semibold text-slate-800">Atendimento Personalizado</p>
+            <p class="text-xs text-slate-400">Avaliação e cuidado exclusivo para cada cliente</p>
+          </div>
+          <a href="https://wa.me/556232881078?text=Ol%C3%A1!%20Vi%20a%20vitrine%20de%20voc%C3%AAs%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="text-xs bg-slate-100 hover:bg-emerald-50 text-emerald-700 font-bold px-3 py-1.5 rounded-lg">Agendar</a>
+        </li>
+        <li class="pt-2 flex justify-between items-center">
+          <div>
+            <p class="font-semibold text-slate-800">Procedimentos Completos</p>
+            <p class="text-xs text-slate-400">Técnicas modernas e atendimento com horário marcado</p>
+          </div>
+          <a href="https://wa.me/556232881078?text=Ol%C3%A1!%20Vi%20a%20vitrine%20de%20voc%C3%AAs%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="text-xs bg-slate-100 hover:bg-emerald-50 text-emerald-700 font-bold px-3 py-1.5 rounded-lg">Agendar</a>
+        </li>
+        <li class="pt-2 flex justify-between items-center">
+          <div>
+            <p class="font-semibold text-slate-800">Pacotes & Sessões Especiais</p>
+            <p class="text-xs text-slate-400">Condições facilitadas para planos recorrentes</p>
+          </div>
+          <a href="https://wa.me/556232881078?text=Ol%C3%A1!%20Vi%20a%20vitrine%20de%20voc%C3%AAs%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="text-xs bg-slate-100 hover:bg-emerald-50 text-emerald-700 font-bold px-3 py-1.5 rounded-lg">Agendar</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- GALERIA DE FOTOS -->
+    <div class="space-y-3">
+      <h3 class="font-bold text-slate-900 text-base">Espaço & Trabalhos</h3>
+      <div class="grid grid-cols-2 gap-3">
+        
+          <div class="rounded-2xl overflow-hidden h-32 shadow-sm border border-slate-100">
+            <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=800&q=80" alt="Foto 1" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+          </div>
+        
+          <div class="rounded-2xl overflow-hidden h-32 shadow-sm border border-slate-100">
+            <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=800&q=80" alt="Foto 2" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+          </div>
+        
+          <div class="rounded-2xl overflow-hidden h-32 shadow-sm border border-slate-100">
+            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=800&q=80" alt="Foto 3" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+          </div>
+        
+      </div>
+    </div>
+
+    <!-- LOCALIZAÇÃO & ENDEREÇO -->
+    <div class="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm space-y-3">
+      <h3 class="font-bold text-slate-900 text-base">Onde Estamos</h3>
+      <p class="text-xs text-slate-600 flex items-start gap-2">
+        <span class="text-base leading-none">📍</span>
+        <span>
+Rua JCA11, S/N Qd 12, LT3 - Jardim Caravelas, Goiânia - GO, 74354-616</span>
+      </p>
+      <div class="pt-2">
+        <a href="https://maps.google.com/?q=Bichol%C3%A2ndia%20Pet%20Shop%20%EE%83%88%0ARua%20JCA11%2C%20S%2FN%20Qd%2012%2C%20LT3%20-%20Jardim%20Caravelas%2C%20Goi%C3%A2nia%20-%20GO%2C%2074354-616" target="_blank" class="block w-full text-center bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-2.5 px-4 rounded-xl text-xs transition">
+          🗺️ Como Chegar (Abrir no GPS)
+        </a>
+      </div>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer class="text-center text-xs text-slate-400 pt-4 space-y-1">
+      <p>© 2026 Bicholândia Pet Shop. Todos os direitos reservados.</p>
+      <p>Vitrine digital desenvolvida para atendimento rápido no WhatsApp.</p>
+    </footer>
+
+  </main>
+
+  <!-- BOTÃO FLUTUANTE DE WHATSAPP FIXO NO RODAPÉ -->
+  <div class="fixed bottom-4 left-0 right-0 z-40 px-4 max-w-md mx-auto">
+    <a href="https://wa.me/556232881078?text=Ol%C3%A1!%20Vi%20a%20vitrine%20de%20voc%C3%AAs%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="flex items-center justify-center gap-2 w-full bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold py-3.5 px-6 rounded-2xl shadow-2xl transition transform active:scale-95 text-sm pulse-btn">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+      Falar no WhatsApp
+    </a>
+  </div>
+
+</body>
+</html>
