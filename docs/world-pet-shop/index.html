@@ -2,37 +2,43 @@
 <html lang="pt-BR" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>World Pet Shop | Banho, Tosa & Spa Pet Oficial</title>
-  <meta name="description" content="Site oficial de World Pet Shop. Cuidado excepcional, banho & tosa, estética animal e spa em 
-Av. das Bandeiras, n° 1156 - Vila Maua, Goiânia - GO, 74323-100. Agende seu horário pelo WhatsApp!">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>World Pet Shop | Estética, Rações & Cuidados na Vila Mauá, Goiânia</title>
+  <meta name="description" content="World Pet Shop na Av. das Bandeiras, Vila Mauá. Banho e tosa de alto padrão, rações de todas as marcas, farmácia veterinária e tele-entrega rápida. Agende pelo WhatsApp!">
+  <meta name="theme-color" content="#2563EB">
   
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="World Pet Shop | O Mundo do Seu Pet em Goiânia">
+  <meta property="og:description" content="Estética canina e felina, rações selecionadas e farmácia completa na Av. das Bandeiras. Peça no WhatsApp!">
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Fontes Google de Alto Padrão (Playfair Display + Plus Jakarta Sans) -->
+  <!-- Fontes Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            serif: ['"Playfair Display"', 'serif'],
+            display: ['"Outfit"', 'sans-serif'],
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
           },
           colors: {
-            brand: {
-              cream: '#FAF8F5',
-              sand: '#F3EFEA',
-              card: '#FFFFFF',
-              dark: '#162820',
-              forest: '#1E3A2F',
-              sage: '#406B57',
-              gold: '#D97706',
+            worldpet: {
+              cream: '#EFF6FF',
+              sky: '#DBEAFE',
+              primary: '#2563EB',
+              primaryDark: '#1D4ED8',
+              accent: '#06B6D4',
+              gold: '#F59E0B',
+              navy: '#0F172A',
+              midnight: '#030712',
               whatsapp: '#25D366',
+              whatsappHover: '#20BA56',
             }
           }
         }
@@ -42,140 +48,148 @@ Av. das Bandeiras, n° 1156 - Vila Maua, Goiânia - GO, 74323-100. Agende seu ho
 
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .pulse-glow {
-      animation: pulseGlow 2.5s infinite;
+    h1, h2, h3, .font-display { font-family: 'Outfit', sans-serif; }
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .pulse-glow-zap {
+      animation: pulseZap 2.2s infinite;
     }
-    @keyframes pulseGlow {
+    @keyframes pulseZap {
       0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
       70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
       100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
   </style>
 </head>
-<body class="bg-brand-cream text-slate-800 antialiased selection:bg-brand-forest selection:text-white">
+<body class="bg-[#F8FAFC] text-slate-800 antialiased selection:bg-blue-600 selection:text-white pb-20 sm:pb-0">
 
-  <!-- TOP ANNOUNCEMENT BAR -->
-  <div class="bg-brand-forest text-white text-xs py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2">
-    <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-    <span>✨ Atendimento com horário agendado em Goiânia • Toalhas esterilizadas e produtos hipoalergênicos</span>
+  <!-- TOP BAR -->
+  <div class="bg-gradient-to-r from-blue-950 via-blue-900 to-slate-950 text-blue-100 text-xs py-2 px-4 shadow-sm">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+      <div class="flex items-center gap-2 truncate">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="truncate">🌍 <strong>World Pet Shop:</strong> Banho relaxante, tosa com carinho, rações selecionadas e disk-entrega na Vila Mauá</span>
+      </div>
+      <a href="https://wa.me/556232569677?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20ou%20agendamento%20no%20World%20Pet%20Shop." target="_blank" class="hidden sm:inline-flex items-center gap-1.5 bg-blue-400 hover:bg-blue-300 text-slate-950 px-3 py-1 rounded-full text-[11px] font-black transition">
+        <span>📲 Atendimento: (62) 3256-9677</span>
+      </a>
+    </div>
   </div>
 
-  <!-- NAVBAR LUXUOSA -->
-  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-brand-sand shadow-sm transition-all duration-300">
+  <!-- NAVBAR -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-blue-100 shadow-sm transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <!-- LOGO -->
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-12 h-12 rounded-2xl bg-brand-forest text-amber-300 flex items-center justify-center text-2xl shadow-md group-hover:scale-105 transition">
-          🐾
-        </div>
+      <a href="#inicio" class="flex items-center gap-3 group">
+        <img src="logo.png" alt="World Pet Shop Logo" class="h-14 w-auto object-contain drop-shadow-sm group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null; this.src='logo.jpg'">
         <div>
-          <span class="font-serif font-bold text-xl sm:text-2xl text-brand-dark tracking-tight block leading-tight">
-            World Pet Shop
-          </span>
-          <span class="text-[11px] font-semibold tracking-wider uppercase text-brand-sage block">
-            Banho • Tosa • Spa Canino
-          </span>
+          <span class="block font-display font-black text-xl tracking-tight text-blue-950 leading-none">WORLD PET SHOP</span>
+          <span class="block text-[10px] uppercase font-bold tracking-widest text-blue-600 mt-1">Estética & Nutrição Animal</span>
         </div>
       </a>
 
-      <!-- MENU DESKTOP -->
-      <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
-        <a href="#servicos" class="hover:text-brand-forest transition">Serviços & Spa</a>
-        <a href="#diferenciais" class="hover:text-brand-forest transition">Por que nos escolher</a>
-        <a href="#agendamento" class="hover:text-brand-forest transition">Agendamento</a>
-        <a href="#depoimentos" class="hover:text-brand-forest transition">Avaliações</a>
-        <a href="#localizacao" class="hover:text-brand-forest transition">Localização</a>
+      <!-- Menu Desktop -->
+      <div class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600">
+        <a href="#inicio" class="hover:text-blue-600 transition">Início</a>
+        <a href="#servicos" class="hover:text-blue-600 transition">Banho & Tosa</a>
+        <a href="#racoes" class="hover:text-blue-600 transition">Rações & Farmácia</a>
+        <a href="#avaliacoes" class="hover:text-blue-600 transition">Avaliações (4.8 ★)</a>
+        <a href="#contato" class="hover:text-blue-600 transition">Localização</a>
       </div>
 
-      <!-- BOTÃO CTA NAVBAR -->
-      <a href="https://wa.me/556232569677?text=Ol%C3%A1!%20Estava%20no%20site%20de%20voc%C3%AAs%20do%20World%20Pet%20Shop%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20o%20meu%20pet." target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-brand-forest hover:bg-brand-dark text-white text-xs sm:text-sm font-bold px-5 py-3 rounded-full shadow-lg transition duration-300 transform hover:-translate-y-0.5">
-        <svg class="w-4 h-4 fill-emerald-400" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
-        <span>Agendar Horário</span>
+      <!-- CTA Desktop -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="https://wa.me/556232569677?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20ou%20pedir%20ração." target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-bold px-5 py-2.5 rounded-full text-sm shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          Agendar Banho
+        </a>
+      </div>
+
+      <!-- Botão Mobile Direto -->
+      <a href="https://wa.me/55623569677?text=Olá!%20Gostaria%20de%20falar%20com%20o%20World%20Pet%20Shop." target="_blank" class="md:hidden flex items-center gap-1.5 bg-emerald-600 text-white font-bold px-3 py-1.5 rounded-full text-xs shadow-sm">
+        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        WhatsApp
       </a>
     </div>
   </nav>
 
-  <!-- HERO SECTION CINEMATOGRÁFICA (INSPIRADA EM PAWCARE & PET PARADE) -->
-  <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-32 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+  <!-- HERO SECTION -->
+  <section id="inicio" class="relative overflow-hidden bg-gradient-to-b from-blue-950 via-slate-900 to-blue-950 text-white pt-12 pb-20 lg:pt-20 lg:pb-28">
+    <div class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:24px_24px]"></div>
+    <div class="absolute -top-32 -left-32 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         
-        <!-- TEXTO HERO (ESQUERDA) -->
+        <!-- Texto Hero -->
         <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-          <div class="inline-flex items-center gap-2 bg-brand-sand/80 border border-brand-sage/20 text-brand-forest text-xs font-bold px-4 py-2 rounded-full shadow-sm">
-            <span>✨ Cuidado Especializado em Goiânia</span>
-            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
-            <span>Estética Animal com Amor</span>
+          <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-400/30 px-3.5 py-1.5 rounded-full text-xs font-semibold text-blue-300">
+            <span class="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span>
+            <span>Av. das Bandeiras, 1156 • Vila Mauá, Goiânia</span>
           </div>
 
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark leading-[1.15] tracking-tight">
-            Cuidado Excepcional & Spa <br>
-            <span class="font-serif italic font-normal text-brand-forest">Para o Seu Melhor Amigo.</span>
+          <h1 class="font-display font-black text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.1] text-white">
+            O mundo dos pets em Goiânia: <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-200 to-blue-400">banho, tosa & rações nobres</span>
           </h1>
 
-          <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-            No <strong>World Pet Shop</strong>, proporcionamos uma experiência de relaxamento e beleza sem estresse. Banhos quentinhos, tosa de raça na tesoura, hidratação de óleos nobres e muito carinho para cães e gatos.
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            No <strong>World Pet Shop</strong> seu animal de estimação encontra os melhores cuidados: banho relaxante com toalhas descartáveis individuais, tosas impecáveis na tesoura, nutrição de alto padrão e disk-entrega na Vila Mauá.
           </p>
 
-          <!-- BOTÕES DE AÇÃO HERO -->
-          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-            <a href="https://wa.me/556232569677?text=Ol%C3%A1!%20Estava%20no%20site%20de%20voc%C3%AAs%20do%20World%20Pet%20Shop%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20o%20meu%20pet." target="_blank" class="w-full sm:w-auto flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base px-8 py-4 rounded-full shadow-xl shadow-emerald-900/10 transition transform hover:-translate-y-0.5 pulse-glow">
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
-              <span>Agendar Banho & Tosa</span>
-            </a>
+          <!-- Badges de Qualidade -->
+          <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-medium text-slate-300">
+            <div class="flex items-center gap-1.5 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">
+              <span class="text-amber-400">⭐</span>
+              <span>Nota 4.8 no Google</span>
+            </div>
+            <div class="flex items-center gap-1.5 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">
+              <span class="text-blue-400">✂️</span>
+              <span>Tosa na Tesoura Especializada</span>
+            </div>
+            <div class="flex items-center gap-1.5 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">
+              <span class="text-emerald-400">🛵</span>
+              <span>Disk Entrega Rápida</span>
+            </div>
+          </div>
 
-            <a href="#servicos" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-white hover:bg-brand-sand text-brand-dark font-bold text-base px-7 py-4 rounded-full border border-brand-sand shadow-sm transition">
+          <!-- CTAs -->
+          <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5">
+            <a href="https://wa.me/556232569677?text=Olá!%20Gostaria%20de%20agendar%20um%20banho%20ou%20pedir%20uma%20ração." target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-black text-base px-8 py-4 rounded-xl shadow-xl hover:shadow-emerald-500/25 transition-all transform hover:-translate-y-0.5 pulse-glow-zap">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span>Falar no WhatsApp</span>
+            </a>
+            <a href="#servicos" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-800/90 hover:bg-slate-700 text-slate-100 font-bold text-base px-6 py-4 rounded-xl border border-slate-600 transition">
               <span>Conhecer Serviços</span>
-              <span>↓</span>
             </a>
           </div>
-
-          <!-- PROVA SOCIAL RÁPIDA -->
-          <div class="pt-6 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-semibold text-slate-500">
-            <div class="flex items-center gap-1 text-amber-500 text-sm">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-              <span class="text-slate-800 font-bold ml-1">4,8 no Google</span>
-            </div>
-            <span class="text-slate-300">•</span>
-            <span>Mais de 180+ avaliações reais</span>
-            <span class="text-slate-300">•</span>
-            <span class="text-emerald-700 font-bold">100% Livre de Gaiolas</span>
-          </div>
         </div>
 
-        <!-- FOTO HERO CINEMATOGRÁFICA (DIREITA) -->
-        <div class="lg:col-span-5 relative flex justify-center">
-          <div class="relative w-full max-w-md lg:max-w-none">
-            
-            <!-- FORMA ORGÂNICA DE FUNDO -->
-            <div class="absolute -inset-4 bg-gradient-to-tr from-amber-200/50 via-emerald-100/60 to-brand-sand rounded-[40px] transform rotate-2 -z-10 filter blur-sm"></div>
-            
-            <!-- IMAGEM PRINCIPAL -->
-            <div class="relative rounded-[36px] overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] bg-slate-100">
-              <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=1000&q=85" alt="Cão no Spa Pet" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent"></div>
-              
-              <!-- CARD FLUTUANTE NA FOTO -->
-              <div class="absolute bottom-5 left-5 right-5 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-lg border border-white/60 flex items-center gap-3">
-                <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-xl shrink-0">
-                  🛁
+        <!-- Card Logo & Destaque Visual -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-sm">
+            <div class="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-cyan-300/10 rounded-3xl blur-2xl transform rotate-2"></div>
+            <div class="relative bg-gradient-to-b from-slate-900/90 to-blue-950/90 border border-blue-400/30 rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-2xl text-center space-y-5">
+              <div class="w-36 h-36 mx-auto bg-slate-800/70 rounded-2xl p-2 flex items-center justify-center border border-blue-400/20 shadow-inner">
+                <img src="logo.png" alt="World Pet Shop Logo" class="w-full h-full object-contain filter drop-shadow-md" onerror="this.onerror=null; this.src='logo.jpg'">
+              </div>
+              <div class="space-y-2">
+                <h3 class="font-display font-black text-xl text-blue-200">WORLD PET SHOP</h3>
+                <p class="text-xs text-slate-300">Av. das Bandeiras, 1156 • Vila Mauá, Goiânia</p>
+                <div class="inline-flex items-center gap-1.5 text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30 px-3 py-1 rounded-full">
+                  <span>⭐ 4.8 no Google Avaliações</span>
                 </div>
-                <div>
-                  <h4 class="font-bold text-sm text-brand-dark">Cuidado de Estética & Bem-Estar</h4>
-                  <p class="text-xs text-slate-500">Produtos suaves para pele sensível e filhotes.</p>
+              </div>
+              <div class="pt-2 border-t border-slate-800 grid grid-cols-2 gap-2 text-center text-xs">
+                <div class="bg-slate-800/50 p-2.5 rounded-xl">
+                  <span class="block font-bold text-blue-400 text-sm">Estética Animal</span>
+                  <span class="text-slate-400 text-[11px]">Banho & Tosa</span>
+                </div>
+                <div class="bg-slate-800/50 p-2.5 rounded-xl">
+                  <span class="block font-bold text-blue-400 text-sm">Disk Entrega</span>
+                  <span class="text-slate-400 text-[11px]">Vila Mauá & Região</span>
                 </div>
               </div>
             </div>
-
-            <!-- SELO DE QUALIDADE FLUTUANTE -->
-            <div class="absolute -top-4 -right-4 bg-white rounded-2xl p-3 shadow-xl border border-brand-sand hidden sm:flex items-center gap-2">
-              <span class="text-2xl">🏆</span>
-              <div class="text-left">
-                <p class="text-[10px] uppercase font-bold text-slate-400">Padrão Ouro</p>
-                <p class="text-xs font-black text-brand-dark">Goiânia - GO</p>
-              </div>
-            </div>
-
           </div>
         </div>
 
@@ -183,472 +197,315 @@ Av. das Bandeiras, n° 1156 - Vila Maua, Goiânia - GO, 74323-100. Agende seu ho
     </div>
   </section>
 
-  <!-- 4 PILARES DE CONFIANÇA -->
-  <section id="diferenciais" class="py-12 bg-white border-y border-brand-sand/60">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-        <div class="p-6 rounded-3xl bg-brand-cream/60 border border-brand-sand/80 hover:bg-white hover:shadow-lg transition duration-300">
-          <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-2xl mb-4">
-            🌿
-          </div>
-          <h3 class="font-bold text-base text-brand-dark mb-1">Cuidado Suave & Seguro</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">Produtos hipoalergênicos de alto padrão para não irritar os olhos nem a pele do seu pet.</p>
-        </div>
-
-        <div class="p-6 rounded-3xl bg-brand-cream/60 border border-brand-sand/80 hover:bg-white hover:shadow-lg transition duration-300">
-          <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center text-2xl mb-4">
-            ✂️
-          </div>
-          <h3 class="font-bold text-base text-brand-dark mb-1">Groomers Certificados</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">Especialistas em tosa da raça, tosa higiênica e técnicas sem estresse ou contenção forçada.</p>
-        </div>
-
-        <div class="p-6 rounded-3xl bg-brand-cream/60 border border-brand-sand/80 hover:bg-white hover:shadow-lg transition duration-300">
-          <div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-800 flex items-center justify-center text-2xl mb-4">
-            🧼
-          </div>
-          <h3 class="font-bold text-base text-brand-dark mb-1">Higiene Rigorosa</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">Toalhas individuais esterilizadas e banheiras desinfetadas após cada procedimento.</p>
-        </div>
-
-        <div class="p-6 rounded-3xl bg-brand-cream/60 border border-brand-sand/80 hover:bg-white hover:shadow-lg transition duration-300">
-          <div class="w-12 h-12 rounded-2xl bg-rose-100 text-rose-800 flex items-center justify-center text-2xl mb-4">
-            ❤️
-          </div>
-          <h3 class="font-bold text-base text-brand-dark mb-1">Garantia de Carinho</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">Seu pet recebe atenção exclusiva, paciência e petiscos para se sentir em casa.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SEÇÃO DE SERVIÇOS & SPA CANINO (INSPIRADA NA IMAGEM 5 PAWCARE) -->
-  <section id="servicos" class="py-20 lg:py-28">
+  <!-- SERVIÇOS EM CARROSSEL MOBILE / GRID DESKTOP -->
+  <section id="servicos" class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
-        <span class="text-xs uppercase font-extrabold tracking-widest text-brand-sage">Tratamentos & Estética</span>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-dark font-serif">
-          Nossos Serviços de Banho & Spa
-        </h2>
-        <p class="text-slate-600 text-sm sm:text-base">
-          Escolha o cuidado perfeito para a raça, porte e necessidade do seu animal de estimação.
-        </p>
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-10">
+        <span class="text-xs font-bold tracking-widest text-blue-700 uppercase bg-blue-100 px-3 py-1 rounded-full">Nossos Diferenciais</span>
+        <h2 class="font-display font-black text-2xl sm:text-4xl text-slate-900 tracking-tight">Cuidado Completo no World Pet Shop</h2>
+        <p class="text-slate-600 text-sm sm:text-base">Estrutura moderna, água morna, ambiente seguro e profissionais que amam animais.</p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="flex overflow-x-auto pb-6 gap-5 snap-x snap-mandatory hide-scrollbar md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-visible">
         
-        <!-- CARD SERVIÇO 1 -->
-        <div class="bg-white rounded-3xl overflow-hidden border border-brand-sand shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
-          <div class="h-56 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=600&q=80" alt="Banho e Escovação" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute top-4 left-4 bg-brand-forest/90 text-white text-[11px] font-bold px-3 py-1.5 rounded-full">
-              Mais Procurado
+        <!-- Card 1: Banho Relaxante -->
+        <div class="min-w-[270px] sm:min-w-[290px] md:min-w-0 bg-[#F8FAFC] rounded-2xl p-5 border border-blue-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between snap-start">
+          <div>
+            <div class="h-32 bg-blue-100/60 rounded-xl flex items-center justify-center p-4 mb-4 text-4xl">
+              🛁
             </div>
+            <span class="text-[11px] font-bold text-blue-800 bg-blue-200/70 px-2.5 py-0.5 rounded-full uppercase">Água Morna</span>
+            <h3 class="font-display font-bold text-lg text-slate-900 mt-2">Banho Relaxante</h3>
+            <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+              Shampoo neutro hipoalergênico, toalhas higienizadas individuais, corte de unhas cuidadoso, limpeza dos ouvidos e perfume agradável.
+            </p>
           </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div>
-              <h3 class="font-bold text-lg text-brand-dark">Banho & Escovação</h3>
-              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-                Água morna em temperatura ideal, xampu suave, desembolo cuidadoso, secagem silenciosa e corte de unhas.
-              </p>
-            </div>
-            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <span class="text-[10px] text-slate-400 block font-semibold uppercase">A partir de</span>
-                <span class="text-lg font-black text-brand-forest">R$ 55,00</span>
-              </div>
-              <a href="https://wa.me/556232569677?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20Banho%20e%20Escova%C3%A7%C3%A3o%20no%20World%20Pet%20Shop." target="_blank" class="w-10 h-10 rounded-full bg-brand-sand hover:bg-emerald-500 hover:text-white flex items-center justify-center text-slate-700 transition font-bold">
-                →
-              </a>
-            </div>
+          <div class="pt-4 mt-4 border-t border-slate-200 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-600">Sem traumas</span>
+            <a href="https://wa.me/556232569677?text=Olá!%20Gostaria%20de%20agendar%20um%20banho%20no%20World%20Pet%20Shop." target="_blank" class="p-2 rounded-lg bg-emerald-100 text-emerald-800 hover:bg-emerald-600 hover:text-white transition">
+              📅
+            </a>
           </div>
         </div>
 
-        <!-- CARD SERVIÇO 2 -->
-        <div class="bg-white rounded-3xl overflow-hidden border border-brand-sand shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
-          <div class="h-56 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=600&q=80" alt="Tosa Completa" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute top-4 left-4 bg-amber-600 text-white text-[11px] font-bold px-3 py-1.5 rounded-full">
-              Tosa Especializada
+        <!-- Card 2: Tosa na Tesoura e Máquina -->
+        <div class="min-w-[270px] sm:min-w-[290px] md:min-w-0 bg-[#F8FAFC] rounded-2xl p-5 border border-blue-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between snap-start">
+          <div>
+            <div class="h-32 bg-blue-100/60 rounded-xl flex items-center justify-center p-4 mb-4 text-4xl">
+              ✂️
             </div>
+            <span class="text-[11px] font-bold text-blue-800 bg-blue-200/70 px-2.5 py-0.5 rounded-full uppercase">Estética Canina</span>
+            <h3 class="font-display font-bold text-lg text-slate-900 mt-2">Tosa Padrão & Bebê</h3>
+            <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+              Tosa na tesoura para Shih-Tzu, Poodle, Maltês e Spitz. Tosa higiênica precisa que evita o acúmulo de sujeiras e nós nos pelos.
+            </p>
           </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div>
-              <h3 class="font-bold text-lg text-brand-dark">Tosa da Raça & Tesoura</h3>
-              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-                Tosa personalizada respeitando o padrão da raça (Spitz, Poodle, Shih-tzu, Yorkshire) ou tosa bebê estilizada.
-              </p>
-            </div>
-            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <span class="text-[10px] text-slate-400 block font-semibold uppercase">A partir de</span>
-                <span class="text-lg font-black text-brand-forest">R$ 85,00</span>
-              </div>
-              <a href="https://wa.me/556232569677?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20Tosa%20da%20Ra%C3%A7a%20no%20World%20Pet%20Shop." target="_blank" class="w-10 h-10 rounded-full bg-brand-sand hover:bg-emerald-500 hover:text-white flex items-center justify-center text-slate-700 transition font-bold">
-                →
-              </a>
-            </div>
+          <div class="pt-4 mt-4 border-t border-slate-200 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-600">Acabamento impecável</span>
+            <a href="https://wa.me/556232569677?text=Olá!%20Gostaria%20de%20agendar%20uma%20tosa%20no%20World%20Pet%20Shop." target="_blank" class="p-2 rounded-lg bg-emerald-100 text-emerald-800 hover:bg-emerald-600 hover:text-white transition">
+              📅
+            </a>
           </div>
         </div>
 
-        <!-- CARD SERVIÇO 3 -->
-        <div class="bg-white rounded-3xl overflow-hidden border border-brand-sand shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
-          <div class="h-56 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=600&q=80" alt="Spa Deluxe" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute top-4 left-4 bg-purple-600 text-white text-[11px] font-bold px-3 py-1.5 rounded-full">
-              Experiência VIP
+        <!-- Card 3: Rações das Melhores Marcas -->
+        <div id="racoes" class="min-w-[270px] sm:min-w-[290px] md:min-w-0 bg-[#F8FAFC] rounded-2xl p-5 border border-blue-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between snap-start">
+          <div>
+            <div class="h-32 bg-blue-100/60 rounded-xl flex items-center justify-center p-4 mb-4 text-4xl">
+              🦴
             </div>
+            <span class="text-[11px] font-bold text-blue-800 bg-blue-200/70 px-2.5 py-0.5 rounded-full uppercase">Nutrição Nobre</span>
+            <h3 class="font-display font-bold text-lg text-slate-900 mt-2">Premier, Golden & Royal Canin</h3>
+            <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+              Rações para filhotes, adultos e idosos. Opções a granel com balança precisa ou sacos fechados lacrados de fábrica com disk-entrega.
+            </p>
           </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div>
-              <h3 class="font-bold text-lg text-brand-dark">Spa & Hidratação Profunda</h3>
-              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-                Banho terapêutico, máscara de hidratação intensa para pelos sedosos, massagem relaxante e bálsamo nas patinhas.
-              </p>
-            </div>
-            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <span class="text-[10px] text-slate-400 block font-semibold uppercase">A partir de</span>
-                <span class="text-lg font-black text-brand-forest">R$ 110,00</span>
-              </div>
-              <a href="https://wa.me/556232569677?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Spa%20Deluxe%20para%20meu%20pet%20no%20World%20Pet%20Shop." target="_blank" class="w-10 h-10 rounded-full bg-brand-sand hover:bg-emerald-500 hover:text-white flex items-center justify-center text-slate-700 transition font-bold">
-                →
-              </a>
-            </div>
+          <div class="pt-4 mt-4 border-t border-slate-200 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-600">Sacos e a granel</span>
+            <a href="https://wa.me/556232569677?text=Olá!%20Quero%20consultar%20preços%20de%20ração%20no%20World%20Pet%20Shop." target="_blank" class="p-2 rounded-lg bg-emerald-100 text-emerald-800 hover:bg-emerald-600 hover:text-white transition">
+              📲
+            </a>
           </div>
         </div>
 
-        <!-- CARD SERVIÇO 4 -->
-        <div class="bg-white rounded-3xl overflow-hidden border border-brand-sand shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
-          <div class="h-56 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80" alt="Filhotes e Gatos" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute top-4 left-4 bg-emerald-700 text-white text-[11px] font-bold px-3 py-1.5 rounded-full">
-              Cuidados Especiais
+        <!-- Card 4: Farmácia Veterinária -->
+        <div class="min-w-[270px] sm:min-w-[290px] md:min-w-0 bg-[#F8FAFC] rounded-2xl p-5 border border-blue-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between snap-start">
+          <div>
+            <div class="h-32 bg-blue-100/60 rounded-xl flex items-center justify-center p-4 mb-4 text-4xl">
+              💊
             </div>
+            <span class="text-[11px] font-bold text-blue-800 bg-blue-200/70 px-2.5 py-0.5 rounded-full uppercase">Farmácia Completa</span>
+            <h3 class="font-display font-bold text-lg text-slate-900 mt-2">Antipulgas & Cuidados</h3>
+            <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+              Simparic, Bravecto, Nexgard Spectra, coleiras repelentes, vermífugos, protetores gástricos, colírios e vitaminas para seu pet.
+            </p>
           </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div>
-              <h3 class="font-bold text-lg text-brand-dark">Filhotes & Felinos</h3>
-              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-                Ambiente silencioso, primeiro banho adaptativo sem sustos para filhotes e cuidados delicados para gatos.
-              </p>
-            </div>
-            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <span class="text-[10px] text-slate-400 block font-semibold uppercase">Consulte</span>
-                <span class="text-lg font-black text-brand-forest">Disponibilidade</span>
-              </div>
-              <a href="https://wa.me/556232569677?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20cuidados%20para%20filhote%2Fgato%20no%20World%20Pet%20Shop." target="_blank" class="w-10 h-10 rounded-full bg-brand-sand hover:bg-emerald-500 hover:text-white flex items-center justify-center text-slate-700 transition font-bold">
-                →
-              </a>
-            </div>
+          <div class="pt-4 mt-4 border-t border-slate-200 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-600">Pronta entrega</span>
+            <a href="https://wa.me/556232569677?text=Olá!%20Gostaria%20de%20consultar%20antipulgas%20ou%20remédios%20no%20World%20Pet%20Shop." target="_blank" class="p-2 rounded-lg bg-emerald-100 text-emerald-800 hover:bg-emerald-600 hover:text-white transition">
+              📲
+            </a>
           </div>
         </div>
 
+      </div>
+
+      <div class="mt-4 text-center md:hidden">
+        <span class="text-xs text-slate-400 font-medium">👉 Deslize para o lado para ver todos os serviços</span>
       </div>
 
     </div>
   </section>
 
-  <!-- WIDGET INTERATIVO DE AGENDAMENTO (INSPIRADO NA IMAGEM 5 PAWCARE) -->
-  <section id="agendamento" class="py-12 bg-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-gradient-to-br from-brand-forest to-brand-dark rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
+  <!-- SIMULADOR INTERATIVO DE AGENDAMENTO / PEDIDO -->
+  <section class="py-16 bg-[#EFF6FF] border-y border-blue-100">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white border border-blue-200 rounded-3xl p-6 sm:p-10 shadow-lg">
         
-        <div class="absolute -right-12 -bottom-12 w-64 h-64 rounded-full bg-emerald-500/10 pointer-events-none"></div>
-
-        <div class="max-w-2xl space-y-3 mb-8">
-          <span class="inline-block bg-white/10 text-emerald-300 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider">
-            Simulador de Agendamento
-          </span>
-          <h3 class="text-2xl sm:text-3xl font-serif font-bold text-white">
-            Consulte a Disponibilidade de Horário em Segundos
-          </h3>
-          <p class="text-slate-300 text-xs sm:text-sm">
-            Selecione o serviço e o porte do seu animal para falar com nossa equipe pelo WhatsApp.
-          </p>
-        </div>
-
-        <!-- FORMULÁRIO / SIMULADOR -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/15">
-          
-          <div>
-            <label class="block text-xs font-bold text-slate-200 mb-1.5">1. Serviço Desejado</label>
-            <select id="sim-servico" class="w-full bg-white text-slate-800 text-xs sm:text-sm font-semibold rounded-xl px-3 py-3 border-0 focus:ring-2 focus:ring-emerald-400">
-              <option value="Banho e Tosa Completa">Banho & Tosa Completa</option>
-              <option value="Apenas Banho e Hidratação">Apenas Banho & Hidratação</option>
-              <option value="Tosa Higiênica">Tosa Higiênica</option>
-              <option value="Spa Canino Deluxe">Spa Canino Deluxe</option>
-              <option value="Consulta / Outros Cuidados">Consulta / Outros Cuidados</option>
-            </select>
-          </div>
-
-          <div>
-            <label class="block text-xs font-bold text-slate-200 mb-1.5">2. Porte do Pet</label>
-            <select id="sim-porte" class="w-full bg-white text-slate-800 text-xs sm:text-sm font-semibold rounded-xl px-3 py-3 border-0 focus:ring-2 focus:ring-emerald-400">
-              <option value="Porte Pequeno (até 10kg)">Porte Pequeno (até 10kg)</option>
-              <option value="Porte Médio (10kg a 20kg)">Porte Médio (10kg a 20kg)</option>
-              <option value="Porte Grande (acima de 20kg)">Porte Grande (acima de 20kg)</option>
-              <option value="Gato / Felino">Gato / Felino</option>
-            </select>
-          </div>
-
-          <div class="flex items-end">
-            <button onclick="dispararAgendamento()" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm py-3 px-4 rounded-xl shadow-lg transition flex items-center justify-center gap-2 transform active:scale-95">
-              <span>📅 Consultar no WhatsApp</span>
-            </button>
-          </div>
-
-        </div>
-
-        <script>
-          function dispararAgendamento() {
-            const serv = document.getElementById('sim-servico').value;
-            const porte = document.getElementById('sim-porte').value;
-            const msg = 'Olá! Gostaria de consultar horários para o serviço: ' + serv + ' (Porte: ' + porte + ') no ' + "World Pet Shop";
-            const url = 'https://wa.me/' + "556232569677" + '?text=' + encodeURIComponent(msg);
-            window.open(url, '_blank');
-          }
-        </script>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SOBRE NÓS E HISTÓRIA -->
-  <section class="py-20 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        
-        <div class="relative">
-          <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3]">
-            <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1000&q=80" alt="Equipe com animais" class="w-full h-full object-cover">
-          </div>
-          <div class="absolute -bottom-6 -right-6 bg-white rounded-3xl p-6 shadow-xl border border-brand-sand max-w-xs hidden sm:block">
-            <p class="font-serif italic font-bold text-brand-dark text-lg">"Nosso compromisso é tratar cada animal como parte da nossa própria família."</p>
-            <p class="text-xs text-brand-sage font-bold mt-2">— Equipe World Pet Shop</p>
-          </div>
+        <div class="text-center space-y-2 mb-8">
+          <span class="inline-block px-3 py-1 bg-blue-100 text-blue-900 rounded-full text-xs font-bold uppercase tracking-wider">Atendimento Rápido no WhatsApp</span>
+          <h2 class="font-display font-black text-2xl sm:text-3xl text-slate-900">Agende ou Peça no World Pet Shop</h2>
+          <p class="text-slate-600 text-xs sm:text-sm">Selecione o serviço ou produto e envie diretamente pelo WhatsApp com 1 clique.</p>
         </div>
 
         <div class="space-y-6">
-          <span class="text-xs uppercase font-extrabold tracking-widest text-brand-sage">Sobre o Estabelecimento</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark font-serif leading-tight">
-            Amor, Respeito e Bem-Estar Animal em Cada Detalhe
-          </h2>
-          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-            Localizado em <strong>
-Av. das Bandeiras, n° 1156 - Vila Maua, Goiânia - GO, 74323-100</strong>, o <strong>World Pet Shop</strong> nasceu da paixão por cuidar dos nossos amigos de quatro patas. Criamos um ambiente acolhedor, limpo e seguro onde o seu pet não sente medo do banho.
+          <!-- Passo 1: O que você precisa -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">1. O que você gostaria de solicitar?</label>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+              <button type="button" onclick="selecionarServico('Banho Relaxante', this)" class="serv-btn p-3 rounded-xl border border-blue-600 bg-blue-50 text-blue-950 font-semibold text-xs flex flex-col items-center gap-1 transition active">
+                <span class="text-xl">🛁</span>
+                <span>Banho</span>
+              </button>
+              <button type="button" onclick="selecionarServico('Banho + Tosa Higiênica / Geral', this)" class="serv-btn p-3 rounded-xl border border-slate-200 bg-white hover:border-blue-500 text-slate-800 font-semibold text-xs flex flex-col items-center gap-1 transition">
+                <span class="text-xl">✂️</span>
+                <span>Banho + Tosa</span>
+              </button>
+              <button type="button" onclick="selecionarServico('Ração para Cães / Gatos', this)" class="serv-btn p-3 rounded-xl border border-slate-200 bg-white hover:border-blue-500 text-slate-800 font-semibold text-xs flex flex-col items-center gap-1 transition">
+                <span class="text-xl">🦴</span>
+                <span>Rações</span>
+              </button>
+              <button type="button" onclick="selecionarServico('Antipulgas / Remédio', this)" class="serv-btn p-3 rounded-xl border border-slate-200 bg-white hover:border-blue-500 text-slate-800 font-semibold text-xs flex flex-col items-center gap-1 transition">
+                <span class="text-xl">💊</span>
+                <span>Farmácia Pet</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Passo 2: Porte ou Detalhes -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">2. Detalhes (Raça, porte ou marca do produto):</label>
+            <input type="text" id="detalhesInput" placeholder="Ex: Shih-tzu para tosa bebê, ou Premier 15kg..." class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600">
+          </div>
+
+          <!-- Botão Disparo WhatsApp -->
+          <button type="button" onclick="enviarPedidoWhatsApp()" class="w-full bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-700 hover:to-emerald-600 text-white font-extrabold text-base py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span>Enviar Solicitação pelo WhatsApp</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- AVALIAÇÕES GOOGLE -->
+  <section id="avaliacoes" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
+        <span class="text-xs font-bold text-blue-700 bg-blue-100 border border-blue-200 px-3 py-1 rounded-full uppercase">Google Avaliações</span>
+        <h2 class="font-display font-black text-2xl sm:text-3xl text-slate-900">Aprovado pelos Tutores da Vila Mauá</h2>
+        <div class="flex items-center justify-center gap-1 text-amber-500 text-lg">
+          ★★★★★ <span class="text-slate-800 text-sm font-bold ml-1">4.8 de 5 estrelas</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-3">
+          <div class="flex items-center gap-1 text-amber-400 text-sm">★★★★★</div>
+          <p class="text-xs sm:text-sm text-slate-600 italic">"Levo meu cachorro há mais de 2 anos no World Pet Shop. O banho é caprichado e eles cuidam dos bichinhos com muito carinho!"</p>
+          <div class="text-xs font-bold text-slate-800">— Marcelo G., Vila Mauá</div>
+        </div>
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-3">
+          <div class="flex items-center gap-1 text-amber-400 text-sm">★★★★★</div>
+          <p class="text-xs sm:text-sm text-slate-600 italic">"Ótima variedade de rações e medicamentos. Preço justo e o atendimento no balcão é nota dez!"</p>
+          <div class="text-xs font-bold text-slate-800">— Vanessa T., Goiânia</div>
+        </div>
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-3">
+          <div class="flex items-center gap-1 text-amber-400 text-sm">★★★★★</div>
+          <p class="text-xs sm:text-sm text-slate-600 italic">"A tosa na tesoura do meu pet ficou maravilhosa! Super recomendo para quem mora na região da Av. das Bandeiras."</p>
+          <div class="text-xs font-bold text-slate-800">— Aline C., Tutora</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ONDE ESTAMOS & LOCALIZAÇÃO -->
+  <section id="contato" class="py-16 bg-[#F8FAFC]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-5 space-y-5">
+          <span class="text-xs font-bold uppercase tracking-widest text-blue-800 bg-blue-100 px-3 py-1 rounded-full">Venha nos Visitar</span>
+          <h2 class="font-display font-black text-2xl sm:text-4xl text-slate-900 tracking-tight">Na Av. das Bandeiras na Vila Mauá</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Estamos em ponto nobre e de fácil acesso na Av. das Bandeiras, com estacionamento rápido e atendimento caloroso.
           </p>
-          <ul class="space-y-3 text-sm text-slate-700">
-            <li class="flex items-center gap-3">
-              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">✓</span>
-              <span>Estrutura completa com toalhas descartáveis individuais</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">✓</span>
-              <span>Monitoramento carinhoso durante todo o atendimento</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">✓</span>
-              <span>Linha cosmética cruelty-free aprovada por veterinários</span>
-            </li>
-          </ul>
-        </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- DEPOIMENTOS / PROVA SOCIAL REAL DO GOOGLE -->
-  <section id="depoimentos" class="py-20 bg-white border-t border-brand-sand">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto space-y-3 mb-14">
-        <span class="text-xs uppercase font-extrabold tracking-widest text-brand-sage">Avaliações de Clientes</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark font-serif">
-          O Que os Tutores Dizem Sobre Nós
-        </h2>
-        <div class="flex items-center justify-center gap-2 text-amber-500 font-bold text-sm">
-          <span>★★★★★</span>
-          <span class="text-slate-800">4,8 no Google (180+ avaliações)</span>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <div class="bg-brand-cream/80 p-8 rounded-3xl border border-brand-sand space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="text-amber-500 text-sm">★★★★★</div>
-            <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
-              "Levo meu Golden Retriever toda semana. O atendimento é impecável, ele volta muito cheiroso e super calmo. Nunca vi um pet shop com tanto carinho!"
-            </p>
-          </div>
-          <div class="flex items-center gap-3 pt-4 border-t border-brand-sand/60">
-            <div class="w-10 h-10 rounded-full bg-amber-200 text-amber-900 font-bold flex items-center justify-center text-xs">
-              MC
+          <div class="space-y-3 pt-2 text-sm text-slate-700">
+            <div class="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
+              <span class="text-blue-600 text-xl">📍</span>
+              <div>
+                <strong class="block text-slate-900 font-bold">Endereço:</strong>
+                <span>Av. das Bandeiras, n° 1156 - Vila Maua, Goiânia - GO, 74323-100</span>
+              </div>
             </div>
-            <div>
-              <p class="font-bold text-xs text-brand-dark">Mariana Costa</p>
-              <p class="text-[11px] text-slate-400">Tutora do Thor (Golden)</p>
-            </div>
-          </div>
-        </div>
 
-        <div class="bg-brand-cream/80 p-8 rounded-3xl border border-brand-sand space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="text-amber-500 text-sm">★★★★★</div>
-            <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
-              "A tosa na tesoura do meu Shih-tzu ficou perfeita, exatamente como eu pedi. Além disso, o ambiente é extremamente limpo e organizado. Recomendo de olhos fechados!"
-            </p>
-          </div>
-          <div class="flex items-center gap-3 pt-4 border-t border-brand-sand/60">
-            <div class="w-10 h-10 rounded-full bg-emerald-200 text-emerald-900 font-bold flex items-center justify-center text-xs">
-              RO
+            <div class="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
+              <span class="text-emerald-600 text-xl">📱</span>
+              <div>
+                <strong class="block text-slate-900 font-bold">Telefone & WhatsApp:</strong>
+                <span>(62) 3256-9677</span>
+              </div>
             </div>
-            <div>
-              <p class="font-bold text-xs text-brand-dark">Rodrigo Oliveira</p>
-              <p class="text-[11px] text-slate-400">Tutor do Pipoca (Shih-tzu)</p>
-            </div>
-          </div>
-        </div>
 
-        <div class="bg-brand-cream/80 p-8 rounded-3xl border border-brand-sand space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="text-amber-500 text-sm">★★★★★</div>
-            <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
-              "Minha gatinha sempre foi muito medrosa com banho, mas a equipe tratou ela com tanta paciência e cuidado que foi uma experiência maravilhosa."
-            </p>
-          </div>
-          <div class="flex items-center gap-3 pt-4 border-t border-brand-sand/60">
-            <div class="w-10 h-10 rounded-full bg-rose-200 text-rose-900 font-bold flex items-center justify-center text-xs">
-              CS
-            </div>
-            <div>
-              <p class="font-bold text-xs text-brand-dark">Camila Silveira</p>
-              <p class="text-[11px] text-slate-400">Tutora da Luna (Gata Persa)</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ONDE ESTAMOS / MAPA E ENDEREÇO -->
-  <section id="localizacao" class="py-20 bg-brand-cream">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-white rounded-3xl border border-brand-sand shadow-lg overflow-hidden grid grid-cols-1 lg:grid-cols-12">
-        
-        <div class="p-8 sm:p-12 lg:col-span-5 flex flex-col justify-between space-y-6">
-          <div class="space-y-4">
-            <span class="text-xs uppercase font-extrabold tracking-widest text-brand-sage">Venha nos Conhecer</span>
-            <h3 class="text-2xl sm:text-3xl font-serif font-bold text-brand-dark">
-              Localização Fácil & Acesso Rápido
-            </h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Estamos prontos para receber você e seu pet com toda a comodidade, ambiente climatizado e facilidade de parada.
-            </p>
-            <div class="space-y-2 pt-2 text-xs sm:text-sm text-slate-700">
-              <p class="flex items-start gap-2">
-                <span class="text-base text-emerald-600">📍</span>
-                <span><strong>Endereço:</strong> 
-Av. das Bandeiras, n° 1156 - Vila Maua, Goiânia - GO, 74323-100</span>
-              </p>
-              <p class="flex items-start gap-2">
-                <span class="text-base text-emerald-600">🕒</span>
-                <span><strong>Horários:</strong> Segunda a Sábado: 08h00 às 18h00</span>
-              </p>
-              <p class="flex items-start gap-2">
-                <span class="text-base text-emerald-600">📱</span>
-                <span><strong>WhatsApp:</strong> 
-(62) 3256-9677</span>
-              </p>
+            <div class="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
+              <span class="text-blue-600 text-xl">⏰</span>
+              <div>
+                <strong class="block text-slate-900 font-bold">Horário de Funcionamento:</strong>
+                <span>Segunda a Sábado com entregas ativas</span>
+              </div>
             </div>
           </div>
 
-          <div class="pt-4 space-y-3">
-            <a href="https://maps.google.com/?q=World%20Pet%20Shop%20%EE%83%88%0AAv.%20das%20Bandeiras%2C%20n%C2%B0%201156%20-%20Vila%20Maua%2C%20Goi%C3%A2nia%20-%20GO%2C%2074323-100" target="_blank" class="block w-full text-center bg-brand-forest hover:bg-brand-dark text-white font-bold py-3.5 px-6 rounded-2xl text-xs sm:text-sm shadow-md transition">
-              🗺️ Abrir Rota no Google Maps / Waze
+          <div class="pt-2 flex flex-wrap gap-3">
+            <a href="https://www.google.com/maps/place/World+Pet+Shop/data=!4m7!3m6!1s0x935ef68df01b68dd:0xc9e829a3ad23da44!8m2!3d-16.7030791!4d-49.3151657!16s%2Fg%2F11f3n7k_x6!19sChIJ3Wgb8I32XpMRRNojraMp6Mk" target="_blank" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs px-5 py-3 rounded-xl transition">
+              <span>🗺️ Ver no Google Maps</span>
             </a>
-            <a href="https://wa.me/556232569677?text=Ol%C3%A1!%20Estava%20no%20site%20de%20voc%C3%AAs%20do%20World%20Pet%20Shop%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20o%20meu%20pet." target="_blank" class="block w-full text-center bg-brand-sand hover:bg-emerald-100 text-brand-dark font-bold py-3 px-6 rounded-2xl text-xs transition">
-              💬 Falar com a Recepção no WhatsApp
+            <a href="https://wa.me/556232569677?text=Olá!%20Gostaria%20de%20saber%20a%20localização%20do%20World%20Pet%20Shop." target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-5 py-3 rounded-xl transition">
+              <span>💬 Falar no WhatsApp</span>
             </a>
           </div>
         </div>
 
-        <div class="lg:col-span-7 bg-slate-100 min-h-[360px] relative">
-          <iframe 
-            width="100%" 
-            height="100%" 
-            style="border:0; min-height: 360px;" 
-            loading="lazy" 
-            allowfullscreen 
-            src="https://maps.google.com/maps?q=World%20Pet%20Shop%20%EE%83%88%0AAv.%20das%20Bandeiras%2C%20n%C2%B0%201156%20-%20Vila%20Maua%2C%20Goi%C3%A2nia%20-%20GO%2C%2074323-100&t=&z=15&ie=UTF8&iwloc=&output=embed">
-          </iframe>
+        <div class="lg:col-span-7">
+          <div class="bg-white p-2 sm:p-3 rounded-3xl border border-slate-200 shadow-md overflow-hidden">
+            <iframe 
+              src="https://maps.google.com/maps?q=-16.7030791,-49.3151657&hl=pt-BR&z=16&output=embed" 
+              class="w-full h-80 sm:h-96 rounded-2xl border-0" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- RODAPÉ CORPORATIVO / DE LUXO -->
-  <footer class="bg-brand-dark text-slate-400 py-16 border-t border-slate-800">
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-slate-800/80">
-        
-        <div class="space-y-4 md:col-span-2">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-brand-forest text-amber-300 flex items-center justify-center text-xl">
-              🐾
-            </div>
-            <span class="font-serif font-bold text-xl text-white">World Pet Shop</span>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800 text-center md:text-left">
+        <div class="flex items-center gap-3">
+          <img src="logo.png" alt="World Pet Shop" class="h-10 w-auto object-contain brightness-110" onerror="this.onerror=null; this.src='logo.jpg'">
+          <div>
+            <span class="block font-display font-bold text-lg text-white">WORLD PET SHOP</span>
+            <span class="block text-xs text-slate-500">Centro de Estética & Nutrição Pet</span>
           </div>
-          <p class="text-xs text-slate-400 max-w-md leading-relaxed">
-            Dedicados ao amor, bem-estar e estética de cães e gatos. Estrutura moderna, groomers qualificados e atendimento acolhedor em Goiânia.
-          </p>
         </div>
-
-        <div class="space-y-3">
-          <h4 class="font-bold text-white text-xs uppercase tracking-wider">Links Rápidos</h4>
-          <ul class="space-y-2 text-xs">
-            <li><a href="#servicos" class="hover:text-emerald-400 transition">Banho & Tosa</a></li>
-            <li><a href="#servicos" class="hover:text-emerald-400 transition">Spa & Hidratação</a></li>
-            <li><a href="#agendamento" class="hover:text-emerald-400 transition">Agendar Horário</a></li>
-            <li><a href="#depoimentos" class="hover:text-emerald-400 transition">Depoimentos</a></li>
-          </ul>
+        <div class="text-xs text-slate-400">
+          Av. das Bandeiras, n° 1156 - Vila Maua, Goiânia - GO • (62) 3256-9677
         </div>
-
-        <div class="space-y-3">
-          <h4 class="font-bold text-white text-xs uppercase tracking-wider">Atendimento</h4>
-          <p class="text-xs text-slate-300">
-Av. das Bandeiras, n° 1156 - Vila Maua, Goiânia - GO, 74323-100</p>
-          <p class="text-xs text-emerald-400 font-bold">
-(62) 3256-9677</p>
-          <a href="https://wa.me/556232569677?text=Ol%C3%A1!%20Estava%20no%20site%20de%20voc%C3%AAs%20do%20World%20Pet%20Shop%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20o%20meu%20pet." target="_blank" class="inline-block text-xs bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2 rounded-xl transition">
-            Falar Conosco
-          </a>
-        </div>
-
       </div>
-
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-        <p>© 2026 World Pet Shop. Todos os direitos reservados.</p>
-        <p class="text-slate-400">Página oficial com conexão direta via WhatsApp.</p>
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500 text-center sm:text-left">
+        <div>© 2026 World Pet Shop. Todos os direitos reservados.</div>
+        <div class="text-[11px] text-slate-400">Vitrine Digital de Alta Performance</div>
       </div>
     </div>
   </footer>
 
-  <!-- BOTÃO FLUTUANTE DE WHATSAPP COM NOTIFICAÇÃO (CANTO INFERIOR DIREITO) -->
-  <div class="fixed bottom-6 right-6 z-50">
-    <a href="https://wa.me/556232569677?text=Ol%C3%A1!%20Estava%20no%20site%20de%20voc%C3%AAs%20do%20World%20Pet%20Shop%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20o%20meu%20pet." target="_blank" class="flex items-center justify-center w-16 h-16 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white shadow-2xl transition transform hover:scale-110 pulse-glow relative group">
-      <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
-      <span class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-red-500 text-white text-[10px] font-black flex items-center justify-center shadow">1</span>
+  <!-- BOTTOM APP BAR FIXA NO MOBILE -->
+  <div class="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-blue-100 px-4 py-2.5 flex items-center justify-between shadow-2xl">
+    <div class="flex items-center gap-2 truncate">
+      <img src="logo.png" alt="World Pet Shop" class="h-8 w-8 object-contain" onerror="this.onerror=null; this.src='logo.jpg'">
+      <div class="truncate">
+        <span class="block font-display font-bold text-xs text-slate-900 truncate">World Pet Shop</span>
+        <span class="block text-[10px] text-emerald-700 font-semibold truncate">Disk Entrega Ativa</span>
+      </div>
+    </div>
+    <a href="https://wa.me/556232569677?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20ou%20agendamento." target="_blank" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-4 py-2 rounded-full shadow-md transition">
+      <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      <span>WhatsApp</span>
     </a>
   </div>
 
+  <script>
+    let servicoSelecionado = 'Banho Relaxante';
+
+    function selecionarServico(nome, btn) {
+      servicoSelecionado = nome;
+      document.querySelectorAll('.serv-btn').forEach(b => {
+        b.classList.remove('border-blue-600', 'bg-blue-50', 'text-blue-950');
+        b.classList.add('border-slate-200', 'bg-white', 'text-slate-800');
+      });
+      btn.classList.add('border-blue-600', 'bg-blue-50', 'text-blue-950');
+      btn.classList.remove('border-slate-200', 'bg-white', 'text-slate-800');
+    }
+
+    function enviarPedidoWhatsApp() {
+      const detalhes = document.getElementById('detalhesInput').value.trim();
+
+      let texto = `Olá, World Pet Shop! Gostaria de um atendimento pelo site:\n`;
+      texto += `🐾 *Solicitação:* ${servicoSelecionado}\n`;
+      if (detalhes) texto += `🔍 *Detalhes:* ${detalhes}\n\n`;
+      texto += `Como podemos proceder?`;
+
+      const url = `https://wa.me/556232569677?text=${encodeURIComponent(texto)}`;
+      window.open(url, '_blank');
+    }
+  </script>
 </body>
 </html>
