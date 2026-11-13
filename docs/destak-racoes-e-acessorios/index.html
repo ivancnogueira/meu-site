@@ -4,40 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Destak Rações e Acessórios | Atacado, Varejo & Tele-Entrega em Aparecida de Goiânia</title>
-  <meta name="description" content="Destak Rações e Acessórios desde 2020. Rações para cães, gatos e aves, medicamentos veterinários, petiscos e acessórios em Aparecida de Goiânia. Tele-entrega rápida pelo WhatsApp!">
-  <meta name="theme-color" content="#0B0F17">
+  <meta name="description" content="Destak Rações e Acessórios: Rações para cães, gatos e aves, medicamentos veterinários e tele-entrega rápida em Aparecida de Goiânia e região. Peça no WhatsApp.">
+  <meta name="theme-color" content="#D97706">
   
-  <!-- Open Graph / WhatsApp Preview -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Destak Rações e Acessórios | Tele-Entrega Rápida">
-  <meta property="og:description" content="Rações para seu pet e aves, medicamentos e acessórios com preço de atacado e varejo. Peça pelo WhatsApp!">
-  <meta property="og:image" content="fachada.jpg">
+  <meta property="og:title" content="Destak Rações e Acessórios | Atacado & Varejo">
+  <meta property="og:description" content="Rações para seu pet e aves, medicamentos e acessórios com preço justo e tele-entrega expressa.">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Fontes Google de Alta Performance (Outfit + Plus Jakarta Sans) -->
+  <!-- Fontes Google (Outfit + Plus Jakarta Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            display: ['"Outfit"', 'sans-serif'],
+            title: ['"Outfit"', 'sans-serif'],
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
           },
           colors: {
-            destak: {
-              black: '#0B0F17',
-              dark: '#121824',
-              card: '#1A2232',
-              border: '#273349',
-              gold: '#F59E0B',
-              goldHover: '#D97706',
-              goldLight: '#FEF3C7',
+            brand: {
+              50: '#FFFBEB',
+              100: '#FEF3C7',
+              200: '#FDE68A',
+              300: '#FCD34D',
+              400: '#FBBF24',
+              500: '#F59E0B',
+              600: '#D97706',
+              700: '#B45309',
+              dark: '#0F172A',
               whatsapp: '#25D366',
               whatsappHover: '#20BA56',
             }
@@ -48,185 +49,181 @@
   </script>
 
   <style>
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      -webkit-tap-highlight-color: transparent;
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    h1, h2, h3, .font-title { font-family: 'Outfit', sans-serif; }
+    
+    @keyframes floatPet {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-7px) rotate(0.6deg); }
     }
-    h1, h2, h3, h4, .font-heading {
-      font-family: 'Outfit', sans-serif;
+    .animate-float-pet {
+      animation: floatPet 5s ease-in-out infinite;
     }
-    .hide-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-    .hide-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-    .pulse-glow-gold {
-      animation: pulseGold 2.5s infinite;
-    }
-    @keyframes pulseGold {
-      0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.6); }
-      70% { box-shadow: 0 0 0 14px rgba(245, 158, 11, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.45); }
+      50% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
     }
     .pulse-glow-zap {
-      animation: pulseZap 2.2s infinite;
-    }
-    @keyframes pulseZap {
-      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-      70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+      animation: pulseGlow 2.2s infinite;
     }
   </style>
 </head>
-<body class="bg-destak-black text-slate-100 antialiased selection:bg-destak-gold selection:text-destak-black pb-20 sm:pb-0">
+<body class="bg-[#FCFBF8] text-slate-800 antialiased selection:bg-amber-400 selection:text-slate-900 pb-16 sm:pb-0">
 
-  <!-- TOP BAR DE TELE-ENTREGA & HORÁRIO -->
-  <div class="bg-gradient-to-r from-amber-600 via-destak-gold to-yellow-500 text-destak-black text-xs py-2 px-3 sm:px-4 font-bold tracking-wide shadow-md">
-    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
-      <div class="flex items-center gap-2 truncate">
-        <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-destak-black text-white text-[10px]">🛵</span>
-        <span class="truncate"><strong>TELE-ENTREGAS:</strong> Aparecida de Goiânia e Região • Seg a Sáb</span>
+  <!-- TOP BAR INFORMATIVA -->
+  <div class="bg-slate-900 text-slate-300 text-xs py-2.5 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="truncate"><strong>DESTAK RAÇÕES:</strong> Atacado e Varejo de Rações • Tele-Entrega em Aparecida de Goiânia e Região</span>
       </div>
-      <a href="https://wa.me/5562995420448?text=Olá!%20Gostaria%20de%20pedir%20uma%20tele-entrega%20de%20ração." target="_blank" class="inline-flex items-center gap-1 bg-destak-black hover:bg-slate-900 text-white px-2.5 py-1 rounded-full text-[11px] font-black shrink-0 transition">
-        <span>(62) 99542-0448</span>
-        <span>→</span>
-      </a>
+      <div class="flex items-center gap-4 text-[11px] sm:text-xs">
+        <div class="flex items-center gap-1 text-amber-400 font-bold">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <span>Desde 2020 com Atendimento de Confiança</span>
+        </div>
+        <a href="https://wa.me/5562995420448?text=Olá!%20Gostaria%20de%20pedir%20uma%20tele-entrega%20de%20ração." target="_blank" class="hidden sm:inline-flex items-center gap-1.5 bg-amber-500 hover:bg-amber-400 text-slate-950 px-3 py-1 rounded-full font-black transition">
+          <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <span>Tele-Entrega: (62) 99542-0448</span>
+        </a>
+      </div>
     </div>
   </div>
 
-  <!-- NAVBAR MODERNA COM LOGO REAL -->
-  <nav class="sticky top-0 z-50 bg-destak-black/95 backdrop-blur-md border-b border-destak-border/60 transition-all duration-300">
+  <!-- NAVBAR MODERNA -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- LOGO FIEL À FACHADA (Dourado sobre Preto) -->
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-destak-card to-destak-dark border-2 border-destak-gold flex items-center justify-center shadow-lg shadow-destak-gold/10 group-hover:scale-105 transition">
-          <!-- Ícone estilizado Cão + Ave -->
-          <div class="text-xl">🐕🦜</div>
+      <!-- LOGO ELEGANTE -->
+      <a href="#inicio" class="flex items-center gap-3.5 group">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-md shadow-amber-500/20 group-hover:scale-105 transition transform text-white">
+          <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/>
+          </svg>
         </div>
-        <div class="flex flex-col">
-          <div class="flex items-center gap-1.5">
-            <span class="font-display font-extrabold text-xl sm:text-2xl text-white tracking-wider leading-none">
-              DESTAK
-            </span>
-            <span class="text-[9px] font-bold px-1.5 py-0.5 rounded bg-destak-gold/20 text-destak-gold border border-destak-gold/40">
-              DESDE 2020
-            </span>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-title font-black text-2xl text-slate-900 tracking-tight">DESTAK</span>
+            <span class="font-title font-extrabold text-[11px] uppercase px-2 py-0.5 rounded-md bg-amber-500 text-slate-950 tracking-widest">Rações</span>
           </div>
-          <span class="text-[10px] sm:text-xs font-semibold tracking-widest uppercase text-destak-gold mt-0.5">
-            Rações & Acessórios • Atacado e Varejo
-          </span>
+          <span class="text-[11px] text-slate-500 font-medium block">Atacado & Varejo • Cães, Gatos e Aves</span>
         </div>
       </a>
 
       <!-- MENU DESKTOP -->
-      <div class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-300">
-        <a href="#catalogo" class="hover:text-destak-gold transition">Catálogo</a>
-        <a href="#aves" class="hover:text-destak-gold transition">Rações p/ Aves</a>
-        <a href="#medicamentos" class="hover:text-destak-gold transition">Farmácia Pet</a>
-        <a href="#tele-entrega" class="hover:text-destak-gold transition">Tele-Entrega</a>
-        <a href="#loja-fisica" class="hover:text-destak-gold transition">Nossa Loja</a>
+      <div class="hidden lg:flex items-center gap-8 text-sm font-bold text-slate-700">
+        <a href="#inicio" class="hover:text-amber-600 transition">Início</a>
+        <a href="#categorias" class="hover:text-amber-600 transition">Categorias</a>
+        <a href="#produtos" class="hover:text-amber-600 transition">Rações & Farmácia</a>
+        <a href="#simulador" class="hover:text-amber-600 transition">Tele-Entrega</a>
+        <a href="#depoimentos" class="hover:text-amber-600 transition">Avaliações</a>
+        <a href="#contato" class="hover:text-amber-600 transition">Contato</a>
       </div>
 
-      <!-- BOTÃO CTA TOPO -->
-      <a href="https://wa.me/5562995420448?text=Olá!%20Vim%20pelo%20site%20da%20Destak%20Rações%20e%20gostaria%20de%20fazer%20um%20pedido." target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-destak-whatsapp hover:bg-destak-whatsappHover text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-full shadow-lg shadow-destak-whatsapp/25 transition transform hover:-translate-y-0.5">
+      <!-- BOTÃO CTA NAVBAR -->
+      <a href="https://wa.me/5562995420448?text=Olá!%20Vim%20pelo%20site%20da%20Destak%20Rações%20e%20gostaria%20de%20fazer%20um%20pedido." target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white text-xs sm:text-sm font-bold px-5 py-3 rounded-full shadow-lg shadow-brand-whatsapp/20 transition transform hover:-translate-y-0.5">
         <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
-        <span>Fazer Pedido no WhatsApp</span>
+        <span>Pedir no WhatsApp</span>
+      </a>
+
+      <!-- BOTÃO MOBILE -->
+      <a href="https://wa.me/5562995420448?text=Olá!%20Vim%20pelo%20site%20da%20Destak%20Rações%20e%20gostaria%20de%20fazer%20um%20pedido." target="_blank" class="sm:hidden flex items-center justify-center w-11 h-11 bg-brand-whatsapp text-white rounded-full shadow-md">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
       </a>
     </div>
   </nav>
 
-  <!-- HERO SECTION CINEMATOGRÁFICA (INSPIRADA NO LAKKY & LOVIMAL) -->
-  <section class="relative pt-6 pb-14 sm:pt-12 sm:pb-20 overflow-hidden bg-gradient-to-b from-destak-black via-destak-dark to-destak-black border-b border-destak-border/40">
-    <!-- Efeitos de iluminação de fundo -->
-    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-destak-gold/10 blur-[130px] rounded-full pointer-events-none"></div>
-
+  <!-- HERO SECTION CINEMATOGRÁFICA -->
+  <section id="inicio" class="relative overflow-hidden pt-10 pb-16 lg:pt-16 lg:pb-24 bg-gradient-to-b from-[#FFFDF0] via-[#FEF3C7]/40 to-[#FCFBF8]">
+    
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
         
-        <!-- TEXTO HERO -->
-        <div class="lg:col-span-7 space-y-5 text-center lg:text-left">
+        <!-- COLUNA ESQUERDA -->
+        <div class="lg:col-span-7 text-center lg:text-left space-y-6">
           
-          <div class="inline-flex items-center gap-2 bg-destak-card border border-destak-gold/40 text-destak-gold text-xs font-bold px-3.5 py-1.5 rounded-full shadow-inner">
-            <span class="w-2 h-2 rounded-full bg-destak-gold animate-ping"></span>
-            <span>📍 St. Aeroporto Sul • Aparecida de Goiânia</span>
+          <div class="inline-flex items-center gap-2 bg-amber-100/90 border border-amber-300/60 text-amber-950 text-xs font-bold px-4 py-2 rounded-full shadow-sm">
+            <svg class="w-3.5 h-3.5 text-amber-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span>Rações no Atacado & Varejo • Sacos de 15kg e 20kg</span>
           </div>
 
-          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-display font-black text-white leading-[1.12] tracking-tight">
-            Rações, Acessórios & Medicamentos com <br class="hidden sm:inline">
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-destak-gold to-amber-500">
-              Preço de Atacado & Varejo.
-            </span>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]">
+            As melhores rações com preço de atacado, <span class="text-amber-600">entregues no seu portão.</span>
           </h1>
 
-          <p class="text-sm sm:text-base lg:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-            A nutrição e o cuidado completo para seu <strong>cão, gato ou ave</strong>. Sacos fechados e fracionados com a praticidade da <strong>Tele-Entrega Expressa</strong> direto no seu portão.
+          <p class="text-base sm:text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
+            Na <strong>Destak Rações e Acessórios</strong> você encontra nutrição completa para cães, gatos e aves, medicamentos veterinários e acessórios com entrega ágil em Aparecida de Goiânia e Goiânia.
           </p>
 
-          <!-- PILARES DE CONFIANÇA RÁPIDA -->
-          <div class="grid grid-cols-3 gap-2 sm:gap-4 pt-2 max-w-xl mx-auto lg:mx-0 text-left">
-            <div class="bg-destak-card/80 border border-destak-border p-3 rounded-2xl">
-              <span class="text-xl">🛵</span>
-              <p class="font-bold text-xs sm:text-sm text-white mt-1">Tele-Entrega</p>
-              <p class="text-[10px] sm:text-xs text-slate-400">Rápida em Aparecida</p>
-            </div>
-            <div class="bg-destak-card/80 border border-destak-border p-3 rounded-2xl">
-              <span class="text-xl">💰</span>
-              <p class="font-bold text-xs sm:text-sm text-white mt-1">Atacado & Varejo</p>
-              <p class="text-[10px] sm:text-xs text-slate-400">Economia comprovada</p>
-            </div>
-            <div class="bg-destak-card/80 border border-destak-border p-3 rounded-2xl">
-              <span class="text-xl">💳</span>
-              <p class="font-bold text-xs sm:text-sm text-white mt-1">Facilidade</p>
-              <p class="text-[10px] sm:text-xs text-slate-400">Pix e Cartões na porta</p>
-            </div>
-          </div>
-
-          <!-- BOTÕES DE AÇÃO HERO -->
-          <div class="flex flex-col sm:flex-row items-center gap-3 pt-2 justify-center lg:justify-start">
-            <a href="https://wa.me/5562995420448?text=Olá!%20Gostaria%20de%20consultar%20preços%20e%20fazer%20um%20pedido%20de%20ração%20na%20Destak." target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-destak-whatsapp hover:bg-destak-whatsappHover text-white font-black text-sm sm:text-base px-7 py-4 rounded-2xl shadow-xl shadow-destak-whatsapp/25 transition transform hover:-translate-y-0.5 pulse-glow-zap">
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+          <!-- AÇÕES PRINCIPAIS -->
+          <div class="flex flex-col sm:flex-row items-center gap-3.5 pt-2 justify-center lg:justify-start">
+            <a href="https://wa.me/5562995420448?text=Olá!%20Gostaria%20de%20consultar%20as%20rações%20e%20fazer%20um%20pedido%20na%20Destak%20Rações." target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white font-extrabold text-base px-8 py-4 rounded-2xl shadow-xl shadow-brand-whatsapp/25 transition transform hover:-translate-y-0.5 pulse-glow-zap">
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
               <span>Pedir Tele-Entrega no WhatsApp</span>
             </a>
-            <a href="#catalogo" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-destak-card hover:bg-destak-border text-slate-200 border border-destak-border font-bold text-sm sm:text-base px-6 py-4 rounded-2xl transition">
-              <span>Ver Linhas de Ração</span>
-              <span>↓</span>
+
+            <a href="#produtos" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-amber-50 text-slate-800 font-bold text-sm px-6 py-4 rounded-2xl border border-slate-200 shadow-sm transition">
+              <span>Ver Produtos & Marcas</span>
+              <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
             </a>
           </div>
 
+          <!-- MINI CARDS DE CONFIANÇA -->
+          <div class="grid grid-cols-3 gap-2 sm:gap-4 pt-4 border-t border-amber-200/60 max-w-lg mx-auto lg:mx-0">
+            <div class="bg-white/80 p-3 rounded-2xl border border-amber-100 text-center">
+              <svg class="w-5 h-5 mx-auto text-amber-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              <p class="font-extrabold text-xs sm:text-sm text-slate-900 mt-1">Tele-Entrega</p>
+              <p class="text-[10px] text-slate-500">Sem carregar peso</p>
+            </div>
+            <div class="bg-white/80 p-3 rounded-2xl border border-amber-100 text-center">
+              <svg class="w-5 h-5 mx-auto text-amber-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <p class="font-extrabold text-xs sm:text-sm text-slate-900 mt-1">Preço Direto</p>
+              <p class="text-[10px] text-slate-500">Atacado & Varejo</p>
+            </div>
+            <div class="bg-white/80 p-3 rounded-2xl border border-amber-100 text-center">
+              <svg class="w-5 h-5 mx-auto text-amber-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+              <p class="font-extrabold text-xs sm:text-sm text-slate-900 mt-1">Pague no Portão</p>
+              <p class="text-[10px] text-slate-500">Pix & Cartão</p>
+            </div>
+          </div>
+
         </div>
 
-        <!-- HERO CARD VISUAL (INSPIRADO EM LAKKY & PET PARADE COM ARCO DOURADO) -->
-        <div class="lg:col-span-5 relative mt-4 lg:mt-0">
+        <!-- COLUNA DIREITA: PET PROTAGONISTA CINEMATOGRÁFICO -->
+        <div class="lg:col-span-5 relative flex items-center justify-center pt-8 lg:pt-0">
           
-          <div class="relative mx-auto max-w-sm sm:max-w-md bg-gradient-to-b from-amber-500/20 via-destak-card to-destak-card rounded-[32px] p-4 sm:p-5 border-2 border-destak-gold/40 shadow-2xl">
+          <div class="w-72 h-72 sm:w-96 sm:h-96 lg:w-[440px] lg:h-[440px] rounded-full bg-gradient-to-tr from-amber-400 via-amber-300 to-yellow-200 shadow-2xl shadow-amber-500/25 relative flex items-end justify-center">
             
-            <!-- Imagem Principal de Animais Felizes com Ração -->
-            <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900 border border-destak-border/80">
-              <img src="hero_destak.jpg" alt="Cão saudável com ração premium na Destak Rações" class="w-full h-full object-cover">
-              
-              <div class="absolute top-3 left-3 bg-destak-black/90 backdrop-blur-md border border-destak-gold/40 text-destak-gold text-[11px] font-black px-3 py-1 rounded-full shadow">
-                ★ 5.0 no Google Maps
-              </div>
+            <div class="absolute -inset-4 sm:-inset-6 rounded-full border-2 border-dashed border-amber-300/80 animate-[spin_60s_linear_infinite]"></div>
 
-              <div class="absolute bottom-3 right-3 bg-destak-black/90 backdrop-blur-md border border-emerald-500/40 text-emerald-400 text-[11px] font-bold px-3 py-1 rounded-full flex items-center gap-1.5 shadow">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>Tele-Entrega Ativa</span>
+            <!-- Pet Hero Recortado em PNG Transparente -->
+            <img 
+              src="pet_hero.png" 
+              alt="Cão nobre e saudável - Destak Rações" 
+              class="relative z-10 w-[140%] sm:w-[155%] max-w-none -mb-3 sm:-mb-6 drop-shadow-[0_25px_35px_rgba(0,0,0,0.22)] animate-float-pet transform scale-110 origin-bottom"
+            />
+
+            <!-- Badge Superior -->
+            <div class="absolute -top-3 -right-2 sm:top-4 sm:-right-4 z-20 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-slate-200 shadow-xl flex items-center gap-2.5 transform rotate-2">
+              <div class="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center text-amber-700">
+                <svg class="w-4 h-4 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg>
+              </div>
+              <div>
+                <p class="text-xs font-black text-slate-900 leading-none">Economia Real</p>
+                <p class="text-[10px] text-amber-700 font-bold mt-0.5">Sacos de 15kg e 20kg</p>
               </div>
             </div>
 
-            <!-- Card Destaque Flutuante: Rações para Aves -->
-            <div class="mt-4 bg-destak-black/90 rounded-2xl p-3.5 border border-destak-border flex items-center gap-3">
-              <div class="w-12 h-12 rounded-xl overflow-hidden border border-destak-gold/40 shrink-0">
-                <img src="aves_destak.jpg" alt="Aves e sementes" class="w-full h-full object-cover">
+            <!-- Badge Inferior -->
+            <div class="absolute -bottom-4 -left-2 sm:bottom-6 sm:-left-6 z-20 bg-slate-900 text-white px-4 py-2.5 rounded-2xl shadow-xl flex items-center gap-3 transform -rotate-2">
+              <div class="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center text-white shrink-0">
+                <svg class="w-4 h-4 fill-none stroke-current" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
               </div>
-              <div class="flex-1 min-w-0">
-                <p class="text-xs font-bold text-white truncate">Especialistas em Rações para Aves</p>
-                <p class="text-[11px] text-slate-400 truncate">Calopsitas, Canários, Papagaios e Sementes</p>
+              <div>
+                <p class="text-xs font-black text-amber-400 leading-none">Entrega no Portão</p>
+                <p class="text-[10px] text-slate-300 mt-0.5">Aparecida e Goiânia</p>
               </div>
-              <span class="text-xs font-bold text-destak-gold shrink-0">Granel ou Pacote</span>
             </div>
 
           </div>
@@ -237,508 +234,299 @@
     </div>
   </section>
 
-  <!-- CARROSSEL DE CATEGORIAS RÁPIDAS NO MOBILE (HORIZONTAL SCROLL POR TOQUE) -->
-  <section class="py-6 bg-destak-dark border-b border-destak-border/60">
+  <!-- CATEGORIAS COM FOTOS REAIS (PAWZO STYLE) -->
+  <section id="categorias" class="py-14 sm:py-20 bg-[#FCFBF8]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="flex items-center justify-between mb-3">
-        <h2 class="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-slate-400">
-          Navegue pelo que você precisa:
-        </h2>
-        <span class="text-[11px] text-destak-gold font-bold">Deslize para o lado →</span>
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-amber-700 font-bold text-xs uppercase tracking-widest">Navegação Rápida</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-1">Quem faz a alegria da sua casa?</h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2">Escolha para ver rações no saco fechado, a granel ou medicamentos.</p>
       </div>
 
-      <!-- CARROSSEL TOUCH COMPATÍVEL -->
-      <div class="flex gap-3 overflow-x-auto hide-scrollbar pb-2 snap-x snap-mandatory">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
         
-        <a href="#caes" class="snap-start shrink-0 flex items-center gap-2.5 bg-destak-card hover:bg-destak-border border border-destak-border px-4 py-3 rounded-2xl transition group">
-          <span class="text-2xl group-hover:scale-110 transition">🐶</span>
-          <div>
-            <p class="text-xs font-bold text-white">Rações p/ Cães</p>
-            <p class="text-[10px] text-slate-400">15kg, 20kg e Granel</p>
+        <!-- Cães -->
+        <a href="#produtos" class="bg-white p-4 rounded-3xl border border-slate-200/90 text-center hover:border-amber-400 hover:shadow-xl transition-all duration-300 group flex flex-col items-center">
+          <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden bg-amber-50 mb-3 group-hover:scale-105 transition-transform duration-300">
+            <img src="../assets/categories/cat_dog.jpg" alt="Cães" class="w-full h-full object-cover">
           </div>
+          <h3 class="font-title font-bold text-slate-900 text-base group-hover:text-amber-700 transition">Cães</h3>
+          <span class="text-xs text-slate-500 mt-0.5">15kg, 20kg & a Granel</span>
+          <span class="inline-flex items-center gap-1 mt-2 text-xs font-bold text-amber-700">Ver Rações →</span>
         </a>
 
-        <a href="#gatos" class="snap-start shrink-0 flex items-center gap-2.5 bg-destak-card hover:bg-destak-border border border-destak-border px-4 py-3 rounded-2xl transition group">
-          <span class="text-2xl group-hover:scale-110 transition">🐱</span>
-          <div>
-            <p class="text-xs font-bold text-white">Rações p/ Gatos</p>
-            <p class="text-[10px] text-slate-400">Castrados e Sachês</p>
+        <!-- Gatos -->
+        <a href="#produtos" class="bg-white p-4 rounded-3xl border border-slate-200/90 text-center hover:border-amber-400 hover:shadow-xl transition-all duration-300 group flex flex-col items-center">
+          <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden bg-teal-50 mb-3 group-hover:scale-105 transition-transform duration-300">
+            <img src="../assets/categories/cat_cat.jpg" alt="Gatos" class="w-full h-full object-cover">
           </div>
+          <h3 class="font-title font-bold text-slate-900 text-base group-hover:text-amber-700 transition">Gatos</h3>
+          <span class="text-xs text-slate-500 mt-0.5">Castrados & Granulados</span>
+          <span class="inline-flex items-center gap-1 mt-2 text-xs font-bold text-amber-700">Ver Linha →</span>
         </a>
 
-        <a href="#aves" class="snap-start shrink-0 flex items-center gap-2.5 bg-destak-card hover:bg-destak-border border border-destak-gold/40 bg-amber-500/10 px-4 py-3 rounded-2xl transition group">
-          <span class="text-2xl group-hover:scale-110 transition">🦜</span>
-          <div>
-            <p class="text-xs font-bold text-amber-300">Rações p/ Aves</p>
-            <p class="text-[10px] text-amber-200/70">Sementes & Misturas</p>
+        <!-- Aves -->
+        <a href="#produtos" class="bg-white p-4 rounded-3xl border border-slate-200/90 text-center hover:border-amber-400 hover:shadow-xl transition-all duration-300 group flex flex-col items-center">
+          <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden bg-emerald-50 mb-3 group-hover:scale-105 transition-transform duration-300">
+            <img src="../assets/categories/cat_bird.jpg" alt="Aves" class="w-full h-full object-cover">
           </div>
+          <h3 class="font-title font-bold text-slate-900 text-base group-hover:text-amber-700 transition">Aves</h3>
+          <span class="text-xs text-slate-500 mt-0.5">Sementes & Misturas Nobres</span>
+          <span class="inline-flex items-center gap-1 mt-2 text-xs font-bold text-amber-700">Ver Sementes →</span>
         </a>
 
-        <a href="#medicamentos" class="snap-start shrink-0 flex items-center gap-2.5 bg-destak-card hover:bg-destak-border border border-destak-border px-4 py-3 rounded-2xl transition group">
-          <span class="text-2xl group-hover:scale-110 transition">💊</span>
-          <div>
-            <p class="text-xs font-bold text-white">Farmácia Pet</p>
-            <p class="text-[10px] text-slate-400">Antipulgas e Vermífugos</p>
+        <!-- Farmácia Pet -->
+        <a href="#produtos" class="bg-white p-4 rounded-3xl border border-slate-200/90 text-center hover:border-amber-400 hover:shadow-xl transition-all duration-300 group flex flex-col items-center">
+          <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden bg-rose-50 mb-3 group-hover:scale-105 transition-transform duration-300">
+            <img src="../assets/categories/cat_small.jpg" alt="Pequenos Animais & Farmácia" class="w-full h-full object-cover">
           </div>
-        </a>
-
-        <a href="#petiscos" class="snap-start shrink-0 flex items-center gap-2.5 bg-destak-card hover:bg-destak-border border border-destak-border px-4 py-3 rounded-2xl transition group">
-          <span class="text-2xl group-hover:scale-110 transition">🦴</span>
-          <div>
-            <p class="text-xs font-bold text-white">Petiscos & Bifinhos</p>
-            <p class="text-[10px] text-slate-400">Ossos e Biscoitos</p>
-          </div>
-        </a>
-
-        <a href="#acessorios" class="snap-start shrink-0 flex items-center gap-2.5 bg-destak-card hover:bg-destak-border border border-destak-border px-4 py-3 rounded-2xl transition group">
-          <span class="text-2xl group-hover:scale-110 transition">🦮</span>
-          <div>
-            <p class="text-xs font-bold text-white">Acessórios</p>
-            <p class="text-[10px] text-slate-400">Coleiras, Guias e Tigelas</p>
-          </div>
+          <h3 class="font-title font-bold text-slate-900 text-base group-hover:text-amber-700 transition">Pequenos Pets</h3>
+          <span class="text-xs text-slate-500 mt-0.5">Roedores & Suplementos</span>
+          <span class="inline-flex items-center gap-1 mt-2 text-xs font-bold text-amber-700">Ver Cuidados →</span>
         </a>
 
       </div>
+
     </div>
   </section>
 
-  <!-- CATÁLOGO PRINCIPAL: PRODUTOS & LINHAS REAIS DA DESTAK -->
-  <section id="catalogo" class="py-14 sm:py-20 bg-destak-black">
+  <!-- VITRINE DE PRODUTOS COM FOTOS REAIS (SEM PREÇOS INVENTADOS) -->
+  <section id="produtos" class="py-14 sm:py-20 bg-white border-y border-slate-200/80">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
-        <span class="text-xs font-extrabold uppercase tracking-widest text-destak-gold bg-destak-gold/10 border border-destak-gold/30 px-3 py-1 rounded-full">
-          Estoque Completo à Pronta Entrega
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <span class="text-amber-700 font-bold text-xs uppercase tracking-widest">Atacado & Varejo</span>
+          <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-1">Destaques da Destak</h2>
+          <p class="text-slate-600 text-sm mt-1">Peça cotação de valores do dia com tele-entrega expressa no WhatsApp.</p>
+        </div>
+        <a href="https://wa.me/5562995420448?text=Olá!%20Gostaria%20de%20consultar%20o%20catálogo%20completo%20de%20rações%20da%20Destak." target="_blank" class="inline-flex items-center gap-2 text-sm font-extrabold text-amber-700 hover:text-amber-800 transition">
+          <span>Ver catálogo completo no WhatsApp</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <!-- GRID DE PRODUTOS -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Produto 1: Ração Cães -->
+        <div class="bg-[#FCFBF8] rounded-3xl p-5 border border-slate-200/90 flex flex-col justify-between hover:shadow-xl transition transform hover:-translate-y-1">
+          <div>
+            <div class="relative bg-white rounded-2xl p-4 mb-4 flex items-center justify-center border border-slate-100 overflow-hidden h-48">
+              <span class="absolute top-3 left-3 bg-slate-900 text-amber-400 text-[10px] font-black px-2.5 py-0.5 rounded-md uppercase">Nutrição Cães</span>
+              <img src="../assets/products/racao_caes.png" alt="Ração Cães" class="h-40 w-auto object-contain">
+            </div>
+            <span class="text-[11px] font-bold text-amber-700 uppercase">Sacos de 15kg e 20kg</span>
+            <h3 class="font-extrabold text-base text-slate-900 mt-0.5">Rações Premium & Linha Criador</h3>
+            <p class="text-xs text-slate-500 mt-1">Premier, Golden, Special Dog e marcas com alto rendimento para o dia a dia.</p>
+          </div>
+          <div class="pt-4 border-t border-slate-200/60 mt-4">
+            <div class="flex items-center justify-between mb-3 text-xs text-slate-600">
+              <span class="font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Em Estoque</span>
+              <span>Tele-Entrega Ágil</span>
+            </div>
+            <a href="https://wa.me/5562995420448?text=Olá!%20Gostaria%20de%20consultar%20valores%20de%20rações%20para%20CÃES%20(15kg/20kg)." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white text-xs font-bold py-3 rounded-xl shadow transition">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+              <span>Consultar Valores no WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Produto 2: Ração Gatos -->
+        <div class="bg-[#FCFBF8] rounded-3xl p-5 border border-slate-200/90 flex flex-col justify-between hover:shadow-xl transition transform hover:-translate-y-1">
+          <div>
+            <div class="relative bg-white rounded-2xl p-4 mb-4 flex items-center justify-center border border-slate-100 overflow-hidden h-48">
+              <span class="absolute top-3 left-3 bg-slate-900 text-amber-400 text-[10px] font-black px-2.5 py-0.5 rounded-md uppercase">Nutrição Gatos</span>
+              <img src="../assets/products/racao_gatos.png" alt="Ração Gatos" class="h-40 w-auto object-contain">
+            </div>
+            <span class="text-[11px] font-bold text-amber-700 uppercase">Castrados & Granulados</span>
+            <h3 class="font-extrabold text-base text-slate-900 mt-0.5">Rações para Gatos & Areias Sanitárias</h3>
+            <p class="text-xs text-slate-500 mt-1">Salmão, frango, sachês e sacos econômicos de 10kg com absorção de odores.</p>
+          </div>
+          <div class="pt-4 border-t border-slate-200/60 mt-4">
+            <div class="flex items-center justify-between mb-3 text-xs text-slate-600">
+              <span class="font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Em Estoque</span>
+              <span>Tele-Entrega Ágil</span>
+            </div>
+            <a href="https://wa.me/5562995420448?text=Olá!%20Gostaria%20de%20consultar%20valores%20de%20rações%20para%20GATOS." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white text-xs font-bold py-3 rounded-xl shadow transition">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+              <span>Consultar Valores no WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Produto 3: Farmácia Antipulgas -->
+        <div class="bg-[#FCFBF8] rounded-3xl p-5 border border-slate-200/90 flex flex-col justify-between hover:shadow-xl transition transform hover:-translate-y-1">
+          <div>
+            <div class="relative bg-white rounded-2xl p-4 mb-4 flex items-center justify-center border border-slate-100 overflow-hidden h-48">
+              <span class="absolute top-3 left-3 bg-slate-900 text-amber-400 text-[10px] font-black px-2.5 py-0.5 rounded-md uppercase">Farmácia Pet</span>
+              <img src="../assets/products/antipulgas.png" alt="Antipulgas" class="h-36 w-auto object-contain">
+            </div>
+            <span class="text-[11px] font-bold text-amber-700 uppercase">Proteção Comprovada</span>
+            <h3 class="font-extrabold text-base text-slate-900 mt-0.5">Antipulgas, Carrapaticidas & Vermífugos</h3>
+            <p class="text-xs text-slate-500 mt-1">Simparic, Bravecto e coleiras com lacre original de fábrica para todos os portes.</p>
+          </div>
+          <div class="pt-4 border-t border-slate-200/60 mt-4">
+            <div class="flex items-center justify-between mb-3 text-xs text-slate-600">
+              <span class="font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Lacre Original</span>
+              <span>Todos os Pesos</span>
+            </div>
+            <a href="https://wa.me/5562995420448?text=Olá!%20Gostaria%20de%20consultar%20valores%20de%20ANTIPULGAS%20para%20o%20peso%20do%20meu%20pet." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white text-xs font-bold py-3 rounded-xl shadow transition">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+              <span>Consultar Peso no WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Produto 4: Acessórios & Caminhas -->
+        <div class="bg-[#FCFBF8] rounded-3xl p-5 border border-slate-200/90 flex flex-col justify-between hover:shadow-xl transition transform hover:-translate-y-1">
+          <div>
+            <div class="relative bg-white rounded-2xl p-4 mb-4 flex items-center justify-center border border-slate-100 overflow-hidden h-48">
+              <span class="absolute top-3 left-3 bg-slate-900 text-amber-400 text-[10px] font-black px-2.5 py-0.5 rounded-md uppercase">Acessórios</span>
+              <img src="../assets/products/caminha_pet.png" alt="Caminha Pet" class="h-36 w-auto object-contain">
+            </div>
+            <span class="text-[11px] font-bold text-amber-700 uppercase">Conforto Térmico</span>
+            <h3 class="font-extrabold text-base text-slate-900 mt-0.5">Caminhas, Comedouros & Brinquedos</h3>
+            <p class="text-xs text-slate-500 mt-1">Coleiras reforçadas, guias, caminhas macias e itens de bem-estar animal.</p>
+          </div>
+          <div class="pt-4 border-t border-slate-200/60 mt-4">
+            <div class="flex items-center justify-between mb-3 text-xs text-slate-600">
+              <span class="font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Diversos Modelos</span>
+              <span>P, M e G</span>
+            </div>
+            <a href="https://wa.me/5562995420448?text=Olá!%20Gostaria%20de%20ver%20as%20opções%20de%20acessórios%20e%20caminhas." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white text-xs font-bold py-3 rounded-xl shadow transition">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+              <span>Ver Modelos no WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SIMULADOR INTERATIVO DE TELE-ENTREGA NO WHATSAPP -->
+  <section id="simulador" class="py-14 sm:py-20 bg-slate-900 text-white relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 relative">
+      <div class="text-center max-w-xl mx-auto mb-10">
+        <span class="inline-flex items-center gap-1.5 bg-amber-500/20 text-amber-400 text-xs font-black uppercase px-3 py-1 rounded-full">
+          <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <span>Tele-Entrega Direta no Portão</span>
         </span>
-        <h2 class="text-3xl sm:text-4xl font-display font-black text-white">
-          O Que Você Procura para o Seu Pet?
-        </h2>
-        <p class="text-slate-400 text-xs sm:text-sm">
-          Trabalhamos com as marcas mais recomendadas do mercado, sacos de atacado (15kg e 20kg), opções econômicas e venda no quilo fracionado.
-        </p>
+        <h2 class="text-3xl sm:text-4xl font-black mt-2">Peça Sem Sair de Casa</h2>
+        <p class="text-slate-400 text-sm mt-1">Selecione o produto, seu endereço e receba o valor com entrega pelo WhatsApp.</p>
       </div>
 
-      <!-- GRID DE CARDS CINEMATOGRÁFICOS DE PRODUTOS (INSPIRADO NO LAKKY E PET PARADE) -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- CARD 1: RAÇÕES PARA CÃES -->
-        <div id="caes" class="bg-destak-card rounded-3xl overflow-hidden border border-destak-border hover:border-destak-gold/60 transition-all duration-300 flex flex-col group shadow-lg">
-          <div class="h-52 overflow-hidden relative bg-slate-900">
-            <img src="hero_destak.jpg" alt="Rações para Cães" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute top-3 left-3 bg-destak-gold text-destak-black text-[11px] font-black px-3 py-1 rounded-full shadow">
-              Atacado & Varejo
-            </div>
-            <div class="absolute bottom-3 right-3 bg-black/80 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-lg">
-              15kg • 20kg • Fracionado
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div>
-              <div class="flex items-center justify-between mb-1">
-                <span class="text-[11px] font-bold text-destak-gold uppercase tracking-wider">Cães Adultos & Filhotes</span>
-                <span class="text-xs text-slate-400">Todas as raças</span>
-              </div>
-              <h3 class="font-display font-bold text-xl text-white">Rações Premium & Super Premium</h3>
-              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
-                Linhas completas para alta performance e saúde intestinal (Premier, Golden, Special Dog, GranPlus, Magnus). Sacos fechados com desconto especial de atacado!
-              </p>
-            </div>
-            <div class="pt-4 border-t border-destak-border flex items-center justify-between">
-              <div>
-                <span class="text-[10px] text-slate-400 block font-semibold uppercase">Tele-Entrega</span>
-                <span class="text-sm font-black text-emerald-400">Rápida em Casa</span>
-              </div>
-              <a href="https://wa.me/5562995420448?text=Olá!%20Gostaria%20de%20consultar%20as%20opções%20e%20preços%20de%20ração%20para%20cães%20na%20Destak." target="_blank" class="inline-flex items-center gap-1.5 bg-destak-whatsapp hover:bg-destak-whatsappHover text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow transition">
-                <span>Pedir no Zap</span>
-                <span>→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 2: RAÇÕES PARA AVES (DIFERENCIAL DA DESTAK) -->
-        <div id="aves" class="bg-destak-card rounded-3xl overflow-hidden border-2 border-destak-gold/40 hover:border-destak-gold transition-all duration-300 flex flex-col group shadow-xl">
-          <div class="h-52 overflow-hidden relative bg-slate-900">
-            <img src="aves_destak.jpg" alt="Rações para Aves e Pássaros" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute top-3 left-3 bg-amber-500 text-destak-black text-[11px] font-black px-3 py-1 rounded-full shadow">
-              Destaque Especial
-            </div>
-            <div class="absolute bottom-3 right-3 bg-black/80 backdrop-blur-md text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-lg">
-              Sementes Selecionadas
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div>
-              <div class="flex items-center justify-between mb-1">
-                <span class="text-[11px] font-bold text-amber-400 uppercase tracking-wider">Aves & Pássaros</span>
-                <span class="text-xs text-slate-400">Alto Padrão</span>
-              </div>
-              <h3 class="font-display font-bold text-xl text-white">Misturas, Sementes & Extrusados</h3>
-              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
-                Alpiste limpo, painço, misturas balanceadas para Calopsitas, Canários, Papagaios, Periquitos, Trinca-Ferro e Coleiro. Farinhadas vitamínicas e suplementos.
-              </p>
-            </div>
-            <div class="pt-4 border-t border-destak-border flex items-center justify-between">
-              <div>
-                <span class="text-[10px] text-slate-400 block font-semibold uppercase">Disponível</span>
-                <span class="text-sm font-black text-amber-400">Granel ou Pacote</span>
-              </div>
-              <a href="https://wa.me/5562995420448?text=Olá!%20Gostaria%20de%20saber%20os%20preços%20das%20rações%20e%20sementes%20para%20aves%20na%20Destak." target="_blank" class="inline-flex items-center gap-1.5 bg-destak-gold hover:bg-destak-goldHover text-destak-black text-xs font-black px-4 py-2.5 rounded-xl shadow transition">
-                <span>Consultar Aves</span>
-                <span>→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 3: RAÇÕES PARA GATOS -->
-        <div id="gatos" class="bg-destak-card rounded-3xl overflow-hidden border border-destak-border hover:border-destak-gold/60 transition-all duration-300 flex flex-col group shadow-lg">
-          <div class="h-52 overflow-hidden relative bg-slate-900">
-            <img src="gato_destak.jpg" alt="Rações para Gatos" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute top-3 left-3 bg-destak-card border border-destak-gold/40 text-destak-gold text-[11px] font-bold px-3 py-1 rounded-full shadow">
-              Saúde do Trato Urinário
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div>
-              <div class="flex items-center justify-between mb-1">
-                <span class="text-[11px] font-bold text-destak-gold uppercase tracking-wider">Felinos</span>
-                <span class="text-xs text-slate-400">Castrados & Filhotes</span>
-              </div>
-              <h3 class="font-display font-bold text-xl text-white">Rações & Sachês para Gatos</h3>
-              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
-                Alimentos saborosos e equilibrados com controle de pH urinário. Além de patês, sachês úmidos Whiskas/Friskies e areias higiênicas sanitárias absorventes.
-              </p>
-            </div>
-            <div class="pt-4 border-t border-destak-border flex items-center justify-between">
-              <div>
-                <span class="text-[10px] text-slate-400 block font-semibold uppercase">Embalagens</span>
-                <span class="text-sm font-black text-white">1kg, 3kg e 10kg</span>
-              </div>
-              <a href="https://wa.me/5562995420448?text=Olá!%20Gostaria%20de%20ver%20as%20rações%20e%20areias%20para%20gatos%20na%20Destak." target="_blank" class="inline-flex items-center gap-1.5 bg-destak-whatsapp hover:bg-destak-whatsappHover text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow transition">
-                <span>Pedir no Zap</span>
-                <span>→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 4: MEDICAMENTOS VETERINÁRIOS & FARMÁCIA -->
-        <div id="medicamentos" class="bg-destak-card rounded-3xl overflow-hidden border border-destak-border hover:border-destak-gold/60 transition-all duration-300 flex flex-col group shadow-lg">
-          <div class="h-52 overflow-hidden relative bg-slate-900">
-            <img src="https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&w=600&q=80" alt="Medicamentos Veterinários" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute top-3 left-3 bg-emerald-500 text-destak-black text-[11px] font-black px-3 py-1 rounded-full shadow">
-              Farmácia Veterinária
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div>
-              <div class="flex items-center justify-between mb-1">
-                <span class="text-[11px] font-bold text-emerald-400 uppercase tracking-wider">Proteção Total</span>
-                <span class="text-xs text-slate-400">Pronta-Entrega</span>
-              </div>
-              <h3 class="font-display font-bold text-xl text-white">Antipulgas, Carrapatos & Remédios</h3>
-              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
-                Comprimidos mastigáveis (Simparic, Bravecto, Nexgard), vermífugos de amplo espectro (Drontal), sprays cicatrizantes, pomadas e suplementos vitamínicos.
-              </p>
-            </div>
-            <div class="pt-4 border-t border-destak-border flex items-center justify-between">
-              <div>
-                <span class="text-[10px] text-slate-400 block font-semibold uppercase">Consulte</span>
-                <span class="text-sm font-black text-emerald-400">Preços & Dosagens</span>
-              </div>
-              <a href="https://wa.me/5562995420448?text=Olá!%20Gostaria%20de%20consultar%20um%20medicamento/antipulgas%20na%20Destak%20Rações." target="_blank" class="inline-flex items-center gap-1.5 bg-destak-whatsapp hover:bg-destak-whatsappHover text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow transition">
-                <span>Consultar Zap</span>
-                <span>→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 5: PETISCOS E BIFINHOS -->
-        <div id="petiscos" class="bg-destak-card rounded-3xl overflow-hidden border border-destak-border hover:border-destak-gold/60 transition-all duration-300 flex flex-col group shadow-lg">
-          <div class="h-52 overflow-hidden relative bg-slate-900">
-            <img src="https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?auto=format&fit=crop&w=600&q=80" alt="Petiscos e Ossos Caninos" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute top-3 left-3 bg-destak-card border border-destak-gold/40 text-destak-gold text-[11px] font-bold px-3 py-1 rounded-full shadow">
-              Alegria do Pet
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div>
-              <div class="flex items-center justify-between mb-1">
-                <span class="text-[11px] font-bold text-destak-gold uppercase tracking-wider">Agrado & Treino</span>
-                <span class="text-xs text-slate-400">Grande Variedade</span>
-              </div>
-              <h3 class="font-display font-bold text-xl text-white">Petiscos, Bifinhos & Ossos Naturais</h3>
-              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
-                Bifinhos macios para cães e gatos, ossos recreativos defumados para mastigação saudável, palitos dentais para tártaro e biscoitos crocantes.
-              </p>
-            </div>
-            <div class="pt-4 border-t border-destak-border flex items-center justify-between">
-              <div>
-                <span class="text-[10px] text-slate-400 block font-semibold uppercase">Adicione ao Pedido</span>
-                <span class="text-sm font-black text-white">Atacado ou Pacote</span>
-              </div>
-              <a href="https://wa.me/5562995420448?text=Olá!%20Gostaria%20de%20adicionar%20petiscos%20e%20ossos%20ao%20meu%20pedido%20na%20Destak." target="_blank" class="inline-flex items-center gap-1.5 bg-destak-whatsapp hover:bg-destak-whatsappHover text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow transition">
-                <span>Pedir no Zap</span>
-                <span>→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 6: ACESSÓRIOS PARA CÃES E GATOS -->
-        <div id="acessorios" class="bg-destak-card rounded-3xl overflow-hidden border border-destak-border hover:border-destak-gold/60 transition-all duration-300 flex flex-col group shadow-lg">
-          <div class="h-52 overflow-hidden relative bg-slate-900">
-            <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=600&q=80" alt="Coleiras, Guias e Acessórios" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute top-3 left-3 bg-destak-card border border-destak-gold/40 text-destak-gold text-[11px] font-bold px-3 py-1 rounded-full shadow">
-              Qualidade & Durabilidade
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div>
-              <div class="flex items-center justify-between mb-1">
-                <span class="text-[11px] font-bold text-destak-gold uppercase tracking-wider">Acessórios Pet</span>
-                <span class="text-xs text-slate-400">P, M, G e GG</span>
-              </div>
-              <h3 class="font-display font-bold text-xl text-white">Coleiras, Guias, Comedouros & Caminhas</h3>
-              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
-                Peitorais anti-puxão, guias reforçadas, coleiras ajustáveis, tigelas de inox e plástico resistente, caminhas laváveis, colchonetes e arranhadores.
-              </p>
-            </div>
-            <div class="pt-4 border-t border-destak-border flex items-center justify-between">
-              <div>
-                <span class="text-[10px] text-slate-400 block font-semibold uppercase">Consulte Fotos</span>
-                <span class="text-sm font-black text-white">Envio no Zap</span>
-              </div>
-              <a href="https://wa.me/5562995420448?text=Olá!%20Gostaria%20de%20ver%20as%20opções%20de%20acessórios%20(coleiras,%20guias,%20caminhas)%20na%20Destak." target="_blank" class="inline-flex items-center gap-1.5 bg-destak-whatsapp hover:bg-destak-whatsappHover text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow transition">
-                <span>Ver Opções</span>
-                <span>→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SEÇÃO INTERATIVA: SIMULADOR DE TELE-ENTREGA EXPRESSA (ENCHER OS OLHOS NO MOBILE) -->
-  <section id="tele-entrega" class="py-14 sm:py-20 bg-destak-dark relative overflow-hidden border-y border-destak-border/60">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      
-      <div class="bg-gradient-to-br from-destak-card via-slate-900 to-destak-black rounded-3xl p-6 sm:p-10 border-2 border-destak-gold/40 shadow-2xl">
-        
-        <div class="max-w-2xl space-y-2 mb-8">
-          <div class="inline-flex items-center gap-2 bg-destak-gold/20 text-destak-gold text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-destak-gold/30">
-            <span>🛵 Pedido Rápido pelo Celular</span>
-          </div>
-          <h2 class="text-2xl sm:text-4xl font-display font-black text-white">
-            Simulador de Tele-Entrega Direto no WhatsApp
-          </h2>
-          <p class="text-slate-300 text-xs sm:text-sm">
-            Monte seu pedido abaixo em menos de 30 segundos. Ao clicar, o WhatsApp da <strong>Destak Rações</strong> se abrirá com os dados preenchidos para entrega imediata!
-          </p>
-        </div>
-
-        <!-- FORMULÁRIO INTERATIVO RESPONSIVO -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 bg-destak-black/60 p-4 sm:p-6 rounded-2xl border border-destak-border">
+      <div class="bg-slate-800/90 border border-slate-700 p-6 sm:p-8 rounded-3xl shadow-2xl backdrop-blur-md">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           
           <div>
-            <label class="block text-xs font-bold text-slate-300 mb-1.5">1. O que você precisa?</label>
-            <select id="ped-categoria" class="w-full bg-destak-card text-white text-xs sm:text-sm font-semibold rounded-xl px-3 py-3 border border-destak-border focus:ring-2 focus:ring-destak-gold outline-none">
-              <option value="Ração para Cães (Adulto)">Ração p/ Cães (Adulto)</option>
-              <option value="Ração para Cães (Filhote)">Ração p/ Cães (Filhote)</option>
-              <option value="Ração para Gatos (Castrado)">Ração p/ Gatos (Castrado)</option>
-              <option value="Rações e Sementes para Aves">Rações & Sementes para Aves</option>
-              <option value="Medicamento Veterinário / Antipulgas">Antipulgas / Medicamento</option>
-              <option value="Acessórios / Petiscos">Acessórios / Petiscos</option>
+            <label class="block text-xs font-bold text-slate-300 mb-1.5">Produto que você precisa</label>
+            <select id="sim-prod" class="w-full bg-slate-900 text-white text-xs sm:text-sm font-semibold rounded-xl px-3 py-3 border border-slate-700 focus:border-amber-400 outline-none">
+              <option value="Ração para Cães (15kg ou 20kg)">Ração para Cães (15kg ou 20kg)</option>
+              <option value="Ração para Gatos (Saco Fechado)">Ração para Gatos (Saco Fechado)</option>
+              <option value="Sementes / Ração para Aves">Sementes / Ração para Aves</option>
+              <option value="Medicamento Antipulgas / Carrapatos">Medicamento Antipulgas / Carrapatos</option>
+              <option value="Ração no Quilo Fracionada">Ração no Quilo Fracionada</option>
+              <option value="Acessórios (Caminhas, Guias, Coleiras)">Acessórios (Caminhas, Guias, Coleiras)</option>
             </select>
           </div>
 
           <div>
-            <label class="block text-xs font-bold text-slate-300 mb-1.5">2. Quantidade / Peso</label>
-            <select id="ped-peso" class="w-full bg-destak-card text-white text-xs sm:text-sm font-semibold rounded-xl px-3 py-3 border border-destak-border focus:ring-2 focus:ring-destak-gold outline-none">
-              <option value="Saco Fechado de 15kg">Saco Fechado de 15kg</option>
-              <option value="Saco Fechado de 20kg">Saco Fechado de 20kg</option>
-              <option value="Saco Médio (10kg a 12kg)">Saco Médio (10kg a 12kg)</option>
+            <label class="block text-xs font-bold text-slate-300 mb-1.5">Quantidade / Porte</label>
+            <select id="sim-tamanho" class="w-full bg-slate-900 text-white text-xs sm:text-sm font-semibold rounded-xl px-3 py-3 border border-slate-700 focus:border-amber-400 outline-none">
+              <option value="Saco Fechado 15kg">Saco Fechado 15kg</option>
+              <option value="Saco Fechado 20kg">Saco Fechado 20kg</option>
+              <option value="Saco 10kg">Saco 10kg</option>
               <option value="Pacote Pequeno (1kg a 3kg)">Pacote Pequeno (1kg a 3kg)</option>
-              <option value="No Quilo / Fracionado">No Quilo / Fracionado</option>
-              <option value="1 Unidade (Medicamento / Acessório)">1 Unidade (Medicamento/Acessório)</option>
+              <option value="No Quilo a Granel">No Quilo a Granel</option>
+              <option value="1 Unidade / Medicamento">1 Unidade / Medicamento</option>
             </select>
           </div>
 
           <div>
-            <label class="block text-xs font-bold text-slate-300 mb-1.5">3. Seu Bairro</label>
-            <input type="text" id="ped-bairro" placeholder="Ex: St. Aeroporto Sul, Garavelo..." class="w-full bg-destak-card text-white placeholder-slate-500 text-xs sm:text-sm font-semibold rounded-xl px-3 py-3 border border-destak-border focus:ring-2 focus:ring-destak-gold outline-none">
+            <label class="block text-xs font-bold text-slate-300 mb-1.5">Seu Bairro / Rua de Entrega</label>
+            <input type="text" id="sim-rua" placeholder="Ex: Aparecida de Goiânia..." class="w-full bg-slate-900 text-white text-xs sm:text-sm font-semibold rounded-xl px-3 py-3 border border-slate-700 focus:border-amber-400 outline-none placeholder-slate-500">
           </div>
 
         </div>
 
-        <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-destak-border">
-          <div class="flex items-center gap-3 text-xs text-slate-400 text-center sm:text-left">
-            <span class="text-xl">💳</span>
-            <span>Pagamento no ato da entrega: <strong>Pix, Dinheiro ou Cartão de Débito/Crédito</strong>.</span>
+        <div class="mt-6 pt-6 border-t border-slate-700/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-2 text-xs text-slate-400">
+            <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span>Pagamento prático no portão: Pix, Cartão ou Dinheiro</span>
           </div>
-
-          <button onclick="dispararPedidoWhatsapp()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-destak-whatsapp hover:bg-destak-whatsappHover text-white font-black text-sm px-8 py-3.5 rounded-xl shadow-lg shadow-destak-whatsapp/25 transition transform active:scale-95 shrink-0 pulse-glow-zap">
+          <button onclick="enviarPedidoDestak()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white font-extrabold text-sm px-8 py-3.5 rounded-xl shadow-lg transition transform active:scale-95 pulse-glow-zap">
             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
-            <span>Enviar Pedido de Tele-Entrega</span>
+            <span>Pedir Tele-Entrega no WhatsApp</span>
           </button>
         </div>
-
-        <script>
-          function dispararPedidoWhatsapp() {
-            const cat = document.getElementById('ped-categoria').value;
-            const peso = document.getElementById('ped-peso').value;
-            const bairro = document.getElementById('ped-bairro').value.trim() || 'Aparecida de Goiânia';
-            const msg = `Olá! Vim pelo site da Destak Rações e gostaria de fazer um pedido de tele-entrega:\n\n📦 Produto: ${cat}\n⚖️ Quantidade/Peso: ${peso}\n📍 Bairro de Entrega: ${bairro}\n\nVocês têm disponível para entrega agora?`;
-            const url = `https://wa.me/5562995420448?text=${encodeURIComponent(msg)}`;
-            window.open(url, '_blank');
-          }
-        </script>
-
       </div>
 
     </div>
   </section>
 
-  <!-- SEÇÃO "NOSSA LOJA FÍSICA" (COM A FOTO REAL DA FACHADA DA DESTAK) -->
-  <section id="loja-fisica" class="py-14 sm:py-20 bg-destak-black">
+  <!-- DEPOIMENTOS -->
+  <section id="depoimentos" class="py-14 sm:py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-        
-        <!-- FOTO REAL DA FACHADA EMOLDURADA -->
-        <div class="lg:col-span-6 relative">
-          <div class="rounded-3xl overflow-hidden border-2 border-destak-gold shadow-2xl relative group bg-slate-900">
-            <img src="fachada.jpg" alt="Fachada real da Destak Rações e Acessórios em Aparecida de Goiânia" class="w-full h-auto object-cover group-hover:scale-102 transition duration-500">
-            
-            <div class="absolute inset-0 bg-gradient-to-t from-destak-black/90 via-transparent to-transparent flex items-end p-6">
-              <div class="space-y-1">
-                <span class="inline-block bg-destak-gold text-destak-black font-black text-[10px] sm:text-xs px-2.5 py-1 rounded">
-                  NOSSA LOJA FÍSICA
-                </span>
-                <p class="text-white font-display font-bold text-lg sm:text-xl leading-tight">
-                  R. Brasília, Qd 66, Lt 1 — St. Aeroporto Sul
-                </p>
-                <p class="text-slate-300 text-xs">Aparecida de Goiânia - GO, 74947-320</p>
-              </div>
-            </div>
-          </div>
+      <div class="text-center max-w-xl mx-auto mb-10">
+        <div class="inline-flex items-center gap-1 text-amber-500 mb-2">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
         </div>
-
-        <!-- TEXTO E HISTÓRIA REAL -->
-        <div class="lg:col-span-6 space-y-6">
-          <div class="inline-flex items-center gap-2 bg-destak-card border border-destak-border text-destak-gold text-xs font-bold px-3.5 py-1.5 rounded-full">
-            <span>🏛️ Desde 2020 Servindo Nossa Região</span>
-          </div>
-
-          <h2 class="text-3xl sm:text-4xl font-display font-black text-white leading-tight">
-            Tradição, Atendimento Amigo e <br>
-            <span class="text-destak-gold">Preço Justo de Verdade.</span>
-          </h2>
-
-          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-            Fundada em 2020, a <strong>Destak Rações e Acessórios</strong> nasceu com o objetivo de oferecer rações de alto padrão para cães, gatos e aves, medicamentos veterinários e acessórios com preços imbatíveis no atacado e varejo.
-          </p>
-
-          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-            Seja para comprar no quilo fracionado no balcão ou pedir o saco fechado de 15kg/20kg com tele-entrega expressa na sua casa, estamos prontos para atender você com respeito e carinho com o seu animal.
-          </p>
-
-          <div class="grid grid-cols-2 gap-4 pt-2">
-            <div class="bg-destak-card border border-destak-border p-4 rounded-2xl">
-              <span class="text-destak-gold font-bold text-xs uppercase tracking-wider block">Horário de Atendimento</span>
-              <p class="text-white font-bold text-sm mt-1">Segunda a Sábado</p>
-              <p class="text-slate-400 text-xs">Das 08:00 às 18:30</p>
-            </div>
-
-            <div class="bg-destak-card border border-destak-border p-4 rounded-2xl">
-              <span class="text-emerald-400 font-bold text-xs uppercase tracking-wider block">Formas de Pagamento</span>
-              <p class="text-white font-bold text-sm mt-1">Pix & Cartões</p>
-              <p class="text-slate-400 text-xs">Visa, Master, Elo, Hipercard</p>
-            </div>
-          </div>
-
-          <!-- BOTÃO ROTA GOOGLE MAPS -->
-          <div class="pt-2">
-            <a href="https://www.google.com/maps/place/Destak+Ra%C3%A7%C3%B5es+e+Acess%C3%B3rios/data=!4m7!3m6!1s0x935e57fb5bc050bd:0xc56faccb32274f5e!8m2!3d-16.798637!4d-49.3535008!16s%2Fg%2F11rn7t20rn!19sChIJvVDAW_tXXpMRXk8nMsusb8U" target="_blank" class="inline-flex items-center gap-2 bg-destak-card hover:bg-destak-border border border-destak-border text-white text-xs sm:text-sm font-bold px-6 py-3.5 rounded-xl transition">
-              <span>📍 Abrir Localização no Google Maps</span>
-              <span>↗</span>
-            </a>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- DEPOIMENTOS REAIS DE CLIENTES LOCAIS -->
-  <section class="py-14 sm:py-20 bg-destak-dark border-t border-destak-border/60">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto space-y-2 mb-12">
-        <span class="text-xs font-bold uppercase tracking-widest text-destak-gold">Avaliação da Nossa Comunidade</span>
-        <h2 class="text-3xl font-display font-black text-white">
-          O Que Nossos Clientes Dizem
-        </h2>
-        <div class="flex items-center justify-center gap-1.5 text-destak-gold text-sm pt-1">
-          <span>★★★★★</span>
-          <span class="text-slate-300 text-xs font-bold">• 5.0 Estrelas no Google</span>
-        </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900">O que dizem os clientes</h2>
+        <p class="text-slate-600 text-sm mt-1">Quem compra e recomenda na Destak Rações.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         
-        <div class="bg-destak-card p-6 rounded-2xl border border-destak-border space-y-3">
-          <div class="text-destak-gold text-xs">★★★★★</div>
-          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed italic">
-            "Compro ração para meus 3 cachorros na Destak há mais de 2 anos. O preço de atacado no saco de 15kg é o melhor da região e a tele-entrega chega rapidinho!"
+        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200/90 shadow-sm flex flex-col justify-between">
+          <p class="text-slate-700 text-xs sm:text-sm leading-relaxed">
+            "Compro sacos de 15kg e 20kg para o meu canil há anos com a Destak. Preço excelente de atacado e entrega pontual sem dor de cabeça!"
           </p>
-          <div class="pt-3 border-t border-destak-border/60 flex items-center gap-2.5">
-            <div class="w-8 h-8 rounded-full bg-destak-gold/20 text-destak-gold font-bold flex items-center justify-center text-xs">
-              MR
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-200 mt-4">
+            <div class="w-10 h-10 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-xs">
+              MC
             </div>
             <div>
-              <p class="font-bold text-xs text-white">Marcos Roberto</p>
-              <p class="text-[10px] text-slate-400">Cliente do St. Aeroporto Sul</p>
+              <p class="font-extrabold text-xs text-slate-900">Marcos Custódio</p>
+              <p class="text-[10px] text-slate-500">Cliente desde 2021</p>
             </div>
           </div>
         </div>
 
-        <div class="bg-destak-card p-6 rounded-2xl border border-destak-border space-y-3">
-          <div class="text-destak-gold text-xs">★★★★★</div>
-          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed italic">
-            "Excelente atendimento! Encontro sementes e misturas de primeira para minhas calopsitas e papagaio. Sempre limpinhas e com preço muito bom."
+        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200/90 shadow-sm flex flex-col justify-between">
+          <p class="text-slate-700 text-xs sm:text-sm leading-relaxed">
+            "Ótima variedade de sementes para minhas aves e rações especiais de gato. Atendimento atencioso pelo WhatsApp e sempre têm tudo em estoque."
           </p>
-          <div class="pt-3 border-t border-destak-border/60 flex items-center gap-2.5">
-            <div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-300 font-bold flex items-center justify-center text-xs">
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-200 mt-4">
+            <div class="w-10 h-10 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-xs">
               CS
             </div>
             <div>
-              <p class="font-bold text-xs text-white">Cláudia Silveira</p>
-              <p class="text-[10px] text-slate-400">Tutora de Aves</p>
+              <p class="font-extrabold text-xs text-slate-900">Cláudia Silveira</p>
+              <p class="text-[10px] text-slate-500">Aparecida de Goiânia</p>
             </div>
           </div>
         </div>
 
-        <div class="bg-destak-card p-6 rounded-2xl border border-destak-border space-y-3">
-          <div class="text-destak-gold text-xs">★★★★★</div>
-          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed italic">
-            "Sempre que preciso do Simparic para os carrapatos dos meus cachorros, peço no zap da Destak e já trazem a maquininha de cartão no portão. Super prático!"
+        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200/90 shadow-sm flex flex-col justify-between">
+          <p class="text-slate-700 text-xs sm:text-sm leading-relaxed">
+            "Sempre que preciso do Simparic para os carrapatos dos meus cachorros, peço no zap da Destak e já trazem a maquininha no portão. Super prático!"
           </p>
-          <div class="pt-3 border-t border-destak-border/60 flex items-center gap-2.5">
-            <div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center text-xs">
-              FA
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-200 mt-4">
+            <div class="w-10 h-10 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-xs">
+              EL
             </div>
             <div>
-              <p class="font-bold text-xs text-white">Fernando Alves</p>
-              <p class="text-[10px] text-slate-400">Cliente Frequente</p>
+              <p class="font-extrabold text-xs text-slate-900">Eduardo Lima</p>
+              <p class="text-[10px] text-slate-500">Aparecida de Goiânia</p>
             </div>
           </div>
         </div>
@@ -748,85 +536,105 @@
     </div>
   </section>
 
-  <!-- RODAPÉ CORPORATIVO LUXUOSO -->
-  <footer class="bg-destak-black border-t border-destak-border py-12 text-slate-400 text-xs">
+  <!-- CONTATO & LOCALIZAÇÃO -->
+  <section id="contato" class="py-14 sm:py-20 bg-[#FCFBF8]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         
-        <!-- COLUNA 1: IDENTIDADE -->
-        <div class="space-y-3 md:col-span-1">
-          <div class="flex items-center gap-2">
-            <div class="w-8 h-8 rounded-lg bg-destak-card border border-destak-gold flex items-center justify-center text-sm">
-              🐕🦜
+        <div class="space-y-5">
+          <span class="text-amber-700 font-bold text-xs uppercase tracking-widest">Atendimento & Pedidos</span>
+          <h2 class="text-3xl sm:text-4xl font-black text-slate-900">Tele-Entrega Direta no WhatsApp</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Atendemos Aparecida de Goiânia e Goiânia com tele-entrega rápida de rações, medicamentos e acessórios com preço justo.
+          </p>
+
+          <div class="space-y-3 text-xs sm:text-sm text-slate-700">
+            <div class="flex items-center gap-3 p-3.5 bg-white rounded-2xl border border-slate-200">
+              <svg class="w-5 h-5 text-brand-whatsapp shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+              <div>
+                <strong>WhatsApp / Pedidos:</strong> (62) 99542-0448
+              </div>
             </div>
-            <span class="font-display font-black text-white text-base tracking-wider">DESTAK RAÇÕES</span>
+            <div class="flex items-center gap-3 p-3.5 bg-white rounded-2xl border border-slate-200">
+              <svg class="w-5 h-5 text-amber-600 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <div>
+                <strong>Horário:</strong> Segunda a Sábado com Tele-Entrega rápida
+              </div>
+            </div>
           </div>
-          <p class="text-slate-400 text-[11px] leading-relaxed">
-            Atacado e varejo de rações para cães, gatos e aves, medicamentos veterinários e acessórios desde 2020.
-          </p>
-          <p class="text-[10px] text-slate-500">
-            CNPJ Ativo • Aparecida de Goiânia - GO
-          </p>
+
+          <div class="pt-2">
+            <a href="https://wa.me/5562995420448?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20de%20tele-entrega." target="_blank" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-xl transition">
+              <span>Falar com Atendimento no WhatsApp →</span>
+            </a>
+          </div>
         </div>
 
-        <!-- COLUNA 2: CATEGORIAS -->
-        <div class="space-y-2">
-          <p class="font-bold text-white text-xs uppercase tracking-wider">Produtos</p>
-          <ul class="space-y-1.5 text-[11px]">
-            <li><a href="#caes" class="hover:text-destak-gold transition">Rações para Cães (15kg e 20kg)</a></li>
-            <li><a href="#gatos" class="hover:text-destak-gold transition">Rações e Sachês para Gatos</a></li>
-            <li><a href="#aves" class="hover:text-destak-gold transition">Sementes e Rações para Aves</a></li>
-            <li><a href="#medicamentos" class="hover:text-destak-gold transition">Antipulgas e Medicamentos</a></li>
-            <li><a href="#acessorios" class="hover:text-destak-gold transition">Coleiras, Guias e Caminhas</a></li>
-          </ul>
+        <div class="rounded-3xl overflow-hidden border border-slate-200 shadow-xl h-80 sm:h-96">
+          <iframe 
+            src="https://www.google.com/maps?q=Aparecida+de+Goi%C3%A2nia+-+GO&output=embed" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
 
-        <!-- COLUNA 3: TELE-ENTREGA -->
-        <div class="space-y-2">
-          <p class="font-bold text-white text-xs uppercase tracking-wider">Tele-Entrega</p>
-          <p class="text-[11px] text-slate-300">
-            Peça no WhatsApp e receba em casa com entrega rápida em Aparecida de Goiânia e Goiânia.
-          </p>
-          <a href="https://wa.me/5562995420448?text=Olá!%20Gostaria%20de%20pedir%20uma%20tele-entrega%20de%20ração." target="_blank" class="inline-flex items-center gap-2 text-destak-whatsapp font-bold text-xs mt-1 hover:underline">
-            <span>(62) 99542-0448</span>
-            <span>↗</span>
-          </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-slate-400 text-xs py-12 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800">
+        
+        <div class="flex items-center gap-3 text-center sm:text-left">
+          <div class="w-10 h-10 rounded-xl bg-amber-500 flex items-center justify-center text-slate-950 font-black text-xl">
+            🐾
+          </div>
+          <div>
+            <span class="font-title font-black text-lg text-white block">Destak Rações e Acessórios</span>
+            <span class="text-[11px] text-amber-400">Atacado & Varejo desde 2020 • Aparecida de Goiânia</span>
+          </div>
         </div>
 
-        <!-- COLUNA 4: LOCALIZAÇÃO -->
-        <div class="space-y-2">
-          <p class="font-bold text-white text-xs uppercase tracking-wider">Endereço</p>
-          <p class="text-[11px] text-slate-300 leading-relaxed">
-            R. Brasília, qd 66 - lt 1<br>
-            St. Aeroporto Sul<br>
-            Aparecida de Goiânia - GO<br>
-            CEP: 74947-320
-          </p>
-          <a href="https://www.google.com/maps/place/Destak+Ra%C3%A7%C3%B5es+e+Acess%C3%B3rios/data=!4m7!3m6!1s0x935e57fb5bc050bd:0xc56faccb32274f5e!8m2!3d-16.798637!4d-49.3535008" target="_blank" class="inline-block text-destak-gold text-[11px] hover:underline">
-            Ver no Google Maps →
-          </a>
+        <div class="flex items-center gap-6 text-xs font-semibold">
+          <a href="#inicio" class="hover:text-amber-400 transition">Início</a>
+          <a href="#categorias" class="hover:text-amber-400 transition">Categorias</a>
+          <a href="#produtos" class="hover:text-amber-400 transition">Produtos</a>
+          <a href="#contato" class="hover:text-amber-400 transition">Contato</a>
         </div>
 
       </div>
 
-      <div class="pt-6 border-t border-destak-border flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px]">
         <p>© 2020-2026 Destak Rações e Acessórios. Todos os direitos reservados.</p>
-        <p class="flex items-center gap-1">
-          <span>Desenvolvido com excelência para negócios locais</span>
-        </p>
+        <p class="text-amber-400 font-bold">Tele-Entrega: (62) 99542-0448</p>
       </div>
-
     </div>
   </footer>
 
-  <!-- BARRA FIXA DE TELE-ENTREGA NO MOBILE (BOTTOM APP BAR STICKY) -->
-  <div class="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-destak-black/95 backdrop-blur-lg border-t border-destak-border/80 p-3 shadow-2xl">
-    <a href="https://wa.me/5562995420448?text=Olá!%20Vim%20pelo%20site%20da%20Destak%20Rações%20e%20gostaria%20de%20pedir%20uma%20tele-entrega." target="_blank" class="w-full flex items-center justify-center gap-2 bg-destak-whatsapp text-white font-black text-sm py-3.5 px-4 rounded-xl shadow-lg shadow-destak-whatsapp/30 pulse-glow-zap active:scale-95 transition">
+  <!-- BOTTOM APP BAR MÓVEL FLUTUANTE -->
+  <div class="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-t border-slate-200 p-3 shadow-2xl">
+    <a href="https://wa.me/5562995420448?text=Olá!%20Vim%20pelo%20site%20da%20Destak%20Rações%20e%20gostaria%20de%20pedir%20uma%20tele-entrega." target="_blank" class="w-full flex items-center justify-center gap-2 bg-brand-whatsapp text-white font-extrabold text-sm py-3.5 px-4 rounded-xl shadow-lg shadow-brand-whatsapp/25 pulse-glow-zap active:scale-95 transition">
       <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
-      <span>🛵 Pedir Tele-Entrega no WhatsApp</span>
+      <span>Pedir Tele-Entrega no WhatsApp</span>
     </a>
   </div>
+
+  <script>
+    function enviarPedidoDestak() {
+      const prod = document.getElementById('sim-prod').value;
+      const tam = document.getElementById('sim-tamanho').value;
+      const rua = document.getElementById('sim-rua').value.trim() || 'Aparecida de Goiânia';
+      const msg = `Olá! Vim pelo site da Destak Rações e gostaria de fazer um pedido de tele-entrega:\n\n📦 Item: ${prod}\n⚖️ Quantidade: ${tam}\n📍 Endereço: ${rua}\n\nQual o valor com tele-entrega para hoje?`;
+      const url = `https://wa.me/5562995420448?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank');
+    }
+  </script>
 
 </body>
 </html>
