@@ -2,37 +2,42 @@
 <html lang="pt-BR" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dog Shower Tio Matheus | Banho, Tosa & Spa Pet Oficial</title>
-  <meta name="description" content="Site oficial de Dog Shower Tio Matheus. Cuidado excepcional, banho & tosa, estética animal e spa em 
-R. Campos do Jordão - Res. Goiani, Aparecida de Goiânia - GO, 74947-350. Agende seu horário pelo WhatsApp!">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Dog Shower Tio Matheus | Estética Canina, Banho & Tosa em Aparecida de Goiânia</title>
+  <meta name="description" content="Dog Shower Tio Matheus no Residencial Goiani. Banho relaxante, tosa na tesoura, tosa higiênica, hidratação e táxi dog com amor e sem estresse. Agende seu horário pelo WhatsApp!">
+  <meta name="theme-color" content="#0369A1">
   
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dog Shower Tio Matheus | Banho & Tosa com Amor">
+  <meta property="og:description" content="Banho quentinho, tosa de raça na tesoura e muito carinho para seu cãozinho em Aparecida de Goiânia.">
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Fontes Google de Alto Padrão (Playfair Display + Plus Jakarta Sans) -->
+  <!-- Fontes Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            serif: ['"Playfair Display"', 'serif'],
+            display: ['"Outfit"', 'sans-serif'],
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
           },
           colors: {
-            brand: {
-              cream: '#FAF8F5',
-              sand: '#F3EFEA',
-              card: '#FFFFFF',
-              dark: '#162820',
-              forest: '#1E3A2F',
-              sage: '#406B57',
-              gold: '#D97706',
+            shower: {
+              cream: '#F8FAFC',
+              sand: '#F1F5F9',
+              primary: '#0284C7',
+              primaryDark: '#0369A1',
+              accent: '#38BDF8',
+              gold: '#F59E0B',
+              dark: '#0F172A',
               whatsapp: '#25D366',
+              whatsappHover: '#20BA56',
             }
           }
         }
@@ -42,140 +47,145 @@ R. Campos do Jordão - Res. Goiani, Aparecida de Goiânia - GO, 74947-350. Agend
 
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .pulse-glow {
-      animation: pulseGlow 2.5s infinite;
+    h1, h2, h3, .font-display { font-family: 'Outfit', sans-serif; }
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .pulse-glow-zap {
+      animation: pulseZap 2.2s infinite;
     }
-    @keyframes pulseGlow {
+    @keyframes pulseZap {
       0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
       70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
       100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
   </style>
 </head>
-<body class="bg-brand-cream text-slate-800 antialiased selection:bg-brand-forest selection:text-white">
+<body class="bg-shower-cream text-slate-800 antialiased selection:bg-shower-primary selection:text-white pb-20 sm:pb-0">
 
-  <!-- TOP ANNOUNCEMENT BAR -->
-  <div class="bg-brand-forest text-white text-xs py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2">
-    <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-    <span>✨ Atendimento com horário agendado em Goiânia • Toalhas esterilizadas e produtos hipoalergênicos</span>
+  <!-- TOP BAR -->
+  <div class="bg-gradient-to-r from-sky-700 via-shower-primaryDark to-sky-800 text-white text-xs py-2 px-4 shadow-sm">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+      <div class="flex items-center gap-2 truncate">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="truncate">🐾 <strong>Dog Shower Tio Matheus:</strong> Atendimento sem estresse com água morna e toalhas individuais</span>
+      </div>
+      <a href="https://wa.me/5562993869694?text=Olá!%20Gostaria%20de%20agendar%20um%20banho%20para%20o%20meu%20pet." target="_blank" class="hidden sm:inline-flex items-center gap-1.5 bg-white hover:bg-slate-100 text-sky-900 px-3 py-1 rounded-full text-[11px] font-black transition">
+        <span>📅 Agendamentos: (62) 99386-9694</span>
+      </a>
+    </div>
   </div>
 
   <!-- NAVBAR LUXUOSA -->
-  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-brand-sand shadow-sm transition-all duration-300">
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <!-- LOGO -->
+      
+      <!-- LOGO OFICIAL VETORIAL -->
       <a href="#" class="flex items-center gap-3 group">
-        <div class="w-12 h-12 rounded-2xl bg-brand-forest text-amber-300 flex items-center justify-center text-2xl shadow-md group-hover:scale-105 transition">
-          🐾
-        </div>
-        <div>
-          <span class="font-serif font-bold text-xl sm:text-2xl text-brand-dark tracking-tight block leading-tight">
-            Dog Shower Tio Matheus
+        <img src="logo.png" alt="Dog Shower Tio Matheus" class="h-14 sm:h-16 w-auto object-contain group-hover:scale-105 transition duration-300">
+        <div class="hidden sm:block">
+          <span class="font-display font-black text-xl text-shower-dark tracking-tight block leading-tight">
+            Dog Shower
           </span>
-          <span class="text-[11px] font-semibold tracking-wider uppercase text-brand-sage block">
-            Banho • Tosa • Spa Canino
+          <span class="text-[11px] font-bold tracking-wider uppercase text-shower-primary block">
+            Tio Matheus • Estética Canina
           </span>
         </div>
       </a>
 
       <!-- MENU DESKTOP -->
-      <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
-        <a href="#servicos" class="hover:text-brand-forest transition">Serviços & Spa</a>
-        <a href="#diferenciais" class="hover:text-brand-forest transition">Por que nos escolher</a>
-        <a href="#agendamento" class="hover:text-brand-forest transition">Agendamento</a>
-        <a href="#depoimentos" class="hover:text-brand-forest transition">Avaliações</a>
-        <a href="#localizacao" class="hover:text-brand-forest transition">Localização</a>
+      <div class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600">
+        <a href="#servicos" class="hover:text-shower-primary transition">Serviços & Banhos</a>
+        <a href="#diferenciais" class="hover:text-shower-primary transition">Por Que Nos Escolher</a>
+        <a href="#simulador" class="hover:text-shower-primary transition">Agendar Horário</a>
+        <a href="#taxi-dog" class="hover:text-shower-primary transition">Táxi Dog</a>
+        <a href="#localizacao" class="hover:text-shower-primary transition">Localização</a>
       </div>
 
       <!-- BOTÃO CTA NAVBAR -->
-      <a href="https://wa.me/5562993869694?text=Ol%C3%A1!%20Estava%20no%20site%20de%20voc%C3%AAs%20do%20Dog%20Shower%20Tio%20Matheus%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20o%20meu%20pet." target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-brand-forest hover:bg-brand-dark text-white text-xs sm:text-sm font-bold px-5 py-3 rounded-full shadow-lg transition duration-300 transform hover:-translate-y-0.5">
-        <svg class="w-4 h-4 fill-emerald-400" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
-        <span>Agendar Horário</span>
+      <a href="https://wa.me/5562993869694?text=Olá!%20Vim%20pelo%20site%20do%20Dog%20Shower%20Tio%20Matheus%20e%20gostaria%20de%20agendar%20um%20horário." target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-shower-whatsapp hover:bg-shower-whatsappHover text-white text-xs sm:text-sm font-bold px-5 py-3 rounded-full shadow-lg shadow-shower-whatsapp/20 transition transform hover:-translate-y-0.5">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+        <span>Agendar no WhatsApp</span>
       </a>
     </div>
   </nav>
 
-  <!-- HERO SECTION CINEMATOGRÁFICA (INSPIRADA EM PAWCARE & PET PARADE) -->
-  <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-32 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+  <!-- HERO SECTION REFRESCANTE (PET SPA) -->
+  <section class="relative pt-8 pb-16 lg:pt-16 lg:pb-24 overflow-hidden bg-gradient-to-b from-sky-50 via-white to-shower-cream border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
-        <!-- TEXTO HERO (ESQUERDA) -->
+        <!-- TEXTO HERO -->
         <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-          <div class="inline-flex items-center gap-2 bg-brand-sand/80 border border-brand-sage/20 text-brand-forest text-xs font-bold px-4 py-2 rounded-full shadow-sm">
-            <span>✨ Cuidado Especializado em Goiânia</span>
-            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
-            <span>Estética Animal com Amor</span>
+          
+          <div class="inline-flex items-center gap-2 bg-sky-100/80 border border-sky-200 text-shower-primaryDark text-xs font-bold px-4 py-2 rounded-full shadow-sm">
+            <span>🛁 Estética Canina Especializada em Aparecida de Goiânia</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
+            <span>Res. Goiani</span>
           </div>
 
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark leading-[1.15] tracking-tight">
-            Cuidado Excepcional & Spa <br>
-            <span class="font-serif italic font-normal text-brand-forest">Para o Seu Melhor Amigo.</span>
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-display font-black text-shower-dark leading-[1.15] tracking-tight">
+            Banho Relaxante & Tosa na Tesoura com o <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-cyan-500">
+              Carinho que Seu Filho de 4 Patas Merece.
+            </span>
           </h1>
 
           <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-            No <strong>Dog Shower Tio Matheus</strong>, proporcionamos uma experiência de relaxamento e beleza sem estresse. Banhos quentinhos, tosa de raça na tesoura, hidratação de óleos nobres e muito carinho para cães e gatos.
+            No <strong>Dog Shower Tio Matheus</strong>, cada atendimento é individual, com água quentinha, toalhas higienizadas descartáveis e cosméticos nobres. Sem estresse e sem traumas para o seu animal!
           </p>
 
-          <!-- BOTÕES DE AÇÃO HERO -->
-          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-            <a href="https://wa.me/5562993869694?text=Ol%C3%A1!%20Estava%20no%20site%20de%20voc%C3%AAs%20do%20Dog%20Shower%20Tio%20Matheus%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20o%20meu%20pet." target="_blank" class="w-full sm:w-auto flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base px-8 py-4 rounded-full shadow-xl shadow-emerald-900/10 transition transform hover:-translate-y-0.5 pulse-glow">
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
-              <span>Agendar Banho & Tosa</span>
-            </a>
+          <!-- PILARES DE CONFIANÇA -->
+          <div class="grid grid-cols-3 gap-3 sm:gap-4 pt-2 max-w-lg mx-auto lg:mx-0 text-left">
+            <div class="bg-white p-3.5 rounded-2xl border border-slate-200 shadow-sm">
+              <span class="text-xl">🫧</span>
+              <p class="font-bold text-xs sm:text-sm text-shower-dark mt-1">Água Morna</p>
+              <p class="text-[10px] sm:text-xs text-slate-500">Temperatura ideal</p>
+            </div>
+            <div class="bg-white p-3.5 rounded-2xl border border-slate-200 shadow-sm">
+              <span class="text-xl">✂️</span>
+              <p class="font-bold text-xs sm:text-sm text-shower-dark mt-1">Tosa Especializada</p>
+              <p class="text-[10px] sm:text-xs text-slate-500">Tesoura e padrão da raça</p>
+            </div>
+            <div class="bg-white p-3.5 rounded-2xl border border-slate-200 shadow-sm">
+              <span class="text-xl">🚕</span>
+              <p class="font-bold text-xs sm:text-sm text-shower-dark mt-1">Táxi Dog</p>
+              <p class="text-[10px] sm:text-xs text-slate-500">Buscamos em casa</p>
+            </div>
+          </div>
 
-            <a href="#servicos" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-white hover:bg-brand-sand text-brand-dark font-bold text-base px-7 py-4 rounded-full border border-brand-sand shadow-sm transition">
-              <span>Conhecer Serviços</span>
+          <!-- BOTÕES DE AÇÃO HERO -->
+          <div class="flex flex-col sm:flex-row items-center gap-3 pt-2 justify-center lg:justify-start">
+            <a href="https://wa.me/5562993869694?text=Olá!%20Gostaria%20de%20agendar%20um%20banho/tosa%20para%20o%20meu%20cachorrinho%20no%20Dog%20Shower." target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-shower-whatsapp hover:bg-shower-whatsappHover text-white font-black text-sm sm:text-base px-8 py-4 rounded-2xl shadow-xl shadow-shower-whatsapp/25 transition transform hover:-translate-y-0.5 pulse-glow-zap">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+              <span>Agendar Banho no WhatsApp</span>
+            </a>
+            <a href="#servicos" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-800 border border-slate-200 font-bold text-sm sm:text-base px-6 py-4 rounded-2xl transition shadow-sm">
+              <span>Conhecer os Banhos</span>
               <span>↓</span>
             </a>
           </div>
 
-          <!-- PROVA SOCIAL RÁPIDA -->
-          <div class="pt-6 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-semibold text-slate-500">
-            <div class="flex items-center gap-1 text-amber-500 text-sm">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-              <span class="text-slate-800 font-bold ml-1">4.9 no Google</span>
-            </div>
-            <span class="text-slate-300">•</span>
-            <span>Mais de 180+ avaliações reais</span>
-            <span class="text-slate-300">•</span>
-            <span class="text-emerald-700 font-bold">100% Livre de Gaiolas</span>
-          </div>
         </div>
 
-        <!-- FOTO HERO CINEMATOGRÁFICA (DIREITA) -->
-        <div class="lg:col-span-5 relative flex justify-center">
-          <div class="relative w-full max-w-md lg:max-w-none">
-            
-            <!-- FORMA ORGÂNICA DE FUNDO -->
-            <div class="absolute -inset-4 bg-gradient-to-tr from-amber-200/50 via-emerald-100/60 to-brand-sand rounded-[40px] transform rotate-2 -z-10 filter blur-sm"></div>
-            
-            <!-- IMAGEM PRINCIPAL -->
-            <div class="relative rounded-[36px] overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] bg-slate-100">
-              <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=1000&q=85" alt="Cão no Spa Pet" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent"></div>
-              
-              <!-- CARD FLUTUANTE NA FOTO -->
-              <div class="absolute bottom-5 left-5 right-5 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-lg border border-white/60 flex items-center gap-3">
-                <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-xl shrink-0">
-                  🛁
-                </div>
-                <div>
-                  <h4 class="font-bold text-sm text-brand-dark">Cuidado de Estética & Bem-Estar</h4>
-                  <p class="text-xs text-slate-500">Produtos suaves para pele sensível e filhotes.</p>
-                </div>
+        <!-- HERO CARD VISUAL COM CÃO FELIZ TOMANDO BANHO -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-sm sm:max-w-md bg-white rounded-[32px] p-4 sm:p-5 border-2 border-sky-100 shadow-2xl">
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-sky-50">
+              <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=800&q=80" alt="Cachorrinho feliz e limpo após o banho" class="w-full h-full object-cover">
+              <div class="absolute top-3 left-3 bg-sky-600 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow">
+                Cuidado com Amor
               </div>
             </div>
 
-            <!-- SELO DE QUALIDADE FLUTUANTE -->
-            <div class="absolute -top-4 -right-4 bg-white rounded-2xl p-3 shadow-xl border border-brand-sand hidden sm:flex items-center gap-2">
-              <span class="text-2xl">🏆</span>
-              <div class="text-left">
-                <p class="text-[10px] uppercase font-bold text-slate-400">Padrão Ouro</p>
-                <p class="text-xs font-black text-brand-dark">Goiânia - GO</p>
+            <div class="mt-4 bg-sky-50/80 rounded-2xl p-4 flex items-center justify-between">
+              <div>
+                <p class="font-bold text-xs text-sky-950">Atendimento Individualizado</p>
+                <p class="text-[11px] text-slate-500">Sem aglomeração, com hora marcada</p>
               </div>
+              <span class="text-xs font-black text-sky-700 bg-white px-2.5 py-1 rounded-lg border border-sky-200 shadow-sm">
+                🐾 Agende Hoje
+              </span>
             </div>
-
           </div>
         </div>
 
@@ -183,168 +193,97 @@ R. Campos do Jordão - Res. Goiani, Aparecida de Goiânia - GO, 74947-350. Agend
     </div>
   </section>
 
-  <!-- 4 PILARES DE CONFIANÇA -->
-  <section id="diferenciais" class="py-12 bg-white border-y border-brand-sand/60">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-        <div class="p-6 rounded-3xl bg-brand-cream/60 border border-brand-sand/80 hover:bg-white hover:shadow-lg transition duration-300">
-          <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-2xl mb-4">
-            🌿
-          </div>
-          <h3 class="font-bold text-base text-brand-dark mb-1">Cuidado Suave & Seguro</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">Produtos hipoalergênicos de alto padrão para não irritar os olhos nem a pele do seu pet.</p>
-        </div>
-
-        <div class="p-6 rounded-3xl bg-brand-cream/60 border border-brand-sand/80 hover:bg-white hover:shadow-lg transition duration-300">
-          <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center text-2xl mb-4">
-            ✂️
-          </div>
-          <h3 class="font-bold text-base text-brand-dark mb-1">Groomers Certificados</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">Especialistas em tosa da raça, tosa higiênica e técnicas sem estresse ou contenção forçada.</p>
-        </div>
-
-        <div class="p-6 rounded-3xl bg-brand-cream/60 border border-brand-sand/80 hover:bg-white hover:shadow-lg transition duration-300">
-          <div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-800 flex items-center justify-center text-2xl mb-4">
-            🧼
-          </div>
-          <h3 class="font-bold text-base text-brand-dark mb-1">Higiene Rigorosa</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">Toalhas individuais esterilizadas e banheiras desinfetadas após cada procedimento.</p>
-        </div>
-
-        <div class="p-6 rounded-3xl bg-brand-cream/60 border border-brand-sand/80 hover:bg-white hover:shadow-lg transition duration-300">
-          <div class="w-12 h-12 rounded-2xl bg-rose-100 text-rose-800 flex items-center justify-center text-2xl mb-4">
-            ❤️
-          </div>
-          <h3 class="font-bold text-base text-brand-dark mb-1">Garantia de Carinho</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">Seu pet recebe atenção exclusiva, paciência e petiscos para se sentir em casa.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SEÇÃO DE SERVIÇOS & SPA CANINO (INSPIRADA NA IMAGEM 5 PAWCARE) -->
-  <section id="servicos" class="py-20 lg:py-28">
+  <!-- CATÁLOGO DE SERVIÇOS & BANHOS -->
+  <section id="servicos" class="py-14 sm:py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
-        <span class="text-xs uppercase font-extrabold tracking-widest text-brand-sage">Tratamentos & Estética</span>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-dark font-serif">
-          Nossos Serviços de Banho & Spa
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-sky-600 bg-sky-100 px-3 py-1 rounded-full">
+          Nossos Cuidados
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-display font-black text-shower-dark">
+          Serviços de Estética Canina de Alto Padrão
         </h2>
-        <p class="text-slate-600 text-sm sm:text-base">
-          Escolha o cuidado perfeito para a raça, porte e necessidade do seu animal de estimação.
+        <p class="text-slate-600 text-xs sm:text-sm">
+          Procedimentos executados com calma e respeito ao comportamento de cada animal.
         </p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-        <!-- CARD SERVIÇO 1 -->
-        <div class="bg-white rounded-3xl overflow-hidden border border-brand-sand shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
-          <div class="h-56 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=600&q=80" alt="Banho e Escovação" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute top-4 left-4 bg-brand-forest/90 text-white text-[11px] font-bold px-3 py-1.5 rounded-full">
-              Mais Procurado
-            </div>
+
+        <!-- SERVIÇO 1 -->
+        <div class="bg-shower-cream rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+          <div class="h-48 overflow-hidden relative bg-slate-100">
+            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=600&q=80" alt="Banho relaxante" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
             <div>
-              <h3 class="font-bold text-lg text-brand-dark">Banho & Escovação</h3>
-              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-                Água morna em temperatura ideal, xampu suave, desembolo cuidadoso, secagem silenciosa e corte de unhas.
+              <h3 class="font-display font-bold text-lg text-shower-dark">Banho Relaxante & Hidratação</h3>
+              <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+                Água morninha, xampu hipoalergênico, limpeza profunda das orelhas, corte de unhas e secagem suave.
               </p>
             </div>
-            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <span class="text-[10px] text-slate-400 block font-semibold uppercase">A partir de</span>
-                <span class="text-lg font-black text-brand-forest">R$ 55,00</span>
-              </div>
-              <a href="https://wa.me/5562993869694?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20Banho%20e%20Escova%C3%A7%C3%A3o%20no%20Dog%20Shower%20Tio%20Matheus." target="_blank" class="w-10 h-10 rounded-full bg-brand-sand hover:bg-emerald-500 hover:text-white flex items-center justify-center text-slate-700 transition font-bold">
-                →
-              </a>
-            </div>
+            <a href="https://wa.me/5562993869694?text=Olá!%20Gostaria%20de%20agendar%20um%20Banho%20Relaxante%20no%20Dog%20Shower." target="_blank" class="inline-flex items-center justify-between text-xs font-bold text-sky-600 hover:text-sky-700 pt-2 border-t border-slate-200">
+              <span>Agendar Horário</span>
+              <span>→</span>
+            </a>
           </div>
         </div>
 
-        <!-- CARD SERVIÇO 2 -->
-        <div class="bg-white rounded-3xl overflow-hidden border border-brand-sand shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
-          <div class="h-56 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=600&q=80" alt="Tosa Completa" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute top-4 left-4 bg-amber-600 text-white text-[11px] font-bold px-3 py-1.5 rounded-full">
-              Tosa Especializada
-            </div>
+        <!-- SERVIÇO 2 -->
+        <div class="bg-shower-cream rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+          <div class="h-48 overflow-hidden relative bg-slate-100">
+            <img src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?auto=format&fit=crop&w=600&q=80" alt="Tosa higiênica" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
             <div>
-              <h3 class="font-bold text-lg text-brand-dark">Tosa da Raça & Tesoura</h3>
-              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-                Tosa personalizada respeitando o padrão da raça (Spitz, Poodle, Shih-tzu, Yorkshire) ou tosa bebê estilizada.
+              <h3 class="font-display font-bold text-lg text-shower-dark">Tosa Higiênica Completa</h3>
+              <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+                Aparagem cuidadosa das patinhas (almofadas plantares), barriguinha e região íntima para máxima higiene diária.
               </p>
             </div>
-            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <span class="text-[10px] text-slate-400 block font-semibold uppercase">A partir de</span>
-                <span class="text-lg font-black text-brand-forest">R$ 85,00</span>
-              </div>
-              <a href="https://wa.me/5562993869694?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20Tosa%20da%20Ra%C3%A7a%20no%20Dog%20Shower%20Tio%20Matheus." target="_blank" class="w-10 h-10 rounded-full bg-brand-sand hover:bg-emerald-500 hover:text-white flex items-center justify-center text-slate-700 transition font-bold">
-                →
-              </a>
-            </div>
+            <a href="https://wa.me/5562993869694?text=Olá!%20Gostaria%20de%20agendar%20uma%20Tosa%20Higiênica%20no%20Dog%20Shower." target="_blank" class="inline-flex items-center justify-between text-xs font-bold text-sky-600 hover:text-sky-700 pt-2 border-t border-slate-200">
+              <span>Agendar Horário</span>
+              <span>→</span>
+            </a>
           </div>
         </div>
 
-        <!-- CARD SERVIÇO 3 -->
-        <div class="bg-white rounded-3xl overflow-hidden border border-brand-sand shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
-          <div class="h-56 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=600&q=80" alt="Spa Deluxe" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute top-4 left-4 bg-purple-600 text-white text-[11px] font-bold px-3 py-1.5 rounded-full">
-              Experiência VIP
-            </div>
+        <!-- SERVIÇO 3 -->
+        <div class="bg-shower-cream rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+          <div class="h-48 overflow-hidden relative bg-slate-100">
+            <img src="https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?auto=format&fit=crop&w=600&q=80" alt="Tosa na tesoura" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
             <div>
-              <h3 class="font-bold text-lg text-brand-dark">Spa & Hidratação Profunda</h3>
-              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-                Banho terapêutico, máscara de hidratação intensa para pelos sedosos, massagem relaxante e bálsamo nas patinhas.
+              <h3 class="font-display font-bold text-lg text-shower-dark">Tosa na Tesoura da Raça</h3>
+              <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+                Acabamento artesanal desenhado para valorizar a beleza natural de Shih-Tzus, Poodles, Lulus e Yorkshires.
               </p>
             </div>
-            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <span class="text-[10px] text-slate-400 block font-semibold uppercase">A partir de</span>
-                <span class="text-lg font-black text-brand-forest">R$ 110,00</span>
-              </div>
-              <a href="https://wa.me/5562993869694?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Spa%20Deluxe%20para%20meu%20pet%20no%20Dog%20Shower%20Tio%20Matheus." target="_blank" class="w-10 h-10 rounded-full bg-brand-sand hover:bg-emerald-500 hover:text-white flex items-center justify-center text-slate-700 transition font-bold">
-                →
-              </a>
-            </div>
+            <a href="https://wa.me/5562993869694?text=Olá!%20Gostaria%20de%20agendar%20uma%20Tosa%20na%20Tesoura%20no%20Dog%20Shower." target="_blank" class="inline-flex items-center justify-between text-xs font-bold text-sky-600 hover:text-sky-700 pt-2 border-t border-slate-200">
+              <span>Agendar Horário</span>
+              <span>→</span>
+            </a>
           </div>
         </div>
 
-        <!-- CARD SERVIÇO 4 -->
-        <div class="bg-white rounded-3xl overflow-hidden border border-brand-sand shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
-          <div class="h-56 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80" alt="Filhotes e Gatos" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute top-4 left-4 bg-emerald-700 text-white text-[11px] font-bold px-3 py-1.5 rounded-full">
-              Cuidados Especiais
-            </div>
+        <!-- SERVIÇO 4 -->
+        <div class="bg-shower-cream rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+          <div class="h-48 overflow-hidden relative bg-slate-100">
+            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80" alt="Spa e desembolo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
             <div>
-              <h3 class="font-bold text-lg text-brand-dark">Filhotes & Felinos</h3>
-              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-                Ambiente silencioso, primeiro banho adaptativo sem sustos para filhotes e cuidados delicados para gatos.
+              <h3 class="font-display font-bold text-lg text-shower-dark">Spa & Desembolo Sem Dor</h3>
+              <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+                Nutrição intensiva com óleos nobres, recuperação de pelos ressecados e desembaraçamento com paciência e amor.
               </p>
             </div>
-            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <span class="text-[10px] text-slate-400 block font-semibold uppercase">Consulte</span>
-                <span class="text-lg font-black text-brand-forest">Disponibilidade</span>
-              </div>
-              <a href="https://wa.me/5562993869694?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20cuidados%20para%20filhote%2Fgato%20no%20Dog%20Shower%20Tio%20Matheus." target="_blank" class="w-10 h-10 rounded-full bg-brand-sand hover:bg-emerald-500 hover:text-white flex items-center justify-center text-slate-700 transition font-bold">
-                →
-              </a>
-            </div>
+            <a href="https://wa.me/5562993869694?text=Olá!%20Gostaria%20de%20agendar%20um%20Spa/Desembolo%20no%20Dog%20Shower." target="_blank" class="inline-flex items-center justify-between text-xs font-bold text-sky-600 hover:text-sky-700 pt-2 border-t border-slate-200">
+              <span>Agendar Horário</span>
+              <span>→</span>
+            </a>
           </div>
         </div>
 
@@ -353,300 +292,139 @@ R. Campos do Jordão - Res. Goiani, Aparecida de Goiânia - GO, 74947-350. Agend
     </div>
   </section>
 
-  <!-- WIDGET INTERATIVO DE AGENDAMENTO (INSPIRADO NA IMAGEM 5 PAWCARE) -->
-  <section id="agendamento" class="py-12 bg-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-gradient-to-br from-brand-forest to-brand-dark rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
-        
-        <div class="absolute -right-12 -bottom-12 w-64 h-64 rounded-full bg-emerald-500/10 pointer-events-none"></div>
+  <!-- SIMULADOR INTERATIVO DE AGENDAMENTO NO WHATSAPP -->
+  <section id="simulador" class="py-14 sm:py-20 bg-sky-950 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center space-y-3 mb-10">
+        <span class="inline-block bg-white/10 text-sky-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+          📅 Agendamento Inteligente
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-display font-black text-white">
+          Consulte Horários Disponíveis para o Seu Cãozinho
+        </h2>
+        <p class="text-slate-300 text-xs sm:text-sm max-w-xl mx-auto">
+          Escolha os serviços abaixo e fale diretamente com o Tio Matheus no WhatsApp para reservar a vaga!
+        </p>
+      </div>
 
-        <div class="max-w-2xl space-y-3 mb-8">
-          <span class="inline-block bg-white/10 text-emerald-300 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider">
-            Simulador de Agendamento
-          </span>
-          <h3 class="text-2xl sm:text-3xl font-serif font-bold text-white">
-            Consulte a Disponibilidade de Horário em Segundos
-          </h3>
-          <p class="text-slate-300 text-xs sm:text-sm">
-            Selecione o serviço e o porte do seu animal para falar com nossa equipe pelo WhatsApp.
-          </p>
-        </div>
-
-        <!-- FORMULÁRIO / SIMULADOR -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/15">
-          
+      <div class="bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-white/15">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div>
-            <label class="block text-xs font-bold text-slate-200 mb-1.5">1. Serviço Desejado</label>
-            <select id="sim-servico" class="w-full bg-white text-slate-800 text-xs sm:text-sm font-semibold rounded-xl px-3 py-3 border-0 focus:ring-2 focus:ring-emerald-400">
-              <option value="Banho e Tosa Completa">Banho & Tosa Completa</option>
-              <option value="Apenas Banho e Hidratação">Apenas Banho & Hidratação</option>
-              <option value="Tosa Higiênica">Tosa Higiênica</option>
-              <option value="Spa Canino Deluxe">Spa Canino Deluxe</option>
-              <option value="Consulta / Outros Cuidados">Consulta / Outros Cuidados</option>
+            <label class="block text-xs font-bold text-slate-200 mb-1.5">1. Serviço</label>
+            <select id="sim-servico" class="w-full bg-white text-slate-800 text-xs sm:text-sm font-semibold rounded-xl px-3 py-3 border-0 focus:ring-2 focus:ring-sky-400 outline-none">
+              <option value="Banho Relaxante Completo">Banho Relaxante Completo</option>
+              <option value="Banho + Tosa Higiênica">Banho + Tosa Higiênica</option>
+              <option value="Tosa Completa na Tesoura">Tosa Completa na Tesoura</option>
+              <option value="Spa & Hidratação Profunda">Spa & Hidratação Profunda</option>
             </select>
           </div>
-
           <div>
-            <label class="block text-xs font-bold text-slate-200 mb-1.5">2. Porte do Pet</label>
-            <select id="sim-porte" class="w-full bg-white text-slate-800 text-xs sm:text-sm font-semibold rounded-xl px-3 py-3 border-0 focus:ring-2 focus:ring-emerald-400">
+            <label class="block text-xs font-bold text-slate-200 mb-1.5">2. Porte / Raça</label>
+            <select id="sim-porte" class="w-full bg-white text-slate-800 text-xs sm:text-sm font-semibold rounded-xl px-3 py-3 border-0 focus:ring-2 focus:ring-sky-400 outline-none">
               <option value="Porte Pequeno (até 10kg)">Porte Pequeno (até 10kg)</option>
               <option value="Porte Médio (10kg a 20kg)">Porte Médio (10kg a 20kg)</option>
               <option value="Porte Grande (acima de 20kg)">Porte Grande (acima de 20kg)</option>
-              <option value="Gato / Felino">Gato / Felino</option>
+              <option value="Filhote (Primeiro Banho)">Filhote (Primeiro Banho)</option>
             </select>
           </div>
-
-          <div class="flex items-end">
-            <button onclick="dispararAgendamento()" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm py-3 px-4 rounded-xl shadow-lg transition flex items-center justify-center gap-2 transform active:scale-95">
-              <span>📅 Consultar no WhatsApp</span>
-            </button>
+          <div>
+            <label class="block text-xs font-bold text-slate-200 mb-1.5">3. Precisa de Táxi Dog?</label>
+            <select id="sim-taxi" class="w-full bg-white text-slate-800 text-xs sm:text-sm font-semibold rounded-xl px-3 py-3 border-0 focus:ring-2 focus:ring-sky-400 outline-none">
+              <option value="Não, eu levo no local">Não, eu levo no local</option>
+              <option value="Sim, buscar em casa (Res. Goiani e Região)">Sim, buscar em casa</option>
+            </select>
           </div>
+        </div>
 
+        <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-white/10">
+          <p class="text-xs text-slate-300 text-center sm:text-left">
+            ✨ Resposta rápida pelo WhatsApp com horários livres desta semana.
+          </p>
+          <button onclick="enviarAgendamentoTioMatheus()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-shower-whatsapp hover:bg-shower-whatsappHover text-white font-bold text-sm px-8 py-3.5 rounded-xl shadow-lg transition transform active:scale-95 shrink-0 pulse-glow-zap">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+            <span>Consultar Vagas no WhatsApp</span>
+          </button>
         </div>
 
         <script>
-          function dispararAgendamento() {
+          function enviarAgendamentoTioMatheus() {
             const serv = document.getElementById('sim-servico').value;
             const porte = document.getElementById('sim-porte').value;
-            const msg = 'Olá! Gostaria de consultar horários para o serviço: ' + serv + ' (Porte: ' + porte + ') no ' + "Dog Shower Tio Matheus";
-            const url = 'https://wa.me/' + "5562993869694" + '?text=' + encodeURIComponent(msg);
+            const taxi = document.getElementById('sim-taxi').value;
+            const msg = `Olá, Tio Matheus! Vim pelo site e gostaria de agendar um horário para o meu cachorro:\n\n✂️ Serviço: ${serv}\n🐶 Porte: ${porte}\n🚕 Táxi Dog: ${taxi}\n\nQuais os horários disponíveis?`;
+            const url = `https://wa.me/5562993869694?text=${encodeURIComponent(msg)}`;
             window.open(url, '_blank');
           }
         </script>
 
       </div>
+
     </div>
   </section>
 
-  <!-- SOBRE NÓS E HISTÓRIA -->
-  <section class="py-20 lg:py-24">
+  <!-- LOCALIZAÇÃO & SOBRE -->
+  <section id="localizacao" class="py-14 sm:py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         
-        <div class="relative">
-          <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3]">
-            <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1000&q=80" alt="Equipe com animais" class="w-full h-full object-cover">
-          </div>
-          <div class="absolute -bottom-6 -right-6 bg-white rounded-3xl p-6 shadow-xl border border-brand-sand max-w-xs hidden sm:block">
-            <p class="font-serif italic font-bold text-brand-dark text-lg">"Nosso compromisso é tratar cada animal como parte da nossa própria família."</p>
-            <p class="text-xs text-brand-sage font-bold mt-2">— Equipe Dog Shower Tio Matheus</p>
-          </div>
-        </div>
-
-        <div class="space-y-6">
-          <span class="text-xs uppercase font-extrabold tracking-widest text-brand-sage">Sobre o Estabelecimento</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark font-serif leading-tight">
-            Amor, Respeito e Bem-Estar Animal em Cada Detalhe
+        <div class="space-y-5">
+          <span class="text-xs font-bold uppercase tracking-widest text-sky-600">Localização Privilegiada</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-black text-shower-dark leading-tight">
+            Venha Nos Conhecer em Aparecida de Goiânia
           </h2>
           <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-            Localizado em <strong>
-R. Campos do Jordão - Res. Goiani, Aparecida de Goiânia - GO, 74947-350</strong>, o <strong>Dog Shower Tio Matheus</strong> nasceu da paixão por cuidar dos nossos amigos de quatro patas. Criamos um ambiente acolhedor, limpo e seguro onde o seu pet não sente medo do banho.
+            Localizado na <strong>Rua Campos do Jordão no Residencial Goiani</strong> em Aparecida de Goiânia, nosso espaço foi planejado para acolher cães de todos os temperamentos, garantindo um ambiente calmo, sem estresse de gaiolas ou barulhos excessivos.
           </p>
-          <ul class="space-y-3 text-sm text-slate-700">
-            <li class="flex items-center gap-3">
-              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">✓</span>
-              <span>Estrutura completa com toalhas descartáveis individuais</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">✓</span>
-              <span>Monitoramento carinhoso durante todo o atendimento</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">✓</span>
-              <span>Linha cosmética cruelty-free aprovada por veterinários</span>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- DEPOIMENTOS / PROVA SOCIAL REAL DO GOOGLE -->
-  <section id="depoimentos" class="py-20 bg-white border-t border-brand-sand">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto space-y-3 mb-14">
-        <span class="text-xs uppercase font-extrabold tracking-widest text-brand-sage">Avaliações de Clientes</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark font-serif">
-          O Que os Tutores Dizem Sobre Nós
-        </h2>
-        <div class="flex items-center justify-center gap-2 text-amber-500 font-bold text-sm">
-          <span>★★★★★</span>
-          <span class="text-slate-800">4.9 no Google (180+ avaliações)</span>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <div class="bg-brand-cream/80 p-8 rounded-3xl border border-brand-sand space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="text-amber-500 text-sm">★★★★★</div>
-            <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
-              "Levo meu Golden Retriever toda semana. O atendimento é impecável, ele volta muito cheiroso e super calmo. Nunca vi um pet shop com tanto carinho!"
-            </p>
+          <div class="bg-sky-50 p-4 rounded-2xl border border-sky-100 space-y-2 text-xs text-slate-700">
+            <p><strong>📍 Endereço:</strong> R. Campos do Jordão - Res. Goiani, Aparecida de Goiânia - GO, 74947-350</p>
+            <p><strong>📞 Telefone / WhatsApp:</strong> (62) 99386-9694</p>
+            <p><strong>⏰ Funcionamento:</strong> Segunda a Sábado com agendamento prévio</p>
           </div>
-          <div class="flex items-center gap-3 pt-4 border-t border-brand-sand/60">
-            <div class="w-10 h-10 rounded-full bg-amber-200 text-amber-900 font-bold flex items-center justify-center text-xs">
-              MC
-            </div>
-            <div>
-              <p class="font-bold text-xs text-brand-dark">Mariana Costa</p>
-              <p class="text-[11px] text-slate-400">Tutora do Thor (Golden)</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-brand-cream/80 p-8 rounded-3xl border border-brand-sand space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="text-amber-500 text-sm">★★★★★</div>
-            <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
-              "A tosa na tesoura do meu Shih-tzu ficou perfeita, exatamente como eu pedi. Além disso, o ambiente é extremamente limpo e organizado. Recomendo de olhos fechados!"
-            </p>
-          </div>
-          <div class="flex items-center gap-3 pt-4 border-t border-brand-sand/60">
-            <div class="w-10 h-10 rounded-full bg-emerald-200 text-emerald-900 font-bold flex items-center justify-center text-xs">
-              RO
-            </div>
-            <div>
-              <p class="font-bold text-xs text-brand-dark">Rodrigo Oliveira</p>
-              <p class="text-[11px] text-slate-400">Tutor do Pipoca (Shih-tzu)</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-brand-cream/80 p-8 rounded-3xl border border-brand-sand space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="text-amber-500 text-sm">★★★★★</div>
-            <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
-              "Minha gatinha sempre foi muito medrosa com banho, mas a equipe tratou ela com tanta paciência e cuidado que foi uma experiência maravilhosa."
-            </p>
-          </div>
-          <div class="flex items-center gap-3 pt-4 border-t border-brand-sand/60">
-            <div class="w-10 h-10 rounded-full bg-rose-200 text-rose-900 font-bold flex items-center justify-center text-xs">
-              CS
-            </div>
-            <div>
-              <p class="font-bold text-xs text-brand-dark">Camila Silveira</p>
-              <p class="text-[11px] text-slate-400">Tutora da Luna (Gata Persa)</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ONDE ESTAMOS / MAPA E ENDEREÇO -->
-  <section id="localizacao" class="py-20 bg-brand-cream">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-white rounded-3xl border border-brand-sand shadow-lg overflow-hidden grid grid-cols-1 lg:grid-cols-12">
-        
-        <div class="p-8 sm:p-12 lg:col-span-5 flex flex-col justify-between space-y-6">
-          <div class="space-y-4">
-            <span class="text-xs uppercase font-extrabold tracking-widest text-brand-sage">Venha nos Conhecer</span>
-            <h3 class="text-2xl sm:text-3xl font-serif font-bold text-brand-dark">
-              Localização Fácil & Acesso Rápido
-            </h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Estamos prontos para receber você e seu pet com toda a comodidade, ambiente climatizado e facilidade de parada.
-            </p>
-            <div class="space-y-2 pt-2 text-xs sm:text-sm text-slate-700">
-              <p class="flex items-start gap-2">
-                <span class="text-base text-emerald-600">📍</span>
-                <span><strong>Endereço:</strong> 
-R. Campos do Jordão - Res. Goiani, Aparecida de Goiânia - GO, 74947-350</span>
-              </p>
-              <p class="flex items-start gap-2">
-                <span class="text-base text-emerald-600">🕒</span>
-                <span><strong>Horários:</strong> Segunda a Sábado: 08h00 às 18h00</span>
-              </p>
-              <p class="flex items-start gap-2">
-                <span class="text-base text-emerald-600">📱</span>
-                <span><strong>WhatsApp:</strong> 
-(62) 99386-9694</span>
-              </p>
-            </div>
-          </div>
-
-          <div class="pt-4 space-y-3">
-            <a href="https://maps.google.com/?q=Dog%20Shower%20Tio%20Matheus%20%EE%83%88%0AR.%20Campos%20do%20Jord%C3%A3o%20-%20Res.%20Goiani%2C%20Aparecida%20de%20Goi%C3%A2nia%20-%20GO%2C%2074947-350" target="_blank" class="block w-full text-center bg-brand-forest hover:bg-brand-dark text-white font-bold py-3.5 px-6 rounded-2xl text-xs sm:text-sm shadow-md transition">
-              🗺️ Abrir Rota no Google Maps / Waze
-            </a>
-            <a href="https://wa.me/5562993869694?text=Ol%C3%A1!%20Estava%20no%20site%20de%20voc%C3%AAs%20do%20Dog%20Shower%20Tio%20Matheus%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20o%20meu%20pet." target="_blank" class="block w-full text-center bg-brand-sand hover:bg-emerald-100 text-brand-dark font-bold py-3 px-6 rounded-2xl text-xs transition">
-              💬 Falar com a Recepção no WhatsApp
+          <div>
+            <a href="https://www.google.com/maps/place/Dog+Shower+Tio+Matheus/data=!4m7!3m6!1s0x935ef9265a2bf37d:0xf4b8c96c9261cdb4!8m2!3d-16.7978236!4d-49.3545743" target="_blank" class="inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white text-xs sm:text-sm font-bold px-6 py-3.5 rounded-xl shadow transition">
+              <span>📍 Ver no Google Maps</span>
+              <span>↗</span>
             </a>
           </div>
         </div>
 
-        <div class="lg:col-span-7 bg-slate-100 min-h-[360px] relative">
-          <iframe 
-            width="100%" 
-            height="100%" 
-            style="border:0; min-height: 360px;" 
-            loading="lazy" 
-            allowfullscreen 
-            src="https://maps.google.com/maps?q=Dog%20Shower%20Tio%20Matheus%20%EE%83%88%0AR.%20Campos%20do%20Jord%C3%A3o%20-%20Res.%20Goiani%2C%20Aparecida%20de%20Goi%C3%A2nia%20-%20GO%2C%2074947-350&t=&z=15&ie=UTF8&iwloc=&output=embed">
-          </iframe>
+        <div class="rounded-3xl overflow-hidden shadow-xl border border-slate-200 p-3 bg-sky-50">
+          <div class="rounded-2xl overflow-hidden aspect-[4/3]">
+            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=800&q=80" alt="Cães felizes e cuidados" class="w-full h-full object-cover">
+          </div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- RODAPÉ CORPORATIVO / DE LUXO -->
-  <footer class="bg-brand-dark text-slate-400 py-16 border-t border-slate-800">
+  <!-- RODAPÉ CORPORATIVO -->
+  <footer class="bg-sky-950 text-slate-300 py-12 text-xs border-t border-sky-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-slate-800/80">
-        
-        <div class="space-y-4 md:col-span-2">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-brand-forest text-amber-300 flex items-center justify-center text-xl">
-              🐾
-            </div>
-            <span class="font-serif font-bold text-xl text-white">Dog Shower Tio Matheus</span>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <div class="bg-white rounded-2xl p-2 shadow">
+            <img src="logo.png" alt="Dog Shower Tio Matheus" class="h-12 w-auto object-contain">
           </div>
-          <p class="text-xs text-slate-400 max-w-md leading-relaxed">
-            Dedicados ao amor, bem-estar e estética de cães e gatos. Estrutura moderna, groomers qualificados e atendimento acolhedor em Goiânia.
-          </p>
+          <div>
+            <span class="font-display font-black text-white text-lg block">Dog Shower Tio Matheus</span>
+            <span class="text-[11px] text-sky-300">Estética Canina & Banho e Tosa • Res. Goiani, Aparecida de Goiânia</span>
+          </div>
         </div>
-
-        <div class="space-y-3">
-          <h4 class="font-bold text-white text-xs uppercase tracking-wider">Links Rápidos</h4>
-          <ul class="space-y-2 text-xs">
-            <li><a href="#servicos" class="hover:text-emerald-400 transition">Banho & Tosa</a></li>
-            <li><a href="#servicos" class="hover:text-emerald-400 transition">Spa & Hidratação</a></li>
-            <li><a href="#agendamento" class="hover:text-emerald-400 transition">Agendar Horário</a></li>
-            <li><a href="#depoimentos" class="hover:text-emerald-400 transition">Depoimentos</a></li>
-          </ul>
+        <div class="text-center sm:text-right text-[11px] text-slate-400">
+          <p class="text-white font-bold text-xs mb-1">WhatsApp: (62) 99386-9694</p>
+          <p>© 2026 Dog Shower Tio Matheus. Todos os direitos reservados.</p>
         </div>
-
-        <div class="space-y-3">
-          <h4 class="font-bold text-white text-xs uppercase tracking-wider">Atendimento</h4>
-          <p class="text-xs text-slate-300">
-R. Campos do Jordão - Res. Goiani, Aparecida de Goiânia - GO, 74947-350</p>
-          <p class="text-xs text-emerald-400 font-bold">
-(62) 99386-9694</p>
-          <a href="https://wa.me/5562993869694?text=Ol%C3%A1!%20Estava%20no%20site%20de%20voc%C3%AAs%20do%20Dog%20Shower%20Tio%20Matheus%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20o%20meu%20pet." target="_blank" class="inline-block text-xs bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2 rounded-xl transition">
-            Falar Conosco
-          </a>
-        </div>
-
-      </div>
-
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-        <p>© 2026 Dog Shower Tio Matheus. Todos os direitos reservados.</p>
-        <p class="text-slate-400">Página oficial com conexão direta via WhatsApp.</p>
       </div>
     </div>
   </footer>
 
-  <!-- BOTÃO FLUTUANTE DE WHATSAPP COM NOTIFICAÇÃO (CANTO INFERIOR DIREITO) -->
-  <div class="fixed bottom-6 right-6 z-50">
-    <a href="https://wa.me/5562993869694?text=Ol%C3%A1!%20Estava%20no%20site%20de%20voc%C3%AAs%20do%20Dog%20Shower%20Tio%20Matheus%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20o%20meu%20pet." target="_blank" class="flex items-center justify-center w-16 h-16 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white shadow-2xl transition transform hover:scale-110 pulse-glow relative group">
-      <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
-      <span class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-red-500 text-white text-[10px] font-black flex items-center justify-center shadow">1</span>
+  <!-- BARRA FIXA MOBILE (BOTTOM APP BAR) -->
+  <div class="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-t border-slate-200 p-3 shadow-2xl">
+    <a href="https://wa.me/5562993869694?text=Olá!%20Vim%20pelo%20site%20do%20Dog%20Shower%20Tio%20Matheus%20e%20gostaria%20de%20agendar%20um%20horário." target="_blank" class="w-full flex items-center justify-center gap-2 bg-shower-whatsapp text-white font-black text-sm py-3.5 px-4 rounded-xl shadow-lg shadow-shower-whatsapp/25 pulse-glow-zap active:scale-95 transition">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+      <span>📅 Agendar Banho no WhatsApp</span>
     </a>
   </div>
 
