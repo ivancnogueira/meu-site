@@ -2,15 +2,20 @@
 <html lang="pt-BR" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dourados pet shop | Banho, Tosa & Spa Pet Oficial</title>
-  <meta name="description" content="Site oficial de Dourados pet shop. Cuidado excepcional, banho & tosa, estética animal e spa em 
-Av. Vila Rica, 725 - quadra 07 lote 21 - Res. Campos Dourados, Goiânia - GO, 74356-400. Agende seu horário pelo WhatsApp!">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Dourados Pet Shop | Rações, Farmácia & Acessórios Pet em Goiânia</title>
+  <meta name="description" content="Dourados Pet Shop no Residencial Campos Dourados, Goiânia. Rações premium, medicamentos veterinários, acessórios e tele-entrega rápida pelo WhatsApp!">
+  <meta name="theme-color" content="#0F291E">
   
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dourados Pet Shop | Campos Dourados, Goiânia">
+  <meta property="og:description" content="Tudo para o seu pet: as melhores rações, farmácia veterinária, acessórios e entrega rápida no WhatsApp.">
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Fontes Google de Alto Padrão (Playfair Display + Plus Jakarta Sans) -->
+  <!-- Fontes Google (Playfair Display + Plus Jakarta Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -24,15 +29,16 @@ Av. Vila Rica, 725 - quadra 07 lote 21 - Res. Campos Dourados, Goiânia - GO, 74
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
           },
           colors: {
-            brand: {
+            dourados: {
               cream: '#FAF8F5',
               sand: '#F3EFEA',
+              forest: '#0F291E',
+              forestLight: '#183D2D',
               card: '#FFFFFF',
-              dark: '#162820',
-              forest: '#1E3A2F',
-              sage: '#406B57',
               gold: '#D97706',
+              goldLight: '#F59E0B',
               whatsapp: '#25D366',
+              whatsappHover: '#20BA56',
             }
           }
         }
@@ -42,140 +48,143 @@ Av. Vila Rica, 725 - quadra 07 lote 21 - Res. Campos Dourados, Goiânia - GO, 74
 
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .pulse-glow {
-      animation: pulseGlow 2.5s infinite;
+    h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .pulse-glow-zap {
+      animation: pulseZap 2.2s infinite;
     }
-    @keyframes pulseGlow {
+    @keyframes pulseZap {
       0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
       70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
       100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
   </style>
 </head>
-<body class="bg-brand-cream text-slate-800 antialiased selection:bg-brand-forest selection:text-white">
+<body class="bg-dourados-cream text-slate-800 antialiased selection:bg-dourados-forest selection:text-white pb-20 sm:pb-0">
 
-  <!-- TOP ANNOUNCEMENT BAR -->
-  <div class="bg-brand-forest text-white text-xs py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2">
-    <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-    <span>✨ Atendimento com horário agendado em Goiânia • Toalhas esterilizadas e produtos hipoalergênicos</span>
+  <!-- TOP BAR -->
+  <div class="bg-dourados-forest text-white text-xs py-2 px-4 shadow-sm">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+      <div class="flex items-center gap-2 truncate">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="truncate">📍 <strong>Dourados Pet Shop:</strong> Av. Vila Rica, 725 • Res. Campos Dourados, Goiânia</span>
+      </div>
+      <a href="https://wa.me/5562994139983?text=Olá!%20Gostaria%20de%20pedir%20uma%20tele-entrega%20de%20ração%20no%20Dourados%20Pet%20Shop." target="_blank" class="hidden sm:inline-flex items-center gap-1.5 bg-amber-500 hover:bg-amber-400 text-slate-900 px-3 py-1 rounded-full text-[11px] font-black transition">
+        <span>🛵 Tele-Entrega: (62) 99413-9983</span>
+      </a>
+    </div>
   </div>
 
   <!-- NAVBAR LUXUOSA -->
-  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-brand-sand shadow-sm transition-all duration-300">
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-dourados-sand shadow-sm transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <!-- LOGO -->
+      
+      <!-- LOGO OFICIAL VETORIAL -->
       <a href="#" class="flex items-center gap-3 group">
-        <div class="w-12 h-12 rounded-2xl bg-brand-forest text-amber-300 flex items-center justify-center text-2xl shadow-md group-hover:scale-105 transition">
-          🐾
-        </div>
-        <div>
-          <span class="font-serif font-bold text-xl sm:text-2xl text-brand-dark tracking-tight block leading-tight">
-            Dourados pet shop
+        <img src="logo.png" alt="Dourados Pet Center" class="h-14 sm:h-16 w-auto object-contain group-hover:scale-105 transition duration-300">
+        <div class="hidden sm:block">
+          <span class="font-serif font-bold text-xl text-dourados-forest tracking-tight block leading-tight">
+            Dourados Pet Center
           </span>
-          <span class="text-[11px] font-semibold tracking-wider uppercase text-brand-sage block">
-            Banho • Tosa • Spa Canino
+          <span class="text-[10px] font-bold tracking-wider uppercase text-dourados-gold block">
+            A melhor opção para seu amiguinho
           </span>
         </div>
       </a>
 
       <!-- MENU DESKTOP -->
-      <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
-        <a href="#servicos" class="hover:text-brand-forest transition">Serviços & Spa</a>
-        <a href="#diferenciais" class="hover:text-brand-forest transition">Por que nos escolher</a>
-        <a href="#agendamento" class="hover:text-brand-forest transition">Agendamento</a>
-        <a href="#depoimentos" class="hover:text-brand-forest transition">Avaliações</a>
-        <a href="#localizacao" class="hover:text-brand-forest transition">Localização</a>
+      <div class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600">
+        <a href="#produtos" class="hover:text-dourados-forest transition">Rações & Alimentos</a>
+        <a href="#farmacia" class="hover:text-dourados-forest transition">Farmácia Pet</a>
+        <a href="#acessorios" class="hover:text-dourados-forest transition">Acessórios</a>
+        <a href="#tele-entrega" class="hover:text-dourados-forest transition">Tele-Entrega</a>
+        <a href="#sobre" class="hover:text-dourados-forest transition">Localização</a>
       </div>
 
       <!-- BOTÃO CTA NAVBAR -->
-      <a href="https://wa.me/5562994139983?text=Ol%C3%A1!%20Estava%20no%20site%20de%20voc%C3%AAs%20do%20Dourados%20pet%20shop%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20o%20meu%20pet." target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-brand-forest hover:bg-brand-dark text-white text-xs sm:text-sm font-bold px-5 py-3 rounded-full shadow-lg transition duration-300 transform hover:-translate-y-0.5">
-        <svg class="w-4 h-4 fill-emerald-400" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
-        <span>Agendar Horário</span>
+      <a href="https://wa.me/5562994139983?text=Olá!%20Vim%20pelo%20site%20do%20Dourados%20Pet%20Shop%20e%20gostaria%20de%20fazer%20um%20pedido." target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-dourados-whatsapp hover:bg-dourados-whatsappHover text-white text-xs sm:text-sm font-bold px-5 py-3 rounded-full shadow-lg shadow-dourados-whatsapp/20 transition transform hover:-translate-y-0.5">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+        <span>Pedir no WhatsApp</span>
       </a>
     </div>
   </nav>
 
-  <!-- HERO SECTION CINEMATOGRÁFICA (INSPIRADA EM PAWCARE & PET PARADE) -->
-  <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-32 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+  <!-- HERO SECTION EDITORIAL (INSPIRADA EM STUDATS & PET PARADE) -->
+  <section class="relative pt-8 pb-16 lg:pt-16 lg:pb-24 overflow-hidden bg-gradient-to-b from-dourados-sand/60 to-dourados-cream border-b border-dourados-sand">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
-        <!-- TEXTO HERO (ESQUERDA) -->
+        <!-- TEXTO HERO -->
         <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-          <div class="inline-flex items-center gap-2 bg-brand-sand/80 border border-brand-sage/20 text-brand-forest text-xs font-bold px-4 py-2 rounded-full shadow-sm">
-            <span>✨ Cuidado Especializado em Goiânia</span>
-            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
-            <span>Estética Animal com Amor</span>
+          
+          <div class="inline-flex items-center gap-2 bg-white border border-amber-300 text-dourados-forest text-xs font-bold px-4 py-2 rounded-full shadow-sm">
+            <span>✨ O Pet Shop de Confiança em Campos Dourados</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-dourados-gold"></span>
+            <span>Goiânia - GO</span>
           </div>
 
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark leading-[1.15] tracking-tight">
-            Cuidado Excepcional & Spa <br>
-            <span class="font-serif italic font-normal text-brand-forest">Para o Seu Melhor Amigo.</span>
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif font-extrabold text-dourados-forest leading-[1.15] tracking-tight">
+            Nutrição de Primeira & Cuidados Completos <br>
+            <span class="italic font-normal text-dourados-gold">para o Seu Melhor Amigo.</span>
           </h1>
 
           <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-            No <strong>Dourados pet shop</strong>, proporcionamos uma experiência de relaxamento e beleza sem estresse. Banhos quentinhos, tosa de raça na tesoura, hidratação de óleos nobres e muito carinho para cães e gatos.
+            No <strong>Dourados Pet Shop</strong>, você encontra as melhores marcas de ração para cães e gatos, farmácia veterinária, acessórios e a praticidade da <strong>Tele-Entrega rápida</strong> no seu portão.
           </p>
 
-          <!-- BOTÕES DE AÇÃO HERO -->
-          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-            <a href="https://wa.me/5562994139983?text=Ol%C3%A1!%20Estava%20no%20site%20de%20voc%C3%AAs%20do%20Dourados%20pet%20shop%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20o%20meu%20pet." target="_blank" class="w-full sm:w-auto flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base px-8 py-4 rounded-full shadow-xl shadow-emerald-900/10 transition transform hover:-translate-y-0.5 pulse-glow">
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
-              <span>Agendar Banho & Tosa</span>
-            </a>
+          <!-- PILARES RÁPIDOS -->
+          <div class="grid grid-cols-3 gap-3 sm:gap-4 pt-2 max-w-lg mx-auto lg:mx-0 text-left">
+            <div class="bg-white p-3.5 rounded-2xl border border-dourados-sand shadow-sm">
+              <span class="text-xl">🛵</span>
+              <p class="font-bold text-xs sm:text-sm text-dourados-forest mt-1">Tele-Entrega</p>
+              <p class="text-[10px] sm:text-xs text-slate-500">Campos Dourados</p>
+            </div>
+            <div class="bg-white p-3.5 rounded-2xl border border-dourados-sand shadow-sm">
+              <span class="text-xl">💊</span>
+              <p class="font-bold text-xs sm:text-sm text-dourados-forest mt-1">Farmácia Pet</p>
+              <p class="text-[10px] sm:text-xs text-slate-500">Antipulgas & Remédios</p>
+            </div>
+            <div class="bg-white p-3.5 rounded-2xl border border-dourados-sand shadow-sm">
+              <span class="text-xl">⭐</span>
+              <p class="font-bold text-xs sm:text-sm text-dourados-forest mt-1">4.6 Estrelas</p>
+              <p class="text-[10px] sm:text-xs text-slate-500">No Google Maps</p>
+            </div>
+          </div>
 
-            <a href="#servicos" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-white hover:bg-brand-sand text-brand-dark font-bold text-base px-7 py-4 rounded-full border border-brand-sand shadow-sm transition">
-              <span>Conhecer Serviços</span>
+          <!-- BOTÕES DE AÇÃO HERO -->
+          <div class="flex flex-col sm:flex-row items-center gap-3 pt-2 justify-center lg:justify-start">
+            <a href="https://wa.me/5562994139983?text=Olá!%20Gostaria%20de%20consultar%20as%20rações%20e%20fazer%20um%20pedido%20no%20Dourados%20Pet%20Shop." target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-dourados-whatsapp hover:bg-dourados-whatsappHover text-white font-black text-sm sm:text-base px-8 py-4 rounded-2xl shadow-xl shadow-dourados-whatsapp/25 transition transform hover:-translate-y-0.5 pulse-glow-zap">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+              <span>Pedir Entrega no WhatsApp</span>
+            </a>
+            <a href="#produtos" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-dourados-sand text-slate-800 border border-slate-200 font-bold text-sm sm:text-base px-6 py-4 rounded-2xl transition shadow-sm">
+              <span>Ver Produtos & Rações</span>
               <span>↓</span>
             </a>
           </div>
 
-          <!-- PROVA SOCIAL RÁPIDA -->
-          <div class="pt-6 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-semibold text-slate-500">
-            <div class="flex items-center gap-1 text-amber-500 text-sm">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-              <span class="text-slate-800 font-bold ml-1">4,6 no Google</span>
-            </div>
-            <span class="text-slate-300">•</span>
-            <span>Mais de 180+ avaliações reais</span>
-            <span class="text-slate-300">•</span>
-            <span class="text-emerald-700 font-bold">100% Livre de Gaiolas</span>
-          </div>
         </div>
 
-        <!-- FOTO HERO CINEMATOGRÁFICA (DIREITA) -->
-        <div class="lg:col-span-5 relative flex justify-center">
-          <div class="relative w-full max-w-md lg:max-w-none">
-            
-            <!-- FORMA ORGÂNICA DE FUNDO -->
-            <div class="absolute -inset-4 bg-gradient-to-tr from-amber-200/50 via-emerald-100/60 to-brand-sand rounded-[40px] transform rotate-2 -z-10 filter blur-sm"></div>
-            
-            <!-- IMAGEM PRINCIPAL -->
-            <div class="relative rounded-[36px] overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] bg-slate-100">
-              <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=1000&q=85" alt="Cão no Spa Pet" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent"></div>
-              
-              <!-- CARD FLUTUANTE NA FOTO -->
-              <div class="absolute bottom-5 left-5 right-5 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-lg border border-white/60 flex items-center gap-3">
-                <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-xl shrink-0">
-                  🛁
-                </div>
-                <div>
-                  <h4 class="font-bold text-sm text-brand-dark">Cuidado de Estética & Bem-Estar</h4>
-                  <p class="text-xs text-slate-500">Produtos suaves para pele sensível e filhotes.</p>
-                </div>
+        <!-- HERO CARD VISUAL (STUDATS STYLE) -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-sm sm:max-w-md bg-white rounded-[32px] p-4 sm:p-5 border border-dourados-sand shadow-2xl">
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-amber-50">
+              <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=80" alt="Cão saudável Dourados Pet Shop" class="w-full h-full object-cover">
+              <div class="absolute top-3 left-3 bg-dourados-forest text-amber-300 text-[11px] font-bold px-3 py-1 rounded-full shadow">
+                ★ 4.6 no Google
               </div>
             </div>
 
-            <!-- SELO DE QUALIDADE FLUTUANTE -->
-            <div class="absolute -top-4 -right-4 bg-white rounded-2xl p-3 shadow-xl border border-brand-sand hidden sm:flex items-center gap-2">
-              <span class="text-2xl">🏆</span>
-              <div class="text-left">
-                <p class="text-[10px] uppercase font-bold text-slate-400">Padrão Ouro</p>
-                <p class="text-xs font-black text-brand-dark">Goiânia - GO</p>
+            <div class="mt-4 bg-dourados-sand/60 rounded-2xl p-4 flex items-center justify-between">
+              <div>
+                <p class="font-bold text-xs text-dourados-forest">Entregas em Campos Dourados</p>
+                <p class="text-[11px] text-slate-500">Rações pesadas, pacotes e remédios</p>
               </div>
+              <span class="text-xs font-black text-emerald-600 bg-white px-2.5 py-1 rounded-lg border border-emerald-100 shadow-sm">
+                🛵 Peça no Zap
+              </span>
             </div>
-
           </div>
         </div>
 
@@ -183,166 +192,139 @@ Av. Vila Rica, 725 - quadra 07 lote 21 - Res. Campos Dourados, Goiânia - GO, 74
     </div>
   </section>
 
-  <!-- 4 PILARES DE CONFIANÇA -->
-  <section id="diferenciais" class="py-12 bg-white border-y border-brand-sand/60">
+  <!-- CARROSSEL TOUCH NO MOBILE DE CATEGORIAS -->
+  <section class="py-5 bg-white border-b border-dourados-sand">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-        <div class="p-6 rounded-3xl bg-brand-cream/60 border border-brand-sand/80 hover:bg-white hover:shadow-lg transition duration-300">
-          <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-2xl mb-4">
-            🌿
+      <div class="flex gap-3 overflow-x-auto hide-scrollbar pb-2 snap-x snap-mandatory">
+        <a href="#produtos" class="snap-start shrink-0 flex items-center gap-2.5 bg-dourados-cream hover:bg-dourados-sand border border-dourados-sand px-4 py-3 rounded-2xl transition">
+          <span class="text-2xl">🐶</span>
+          <div>
+            <p class="text-xs font-bold text-dourados-forest">Rações p/ Cães</p>
+            <p class="text-[10px] text-slate-500">Premier, Golden, Special Dog</p>
           </div>
-          <h3 class="font-bold text-base text-brand-dark mb-1">Cuidado Suave & Seguro</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">Produtos hipoalergênicos de alto padrão para não irritar os olhos nem a pele do seu pet.</p>
-        </div>
-
-        <div class="p-6 rounded-3xl bg-brand-cream/60 border border-brand-sand/80 hover:bg-white hover:shadow-lg transition duration-300">
-          <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center text-2xl mb-4">
-            ✂️
+        </a>
+        <a href="#gatos" class="snap-start shrink-0 flex items-center gap-2.5 bg-dourados-cream hover:bg-dourados-sand border border-dourados-sand px-4 py-3 rounded-2xl transition">
+          <span class="text-2xl">🐱</span>
+          <div>
+            <p class="text-xs font-bold text-dourados-forest">Rações p/ Gatos</p>
+            <p class="text-[10px] text-slate-500">Castrados e Sachês</p>
           </div>
-          <h3 class="font-bold text-base text-brand-dark mb-1">Groomers Certificados</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">Especialistas em tosa da raça, tosa higiênica e técnicas sem estresse ou contenção forçada.</p>
-        </div>
-
-        <div class="p-6 rounded-3xl bg-brand-cream/60 border border-brand-sand/80 hover:bg-white hover:shadow-lg transition duration-300">
-          <div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-800 flex items-center justify-center text-2xl mb-4">
-            🧼
+        </a>
+        <a href="#farmacia" class="snap-start shrink-0 flex items-center gap-2.5 bg-dourados-cream hover:bg-dourados-sand border border-dourados-sand px-4 py-3 rounded-2xl transition">
+          <span class="text-2xl">💊</span>
+          <div>
+            <p class="text-xs font-bold text-dourados-forest">Farmácia Pet</p>
+            <p class="text-[10px] text-slate-500">Antipulgas e Vermífugos</p>
           </div>
-          <h3 class="font-bold text-base text-brand-dark mb-1">Higiene Rigorosa</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">Toalhas individuais esterilizadas e banheiras desinfetadas após cada procedimento.</p>
-        </div>
-
-        <div class="p-6 rounded-3xl bg-brand-cream/60 border border-brand-sand/80 hover:bg-white hover:shadow-lg transition duration-300">
-          <div class="w-12 h-12 rounded-2xl bg-rose-100 text-rose-800 flex items-center justify-center text-2xl mb-4">
-            ❤️
+        </a>
+        <a href="#acessorios" class="snap-start shrink-0 flex items-center gap-2.5 bg-dourados-cream hover:bg-dourados-sand border border-dourados-sand px-4 py-3 rounded-2xl transition">
+          <span class="text-2xl">🦮</span>
+          <div>
+            <p class="text-xs font-bold text-dourados-forest">Acessórios</p>
+            <p class="text-[10px] text-slate-500">Coleiras, Guias e Tigelas</p>
           </div>
-          <h3 class="font-bold text-base text-brand-dark mb-1">Garantia de Carinho</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">Seu pet recebe atenção exclusiva, paciência e petiscos para se sentir em casa.</p>
-        </div>
-
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- SEÇÃO DE SERVIÇOS & SPA CANINO (INSPIRADA NA IMAGEM 5 PAWCARE) -->
-  <section id="servicos" class="py-20 lg:py-28">
+  <!-- CATÁLOGO DE PRODUTOS REAIS -->
+  <section id="produtos" class="py-14 sm:py-20 bg-dourados-cream">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
-        <span class="text-xs uppercase font-extrabold tracking-widest text-brand-sage">Tratamentos & Estética</span>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-dark font-serif">
-          Nossos Serviços de Banho & Spa
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-dourados-gold bg-amber-100 px-3 py-1 rounded-full">
+          Estoque Completo
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-dourados-forest">
+          Tudo que o Seu Pet Precisa no Dia a Dia
         </h2>
-        <p class="text-slate-600 text-sm sm:text-base">
-          Escolha o cuidado perfeito para a raça, porte e necessidade do seu animal de estimação.
+        <p class="text-slate-600 text-xs sm:text-sm">
+          Marcas consagradas para garantir a melhor nutrição e longevidade do seu animal de estimação.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         
-        <!-- CARD SERVIÇO 1 -->
-        <div class="bg-white rounded-3xl overflow-hidden border border-brand-sand shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
-          <div class="h-56 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=600&q=80" alt="Banho e Escovação" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute top-4 left-4 bg-brand-forest/90 text-white text-[11px] font-bold px-3 py-1.5 rounded-full">
-              Mais Procurado
+        <!-- CARD 1: CÃES -->
+        <div class="bg-white rounded-3xl overflow-hidden border border-dourados-sand shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+          <div class="h-52 overflow-hidden relative bg-slate-100">
+            <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=600&q=80" alt="Rações para Cães" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute top-3 left-3 bg-dourados-forest text-white text-[11px] font-bold px-3 py-1 rounded-full">
+              Cães Adultos & Filhotes
             </div>
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
-              <h3 class="font-bold text-lg text-brand-dark">Banho & Escovação</h3>
+              <h3 class="font-serif font-bold text-xl text-dourados-forest">Rações Premium & Super Premium</h3>
               <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-                Água morna em temperatura ideal, xampu suave, desembolo cuidadoso, secagem silenciosa e corte de unhas.
+                Opções para todas as raças e portes. Sacos de 15kg, 20kg e opções fracionadas para atender sua necessidade com o melhor custo-benefício.
               </p>
             </div>
             <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
               <div>
-                <span class="text-[10px] text-slate-400 block font-semibold uppercase">A partir de</span>
-                <span class="text-lg font-black text-brand-forest">R$ 55,00</span>
+                <span class="text-[10px] text-slate-400 block font-semibold uppercase">Tele-Entrega</span>
+                <span class="text-sm font-bold text-emerald-600">Rápida em Casa</span>
               </div>
-              <a href="https://wa.me/5562994139983?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20Banho%20e%20Escova%C3%A7%C3%A3o%20no%20Dourados%20pet%20shop." target="_blank" class="w-10 h-10 rounded-full bg-brand-sand hover:bg-emerald-500 hover:text-white flex items-center justify-center text-slate-700 transition font-bold">
-                →
+              <a href="https://wa.me/5562994139983?text=Olá!%20Gostaria%20de%20consultar%20preços%20de%20ração%20para%20cão%20no%20Dourados%20Pet%20Shop." target="_blank" class="inline-flex items-center gap-1.5 bg-dourados-whatsapp hover:bg-dourados-whatsappHover text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow transition">
+                <span>Pedir no Zap</span>
+                <span>→</span>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- CARD SERVIÇO 2 -->
-        <div class="bg-white rounded-3xl overflow-hidden border border-brand-sand shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
-          <div class="h-56 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=600&q=80" alt="Tosa Completa" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute top-4 left-4 bg-amber-600 text-white text-[11px] font-bold px-3 py-1.5 rounded-full">
-              Tosa Especializada
+        <!-- CARD 2: GATOS -->
+        <div id="gatos" class="bg-white rounded-3xl overflow-hidden border border-dourados-sand shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+          <div class="h-52 overflow-hidden relative bg-slate-100">
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=600&q=80" alt="Rações para Gatos" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute top-3 left-3 bg-amber-500 text-slate-900 text-[11px] font-bold px-3 py-1 rounded-full">
+              Gatos Castrados
             </div>
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
-              <h3 class="font-bold text-lg text-brand-dark">Tosa da Raça & Tesoura</h3>
+              <h3 class="font-serif font-bold text-xl text-dourados-forest">Rações Especiais & Sachês</h3>
               <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-                Tosa personalizada respeitando o padrão da raça (Spitz, Poodle, Shih-tzu, Yorkshire) ou tosa bebê estilizada.
+                Fórmulas com equilíbrio mineral para proteção renal dos felinos, patês, sachês úmidos e areias sanitárias absorventes sem poeira.
               </p>
             </div>
             <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
               <div>
-                <span class="text-[10px] text-slate-400 block font-semibold uppercase">A partir de</span>
-                <span class="text-lg font-black text-brand-forest">R$ 85,00</span>
+                <span class="text-[10px] text-slate-400 block font-semibold uppercase">Opções</span>
+                <span class="text-sm font-bold text-slate-800">1kg, 3kg e 10kg</span>
               </div>
-              <a href="https://wa.me/5562994139983?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20Tosa%20da%20Ra%C3%A7a%20no%20Dourados%20pet%20shop." target="_blank" class="w-10 h-10 rounded-full bg-brand-sand hover:bg-emerald-500 hover:text-white flex items-center justify-center text-slate-700 transition font-bold">
-                →
+              <a href="https://wa.me/5562994139983?text=Olá!%20Gostaria%20de%20ver%20as%20rações%20e%20areias%20para%20gato%20no%20Dourados%20Pet%20Shop." target="_blank" class="inline-flex items-center gap-1.5 bg-dourados-whatsapp hover:bg-dourados-whatsappHover text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow transition">
+                <span>Pedir no Zap</span>
+                <span>→</span>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- CARD SERVIÇO 3 -->
-        <div class="bg-white rounded-3xl overflow-hidden border border-brand-sand shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
-          <div class="h-56 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=600&q=80" alt="Spa Deluxe" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute top-4 left-4 bg-purple-600 text-white text-[11px] font-bold px-3 py-1.5 rounded-full">
-              Experiência VIP
+        <!-- CARD 3: FARMÁCIA VETERINÁRIA -->
+        <div id="farmacia" class="bg-white rounded-3xl overflow-hidden border border-dourados-sand shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+          <div class="h-52 overflow-hidden relative bg-slate-100">
+            <img src="https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&w=600&q=80" alt="Farmácia Veterinária" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute top-3 left-3 bg-emerald-600 text-white text-[11px] font-bold px-3 py-1 rounded-full">
+              Farmácia Pet
             </div>
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
-              <h3 class="font-bold text-lg text-brand-dark">Spa & Hidratação Profunda</h3>
+              <h3 class="font-serif font-bold text-xl text-dourados-forest">Antipulgas & Medicamentos</h3>
               <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-                Banho terapêutico, máscara de hidratação intensa para pelos sedosos, massagem relaxante e bálsamo nas patinhas.
-              </p>
-            </div>
-            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <span class="text-[10px] text-slate-400 block font-semibold uppercase">A partir de</span>
-                <span class="text-lg font-black text-brand-forest">R$ 110,00</span>
-              </div>
-              <a href="https://wa.me/5562994139983?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Spa%20Deluxe%20para%20meu%20pet%20no%20Dourados%20pet%20shop." target="_blank" class="w-10 h-10 rounded-full bg-brand-sand hover:bg-emerald-500 hover:text-white flex items-center justify-center text-slate-700 transition font-bold">
-                →
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD SERVIÇO 4 -->
-        <div class="bg-white rounded-3xl overflow-hidden border border-brand-sand shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
-          <div class="h-56 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80" alt="Filhotes e Gatos" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute top-4 left-4 bg-emerald-700 text-white text-[11px] font-bold px-3 py-1.5 rounded-full">
-              Cuidados Especiais
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div>
-              <h3 class="font-bold text-lg text-brand-dark">Filhotes & Felinos</h3>
-              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-                Ambiente silencioso, primeiro banho adaptativo sem sustos para filhotes e cuidados delicados para gatos.
+                Comprimidos mastigáveis contra pulgas e carrapatos (Simparic, Bravecto), vermífugos, sprays cicatrizantes, pomadas e suplementos vitamínicos.
               </p>
             </div>
             <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
               <div>
                 <span class="text-[10px] text-slate-400 block font-semibold uppercase">Consulte</span>
-                <span class="text-lg font-black text-brand-forest">Disponibilidade</span>
+                <span class="text-sm font-bold text-emerald-600">Preços & Dosagens</span>
               </div>
-              <a href="https://wa.me/5562994139983?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20cuidados%20para%20filhote%2Fgato%20no%20Dourados%20pet%20shop." target="_blank" class="w-10 h-10 rounded-full bg-brand-sand hover:bg-emerald-500 hover:text-white flex items-center justify-center text-slate-700 transition font-bold">
-                →
+              <a href="https://wa.me/5562994139983?text=Olá!%20Gostaria%20de%20consultar%20um%20medicamento/antipulgas%20no%20Dourados%20Pet%20Shop." target="_blank" class="inline-flex items-center gap-1.5 bg-dourados-whatsapp hover:bg-dourados-whatsappHover text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow transition">
+                <span>Consultar Zap</span>
+                <span>→</span>
               </a>
             </div>
           </div>
@@ -353,300 +335,139 @@ Av. Vila Rica, 725 - quadra 07 lote 21 - Res. Campos Dourados, Goiânia - GO, 74
     </div>
   </section>
 
-  <!-- WIDGET INTERATIVO DE AGENDAMENTO (INSPIRADO NA IMAGEM 5 PAWCARE) -->
-  <section id="agendamento" class="py-12 bg-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-gradient-to-br from-brand-forest to-brand-dark rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
-        
-        <div class="absolute -right-12 -bottom-12 w-64 h-64 rounded-full bg-emerald-500/10 pointer-events-none"></div>
+  <!-- SIMULADOR DE PEDIDO E TELE-ENTREGA NO WHATSAPP -->
+  <section id="tele-entrega" class="py-14 sm:py-20 bg-dourados-forest text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center space-y-3 mb-10">
+        <span class="inline-block bg-white/10 text-amber-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+          🛵 Tele-Entrega Campos Dourados
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-serif font-bold text-white">
+          Receba Sua Ração Sem Sair de Casa
+        </h2>
+        <p class="text-slate-300 text-xs sm:text-sm max-w-xl mx-auto">
+          Faça seu pedido abaixo. Levamos a ração até você com opção de pagamento no Pix ou cartão na entrega!
+        </p>
+      </div>
 
-        <div class="max-w-2xl space-y-3 mb-8">
-          <span class="inline-block bg-white/10 text-emerald-300 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider">
-            Simulador de Agendamento
-          </span>
-          <h3 class="text-2xl sm:text-3xl font-serif font-bold text-white">
-            Consulte a Disponibilidade de Horário em Segundos
-          </h3>
-          <p class="text-slate-300 text-xs sm:text-sm">
-            Selecione o serviço e o porte do seu animal para falar com nossa equipe pelo WhatsApp.
-          </p>
+      <div class="bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-white/15">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-200 mb-1.5">Produto Desejado</label>
+            <select id="sim-prod" class="w-full bg-white text-slate-800 text-xs sm:text-sm font-semibold rounded-xl px-3 py-3 border-0 focus:ring-2 focus:ring-amber-400 outline-none">
+              <option value="Ração para Cão Adulto">Ração p/ Cão Adulto</option>
+              <option value="Ração para Cão Filhote">Ração p/ Cão Filhote</option>
+              <option value="Ração para Gato">Ração p/ Gato</option>
+              <option value="Antipulgas / Remédio">Antipulgas / Remédio</option>
+              <option value="Acessórios / Petiscos">Acessórios / Petiscos</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-200 mb-1.5">Tamanho / Peso</label>
+            <select id="sim-tamanho" class="w-full bg-white text-slate-800 text-xs sm:text-sm font-semibold rounded-xl px-3 py-3 border-0 focus:ring-2 focus:ring-amber-400 outline-none">
+              <option value="Saco Fechado de 15kg">Saco Fechado de 15kg</option>
+              <option value="Saco Fechado de 20kg">Saco Fechado de 20kg</option>
+              <option value="Pacote Médio (10kg a 12kg)">Pacote Médio (10kg a 12kg)</option>
+              <option value="Pacote Pequeno (1kg a 3kg)">Pacote Pequeno (1kg a 3kg)</option>
+              <option value="No Quilo / Fracionado">No Quilo / Fracionado</option>
+              <option value="1 Unidade (Remédio/Item)">1 Unidade (Remédio/Item)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-200 mb-1.5">Seu Bairro / Rua</label>
+            <input type="text" id="sim-rua" placeholder="Ex: Res. Campos Dourados..." class="w-full bg-white text-slate-800 text-xs sm:text-sm font-semibold rounded-xl px-3 py-3 border-0 focus:ring-2 focus:ring-amber-400 outline-none">
+          </div>
         </div>
 
-        <!-- FORMULÁRIO / SIMULADOR -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/15">
-          
-          <div>
-            <label class="block text-xs font-bold text-slate-200 mb-1.5">1. Serviço Desejado</label>
-            <select id="sim-servico" class="w-full bg-white text-slate-800 text-xs sm:text-sm font-semibold rounded-xl px-3 py-3 border-0 focus:ring-2 focus:ring-emerald-400">
-              <option value="Banho e Tosa Completa">Banho & Tosa Completa</option>
-              <option value="Apenas Banho e Hidratação">Apenas Banho & Hidratação</option>
-              <option value="Tosa Higiênica">Tosa Higiênica</option>
-              <option value="Spa Canino Deluxe">Spa Canino Deluxe</option>
-              <option value="Consulta / Outros Cuidados">Consulta / Outros Cuidados</option>
-            </select>
-          </div>
-
-          <div>
-            <label class="block text-xs font-bold text-slate-200 mb-1.5">2. Porte do Pet</label>
-            <select id="sim-porte" class="w-full bg-white text-slate-800 text-xs sm:text-sm font-semibold rounded-xl px-3 py-3 border-0 focus:ring-2 focus:ring-emerald-400">
-              <option value="Porte Pequeno (até 10kg)">Porte Pequeno (até 10kg)</option>
-              <option value="Porte Médio (10kg a 20kg)">Porte Médio (10kg a 20kg)</option>
-              <option value="Porte Grande (acima de 20kg)">Porte Grande (acima de 20kg)</option>
-              <option value="Gato / Felino">Gato / Felino</option>
-            </select>
-          </div>
-
-          <div class="flex items-end">
-            <button onclick="dispararAgendamento()" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm py-3 px-4 rounded-xl shadow-lg transition flex items-center justify-center gap-2 transform active:scale-95">
-              <span>📅 Consultar no WhatsApp</span>
-            </button>
-          </div>
-
+        <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-white/10">
+          <p class="text-xs text-slate-300 text-center sm:text-left">
+            💳 Aceitamos Pix, Dinheiro e Cartões no ato da entrega.
+          </p>
+          <button onclick="enviarPedidoDourados()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-dourados-whatsapp hover:bg-dourados-whatsappHover text-white font-bold text-sm px-8 py-3.5 rounded-xl shadow-lg transition transform active:scale-95 shrink-0 pulse-glow-zap">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+            <span>Pedir Tele-Entrega no WhatsApp</span>
+          </button>
         </div>
 
         <script>
-          function dispararAgendamento() {
-            const serv = document.getElementById('sim-servico').value;
-            const porte = document.getElementById('sim-porte').value;
-            const msg = 'Olá! Gostaria de consultar horários para o serviço: ' + serv + ' (Porte: ' + porte + ') no ' + "Dourados pet shop";
-            const url = 'https://wa.me/' + "5562994139983" + '?text=' + encodeURIComponent(msg);
+          function enviarPedidoDourados() {
+            const prod = document.getElementById('sim-prod').value;
+            const tam = document.getElementById('sim-tamanho').value;
+            const rua = document.getElementById('sim-rua').value.trim() || 'Campos Dourados';
+            const msg = `Olá! Vim pelo site do Dourados Pet Shop e gostaria de pedir uma tele-entrega:\n\n📦 Produto: ${prod}\n⚖️ Peso: ${tam}\n📍 Endereço: ${rua}\n\nVocês conseguem entregar para mim hoje?`;
+            const url = `https://wa.me/5562994139983?text=${encodeURIComponent(msg)}`;
             window.open(url, '_blank');
           }
         </script>
 
       </div>
+
     </div>
   </section>
 
-  <!-- SOBRE NÓS E HISTÓRIA -->
-  <section class="py-20 lg:py-24">
+  <!-- LOCALIZAÇÃO & SOBRE -->
+  <section id="sobre" class="py-14 sm:py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         
-        <div class="relative">
-          <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3]">
-            <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1000&q=80" alt="Equipe com animais" class="w-full h-full object-cover">
-          </div>
-          <div class="absolute -bottom-6 -right-6 bg-white rounded-3xl p-6 shadow-xl border border-brand-sand max-w-xs hidden sm:block">
-            <p class="font-serif italic font-bold text-brand-dark text-lg">"Nosso compromisso é tratar cada animal como parte da nossa própria família."</p>
-            <p class="text-xs text-brand-sage font-bold mt-2">— Equipe Dourados pet shop</p>
-          </div>
-        </div>
-
-        <div class="space-y-6">
-          <span class="text-xs uppercase font-extrabold tracking-widest text-brand-sage">Sobre o Estabelecimento</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark font-serif leading-tight">
-            Amor, Respeito e Bem-Estar Animal em Cada Detalhe
+        <div class="space-y-5">
+          <span class="text-xs font-bold uppercase tracking-widest text-dourados-gold">Visite Nossa Loja Física</span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-dourados-forest leading-tight">
+            Atendimento Amigo & Dedicado em Campos Dourados
           </h2>
           <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-            Localizado em <strong>
-Av. Vila Rica, 725 - quadra 07 lote 21 - Res. Campos Dourados, Goiânia - GO, 74356-400</strong>, o <strong>Dourados pet shop</strong> nasceu da paixão por cuidar dos nossos amigos de quatro patas. Criamos um ambiente acolhedor, limpo e seguro onde o seu pet não sente medo do banho.
+            Localizado na <strong>Av. Vila Rica, 725 (Qd. 07, Lt. 21)</strong> no Residencial Campos Dourados em Goiânia, o <strong>Dourados Pet Shop</strong> é o ponto de encontro de quem busca preço justo, rações de confiança e atendimento atencioso para seu animal.
           </p>
-          <ul class="space-y-3 text-sm text-slate-700">
-            <li class="flex items-center gap-3">
-              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">✓</span>
-              <span>Estrutura completa com toalhas descartáveis individuais</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">✓</span>
-              <span>Monitoramento carinhoso durante todo o atendimento</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">✓</span>
-              <span>Linha cosmética cruelty-free aprovada por veterinários</span>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- DEPOIMENTOS / PROVA SOCIAL REAL DO GOOGLE -->
-  <section id="depoimentos" class="py-20 bg-white border-t border-brand-sand">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto space-y-3 mb-14">
-        <span class="text-xs uppercase font-extrabold tracking-widest text-brand-sage">Avaliações de Clientes</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark font-serif">
-          O Que os Tutores Dizem Sobre Nós
-        </h2>
-        <div class="flex items-center justify-center gap-2 text-amber-500 font-bold text-sm">
-          <span>★★★★★</span>
-          <span class="text-slate-800">4,6 no Google (180+ avaliações)</span>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <div class="bg-brand-cream/80 p-8 rounded-3xl border border-brand-sand space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="text-amber-500 text-sm">★★★★★</div>
-            <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
-              "Levo meu Golden Retriever toda semana. O atendimento é impecável, ele volta muito cheiroso e super calmo. Nunca vi um pet shop com tanto carinho!"
-            </p>
+          <div class="bg-dourados-cream p-4 rounded-2xl border border-dourados-sand space-y-2 text-xs text-slate-700">
+            <p><strong>📍 Endereço:</strong> Av. Vila Rica, 725 - Res. Campos Dourados, Goiânia - GO, 74356-400</p>
+            <p><strong>📞 Telefone/WhatsApp:</strong> (62) 99413-9983</p>
+            <p><strong>⏰ Atendimento:</strong> Segunda a Sábado</p>
           </div>
-          <div class="flex items-center gap-3 pt-4 border-t border-brand-sand/60">
-            <div class="w-10 h-10 rounded-full bg-amber-200 text-amber-900 font-bold flex items-center justify-center text-xs">
-              MC
-            </div>
-            <div>
-              <p class="font-bold text-xs text-brand-dark">Mariana Costa</p>
-              <p class="text-[11px] text-slate-400">Tutora do Thor (Golden)</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-brand-cream/80 p-8 rounded-3xl border border-brand-sand space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="text-amber-500 text-sm">★★★★★</div>
-            <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
-              "A tosa na tesoura do meu Shih-tzu ficou perfeita, exatamente como eu pedi. Além disso, o ambiente é extremamente limpo e organizado. Recomendo de olhos fechados!"
-            </p>
-          </div>
-          <div class="flex items-center gap-3 pt-4 border-t border-brand-sand/60">
-            <div class="w-10 h-10 rounded-full bg-emerald-200 text-emerald-900 font-bold flex items-center justify-center text-xs">
-              RO
-            </div>
-            <div>
-              <p class="font-bold text-xs text-brand-dark">Rodrigo Oliveira</p>
-              <p class="text-[11px] text-slate-400">Tutor do Pipoca (Shih-tzu)</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-brand-cream/80 p-8 rounded-3xl border border-brand-sand space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="text-amber-500 text-sm">★★★★★</div>
-            <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
-              "Minha gatinha sempre foi muito medrosa com banho, mas a equipe tratou ela com tanta paciência e cuidado que foi uma experiência maravilhosa."
-            </p>
-          </div>
-          <div class="flex items-center gap-3 pt-4 border-t border-brand-sand/60">
-            <div class="w-10 h-10 rounded-full bg-rose-200 text-rose-900 font-bold flex items-center justify-center text-xs">
-              CS
-            </div>
-            <div>
-              <p class="font-bold text-xs text-brand-dark">Camila Silveira</p>
-              <p class="text-[11px] text-slate-400">Tutora da Luna (Gata Persa)</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ONDE ESTAMOS / MAPA E ENDEREÇO -->
-  <section id="localizacao" class="py-20 bg-brand-cream">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-white rounded-3xl border border-brand-sand shadow-lg overflow-hidden grid grid-cols-1 lg:grid-cols-12">
-        
-        <div class="p-8 sm:p-12 lg:col-span-5 flex flex-col justify-between space-y-6">
-          <div class="space-y-4">
-            <span class="text-xs uppercase font-extrabold tracking-widest text-brand-sage">Venha nos Conhecer</span>
-            <h3 class="text-2xl sm:text-3xl font-serif font-bold text-brand-dark">
-              Localização Fácil & Acesso Rápido
-            </h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Estamos prontos para receber você e seu pet com toda a comodidade, ambiente climatizado e facilidade de parada.
-            </p>
-            <div class="space-y-2 pt-2 text-xs sm:text-sm text-slate-700">
-              <p class="flex items-start gap-2">
-                <span class="text-base text-emerald-600">📍</span>
-                <span><strong>Endereço:</strong> 
-Av. Vila Rica, 725 - quadra 07 lote 21 - Res. Campos Dourados, Goiânia - GO, 74356-400</span>
-              </p>
-              <p class="flex items-start gap-2">
-                <span class="text-base text-emerald-600">🕒</span>
-                <span><strong>Horários:</strong> Segunda a Sábado: 08h00 às 18h00</span>
-              </p>
-              <p class="flex items-start gap-2">
-                <span class="text-base text-emerald-600">📱</span>
-                <span><strong>WhatsApp:</strong> 
-(62) 99413-9983</span>
-              </p>
-            </div>
-          </div>
-
-          <div class="pt-4 space-y-3">
-            <a href="https://maps.google.com/?q=Dourados%20pet%20shop%20%EE%83%88%0AAv.%20Vila%20Rica%2C%20725%20-%20quadra%2007%20lote%2021%20-%20Res.%20Campos%20Dourados%2C%20Goi%C3%A2nia%20-%20GO%2C%2074356-400" target="_blank" class="block w-full text-center bg-brand-forest hover:bg-brand-dark text-white font-bold py-3.5 px-6 rounded-2xl text-xs sm:text-sm shadow-md transition">
-              🗺️ Abrir Rota no Google Maps / Waze
-            </a>
-            <a href="https://wa.me/5562994139983?text=Ol%C3%A1!%20Estava%20no%20site%20de%20voc%C3%AAs%20do%20Dourados%20pet%20shop%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20o%20meu%20pet." target="_blank" class="block w-full text-center bg-brand-sand hover:bg-emerald-100 text-brand-dark font-bold py-3 px-6 rounded-2xl text-xs transition">
-              💬 Falar com a Recepção no WhatsApp
+          <div>
+            <a href="https://www.google.com/maps/place/Dourados+pet+shop/data=!4m7!3m6!1s0x935ef96ebf0f64eb:0x58ae256191bcc2c!8m2!3d-16.8009681!4d-49.3637872" target="_blank" class="inline-flex items-center gap-2 bg-dourados-forest hover:bg-slate-900 text-white text-xs sm:text-sm font-bold px-6 py-3.5 rounded-xl shadow transition">
+              <span>📍 Abrir no Google Maps</span>
+              <span>↗</span>
             </a>
           </div>
         </div>
 
-        <div class="lg:col-span-7 bg-slate-100 min-h-[360px] relative">
-          <iframe 
-            width="100%" 
-            height="100%" 
-            style="border:0; min-height: 360px;" 
-            loading="lazy" 
-            allowfullscreen 
-            src="https://maps.google.com/maps?q=Dourados%20pet%20shop%20%EE%83%88%0AAv.%20Vila%20Rica%2C%20725%20-%20quadra%2007%20lote%2021%20-%20Res.%20Campos%20Dourados%2C%20Goi%C3%A2nia%20-%20GO%2C%2074356-400&t=&z=15&ie=UTF8&iwloc=&output=embed">
-          </iframe>
+        <div class="rounded-3xl overflow-hidden shadow-xl border border-dourados-sand bg-dourados-sand/40 p-4">
+          <div class="rounded-2xl overflow-hidden aspect-[4/3]">
+            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=800&q=80" alt="Cães felizes correndo" class="w-full h-full object-cover">
+          </div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- RODAPÉ CORPORATIVO / DE LUXO -->
-  <footer class="bg-brand-dark text-slate-400 py-16 border-t border-slate-800">
+  <!-- RODAPÉ CORPORATIVO -->
+  <footer class="bg-dourados-forest text-slate-300 py-12 text-xs border-t border-emerald-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-slate-800/80">
-        
-        <div class="space-y-4 md:col-span-2">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-brand-forest text-amber-300 flex items-center justify-center text-xl">
-              🐾
-            </div>
-            <span class="font-serif font-bold text-xl text-white">Dourados pet shop</span>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <div class="bg-white rounded-2xl p-2 shadow">
+            <img src="logo.png" alt="Dourados Pet Center" class="h-12 w-auto object-contain">
           </div>
-          <p class="text-xs text-slate-400 max-w-md leading-relaxed">
-            Dedicados ao amor, bem-estar e estética de cães e gatos. Estrutura moderna, groomers qualificados e atendimento acolhedor em Goiânia.
-          </p>
+          <div>
+            <span class="font-serif font-bold text-white text-lg block">Dourados Pet Center</span>
+            <span class="text-[11px] text-amber-300">A melhor opção para seu amiguinho • Campos Dourados, Goiânia</span>
+          </div>
         </div>
-
-        <div class="space-y-3">
-          <h4 class="font-bold text-white text-xs uppercase tracking-wider">Links Rápidos</h4>
-          <ul class="space-y-2 text-xs">
-            <li><a href="#servicos" class="hover:text-emerald-400 transition">Banho & Tosa</a></li>
-            <li><a href="#servicos" class="hover:text-emerald-400 transition">Spa & Hidratação</a></li>
-            <li><a href="#agendamento" class="hover:text-emerald-400 transition">Agendar Horário</a></li>
-            <li><a href="#depoimentos" class="hover:text-emerald-400 transition">Depoimentos</a></li>
-          </ul>
+        <div class="text-center sm:text-right text-[11px] text-slate-400">
+          <p class="text-white font-bold text-xs mb-1">Tele-Entrega: (62) 99413-9983</p>
+          <p>© 2026 Dourados Pet Center. Todos os direitos reservados.</p>
         </div>
-
-        <div class="space-y-3">
-          <h4 class="font-bold text-white text-xs uppercase tracking-wider">Atendimento</h4>
-          <p class="text-xs text-slate-300">
-Av. Vila Rica, 725 - quadra 07 lote 21 - Res. Campos Dourados, Goiânia - GO, 74356-400</p>
-          <p class="text-xs text-emerald-400 font-bold">
-(62) 99413-9983</p>
-          <a href="https://wa.me/5562994139983?text=Ol%C3%A1!%20Estava%20no%20site%20de%20voc%C3%AAs%20do%20Dourados%20pet%20shop%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20o%20meu%20pet." target="_blank" class="inline-block text-xs bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2 rounded-xl transition">
-            Falar Conosco
-          </a>
-        </div>
-
-      </div>
-
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-        <p>© 2026 Dourados pet shop. Todos os direitos reservados.</p>
-        <p class="text-slate-400">Página oficial com conexão direta via WhatsApp.</p>
       </div>
     </div>
   </footer>
 
-  <!-- BOTÃO FLUTUANTE DE WHATSAPP COM NOTIFICAÇÃO (CANTO INFERIOR DIREITO) -->
-  <div class="fixed bottom-6 right-6 z-50">
-    <a href="https://wa.me/5562994139983?text=Ol%C3%A1!%20Estava%20no%20site%20de%20voc%C3%AAs%20do%20Dourados%20pet%20shop%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20o%20meu%20pet." target="_blank" class="flex items-center justify-center w-16 h-16 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white shadow-2xl transition transform hover:scale-110 pulse-glow relative group">
-      <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
-      <span class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-red-500 text-white text-[10px] font-black flex items-center justify-center shadow">1</span>
+  <!-- BARRA FIXA MOBILE (BOTTOM APP BAR) -->
+  <div class="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-t border-dourados-sand p-3 shadow-2xl">
+    <a href="https://wa.me/5562994139983?text=Olá!%20Vim%20pelo%20site%20do%20Dourados%20Pet%20Shop%20e%20gostaria%20de%20fazer%20um%20pedido." target="_blank" class="w-full flex items-center justify-center gap-2 bg-dourados-whatsapp text-white font-black text-sm py-3.5 px-4 rounded-xl shadow-lg shadow-dourados-whatsapp/25 pulse-glow-zap active:scale-95 transition">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+      <span>🛵 Pedir Entrega no WhatsApp</span>
     </a>
   </div>
 
