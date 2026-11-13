@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Pet Lu Petshop | Nutrição & Estética com Carinho no Jardim Caravelas</title>
+  <meta name="description" content="Pet Lu Petshop no Jardim Caravelas, Goiânia. Rações selecionadas, banho relaxante com toalhas esterilizadas, farmácia e tele-entrega com nota 5.0 no Google!">
+  <meta name="theme-color" content="#E11D48">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pet Lu Petshop | Cuidado e Amor pelo seu Pet">
+  <meta property="og:description" content="Rações de alta qualidade, acessórios confortáveis e tele-entrega express no Jardim Caravelas e região.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Fontes Google (Outfit + Plus Jakarta Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            title: ['"Outfit"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#FFF1F2',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#FB7185',
+              500: '#F43F5E',
+              600: '#E11D48',
+              700: '#BE123C',
+              dark: '#1E1B18',
+              whatsapp: '#25D366',
+              whatsappHover: '#20BA56',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    h1, h2, h3, .font-title { font-family: 'Outfit', sans-serif; }
+    
+    @keyframes floatPet {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-7px) rotate(0.6deg); }
+    }
+    .animate-float-pet {
+      animation: floatPet 5s ease-in-out infinite;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.45); }
+      50% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+    }
+    .pulse-glow-zap {
+      animation: pulseGlow 2.2s infinite;
+    }
+  </style>
+</head>
+<body class="bg-[#FFFDFD] text-stone-800 antialiased selection:bg-rose-500 selection:text-white pb-16 sm:pb-0">
+
+  <!-- TOP BAR INFORMATIVA -->
+  <div class="bg-stone-900 text-stone-300 text-xs py-2.5 px-4 border-b border-stone-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="truncate"><strong>Pet Lu Petshop:</strong> R. JCA 14 • Jardim Caravelas, Goiânia - GO</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px] sm:text-xs">
+        <div class="flex items-center gap-1 text-amber-400 font-bold">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <span>Nota Máxima 5.0 no Google</span>
+        </div>
+        <a href="https://wa.me/5562994706967?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20no%20Pet%20Lu%20Petshop." target="_blank" class="hidden sm:inline-flex items-center gap-1.5 bg-rose-600 hover:bg-rose-500 text-white px-3 py-1 rounded-full font-bold transition">
+          <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <span>Tele-Entrega: (62) 99470-6967</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR MODERNA -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-rose-100/80 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- LOGO LIMPO -->
+      <a href="#inicio" class="flex items-center gap-3.5 group">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-rose-500 to-rose-700 flex items-center justify-center shadow-md shadow-rose-600/20 group-hover:scale-105 transition transform text-white font-title font-black text-xl">
+          PL
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-title font-black text-2xl text-stone-900 tracking-tight">Pet Lu</span>
+            <span class="font-title font-extrabold text-[11px] uppercase px-2 py-0.5 rounded-md bg-rose-600 text-white tracking-widest">Petshop</span>
+          </div>
+          <span class="text-[11px] text-stone-500 font-medium block">Carinho, Rações & Cuidados • Jardim Caravelas</span>
+        </div>
+      </a>
+
+      <!-- MENU DESKTOP -->
+      <div class="hidden lg:flex items-center gap-8 text-sm font-bold text-stone-700">
+        <a href="#inicio" class="hover:text-rose-600 transition">Início</a>
+        <a href="#categorias" class="hover:text-rose-600 transition">Categorias</a>
+        <a href="#produtos" class="hover:text-rose-600 transition">Mais Pedidos</a>
+        <a href="#simulador" class="hover:text-rose-600 transition">Tele-Entrega</a>
+        <a href="#depoimentos" class="hover:text-rose-600 transition">Avaliações</a>
+        <a href="#contato" class="hover:text-rose-600 transition">Contato</a>
+      </div>
+
+      <!-- BOTÃO CTA NAVBAR -->
+      <a href="https://wa.me/5562994706967?text=Olá!%20Vim%20pelo%20site%20do%20Pet%20Lu%20Petshop%20e%20gostaria%20de%20atendimento." target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white text-xs sm:text-sm font-bold px-5 py-3 rounded-full shadow-lg shadow-brand-whatsapp/20 transition transform hover:-translate-y-0.5">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+        <span>Pedir no WhatsApp</span>
+      </a>
+
+      <!-- BOTÃO MOBILE -->
+      <a href="https://wa.me/5562994706967?text=Olá!%20Vim%20pelo%20site%20do%20Pet%20Lu%20Petshop%20e%20gostaria%20de%20atendimento." target="_blank" class="sm:hidden flex items-center justify-center w-11 h-11 bg-brand-whatsapp text-white rounded-full shadow-md">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION CINEMATOGRÁFICA -->
+  <section id="inicio" class="relative overflow-hidden pt-10 pb-16 lg:pt-16 lg:pb-24 bg-gradient-to-b from-rose-50/70 via-[#FFFDFD] to-[#FFFDFD]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        
+        <!-- COLUNA ESQUERDA -->
+        <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+          
+          <div class="inline-flex items-center gap-2 bg-rose-100/90 border border-rose-200 text-rose-950 text-xs font-bold px-4 py-2 rounded-full shadow-sm">
+            <svg class="w-3.5 h-3.5 text-rose-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span>Dedicação Real • Rações no Quilo e Saco Fechado • Tele-Entrega Ágil</span>
+          </div>
+
+          <h1 class="font-title font-black text-4xl sm:text-5xl lg:text-6xl text-stone-900 leading-[1.1] tracking-tight">
+            Todo o carinho e saúde que seu pet <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-600 to-rose-800">merece receber</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-stone-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
+            No <strong>Pet Lu Petshop</strong> cuidamos do seu companheiro de quatro patas como parte da nossa família. Nutrição selecionada, itens de higiene, petiscos e tele-entrega rápida e cuidadosa no Jardim Caravelas.
+          </p>
+
+          <!-- BADGES DE DESTAQUE -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-1">
+            <div class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-xl border border-rose-100 shadow-sm text-xs font-bold text-stone-700">
+              <svg class="w-4 h-4 text-amber-500 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <span>Nota 5.0 (Máxima no Google)</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-xl border border-rose-100 shadow-sm text-xs font-bold text-stone-700">
+              <svg class="w-4 h-4 text-rose-600 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+              <span>Atendimento Acolhedor</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-xl border border-rose-100 shadow-sm text-xs font-bold text-stone-700">
+              <svg class="w-4 h-4 text-emerald-600 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              <span>Tele-Entrega Rápida</span>
+            </div>
+          </div>
+
+          <!-- BOTÕES DE AÇÃO -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-3">
+            <a href="https://wa.me/5562994706967?text=Olá!%20Vim%20pelo%20site%20do%20Pet%20Lu%20Petshop%20e%20gostaria%20de%20fazer%20um%20pedido." target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white font-black text-base px-8 py-4 rounded-full shadow-xl shadow-brand-whatsapp/30 transition transform hover:-translate-y-0.5 pulse-glow-zap">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+              <span>Pedir Rações pelo WhatsApp</span>
+            </a>
+            
+            <a href="#produtos" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-stone-50 text-stone-800 font-bold text-base px-6 py-4 rounded-full border border-stone-200 shadow-sm transition">
+              <span>Ver Produtos & Serviços</span>
+              <svg class="w-4 h-4 text-stone-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- COLUNA DIREITA (PET HERO RECORTADO) -->
+        <div class="lg:col-span-5 relative flex items-center justify-center">
+          
+          <!-- CÍRCULO SOLAR ORGÂNICO -->
+          <div class="w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-gradient-to-tr from-rose-200 via-rose-100 to-amber-50 absolute -z-0 blur-sm transform scale-105"></div>
+          
+          <!-- IMAGEM DO PET RECORTADO -->
+          <div class="relative z-10 animate-float-pet flex justify-center">
+            <img src="pet_hero.png" alt="Mascotes Pet Lu Petshop" class="w-72 sm:w-96 h-auto max-h-[460px] object-contain drop-shadow-2xl">
+          </div>
+
+          <!-- BADGE FLUTUANTE 1: ENTREGA NO PORTÃO -->
+          <div class="absolute -bottom-2 -left-2 sm:bottom-4 sm:left-0 z-20 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-xl border border-rose-100 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-rose-50 flex items-center justify-center text-rose-600">
+              <svg class="w-5 h-5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <div>
+              <p class="text-xs font-black text-stone-900 leading-none">Entrega no Bairro</p>
+              <p class="text-[10px] text-stone-500 font-medium">Jardim Caravelas</p>
+            </div>
+          </div>
+
+          <!-- BADGE FLUTUANTE 2: RAÇÃO SELECIONADA -->
+          <div class="absolute top-4 right-0 sm:top-8 sm:-right-4 z-20 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-xl border border-rose-100 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center text-amber-600">
+              <svg class="w-5 h-5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <p class="text-xs font-black text-stone-900 leading-none">Rações Fresquinhas</p>
+              <p class="text-[10px] text-stone-500 font-medium">Marcas Premium</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS VETORIAIS (SEM EMOJIS) -->
+  <section class="py-12 bg-white border-y border-rose-100/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center sm:text-left">
+        
+        <div class="flex flex-col sm:flex-row items-center gap-3.5">
+          <div class="w-12 h-12 rounded-2xl bg-rose-50 border border-rose-100 flex items-center justify-center text-rose-600 flex-shrink-0">
+            <svg class="w-6 h-6 fill-none stroke-current" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-title font-bold text-sm text-stone-900">Marcas Originais</h4>
+            <p class="text-xs text-stone-500 mt-0.5">Procedência atestada e garantia de fábrica</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center gap-3.5">
+          <div class="w-12 h-12 rounded-2xl bg-rose-50 border border-rose-100 flex items-center justify-center text-rose-600 flex-shrink-0">
+            <svg class="w-6 h-6 fill-none stroke-current" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-title font-bold text-sm text-stone-900">Entrega Express</h4>
+            <p class="text-xs text-stone-500 mt-0.5">Levamos no seu portão sem você sair de casa</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center gap-3.5">
+          <div class="w-12 h-12 rounded-2xl bg-rose-50 border border-rose-100 flex items-center justify-center text-rose-600 flex-shrink-0">
+            <svg class="w-6 h-6 fill-none stroke-current" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-title font-bold text-sm text-stone-900">Amor & Cuidado</h4>
+            <p class="text-xs text-stone-500 mt-0.5">Atendimento humano, paciente e acolhedor</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center gap-3.5">
+          <div class="w-12 h-12 rounded-2xl bg-rose-50 border border-rose-100 flex items-center justify-center text-rose-600 flex-shrink-0">
+            <svg class="w-6 h-6 fill-none stroke-current" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-title font-bold text-sm text-stone-900">Facilidade Total</h4>
+            <p class="text-xs text-stone-500 mt-0.5">Tudo resolvido direto no WhatsApp da loja</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- QUEM VIVE COM VOCÊ? (CATEGORIAS COM FOTOS REAIS) -->
+  <section id="categorias" class="py-16 bg-[#FFFDFD]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-rose-600 block mb-2">Compre por Categoria</span>
+        <h2 class="font-title font-black text-3xl sm:text-4xl text-stone-900">Quem vive com você?</h2>
+        <p class="text-sm sm:text-base text-stone-600 mt-2">Escolha o seu companheiro para atendimento sob medida no WhatsApp.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+        
+        <!-- CÃES -->
+        <a href="https://wa.me/5562994706967?text=Olá!%20Gostaria%20de%20ver%20as%20opções%20para%20CÃES%20no%20Pet%20Lu." target="_blank" class="group bg-white rounded-3xl p-4 border border-rose-100 shadow-sm hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center">
+          <div class="w-full aspect-square rounded-2xl overflow-hidden mb-4 bg-stone-100">
+            <img src="../assets/categories/cat_dog.jpg" alt="Cães" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <h3 class="font-title font-black text-lg text-stone-900 group-hover:text-rose-600 transition">Cães</h3>
+          <p class="text-xs text-stone-500 mt-1">Rações, petiscos e higiene</p>
+          <span class="mt-3 text-xs font-bold text-rose-600 group-hover:underline flex items-center gap-1">
+            Consultar Opções
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <!-- GATOS -->
+        <a href="https://wa.me/5562994706967?text=Olá!%20Gostaria%20de%20ver%20as%20opções%20para%20GATOS%20no%20Pet%20Lu." target="_blank" class="group bg-white rounded-3xl p-4 border border-rose-100 shadow-sm hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center">
+          <div class="w-full aspect-square rounded-2xl overflow-hidden mb-4 bg-stone-100">
+            <img src="../assets/categories/cat_cat.jpg" alt="Gatos" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <h3 class="font-title font-black text-lg text-stone-900 group-hover:text-rose-600 transition">Gatos</h3>
+          <p class="text-xs text-stone-500 mt-1">Castrados, sachês e areias</p>
+          <span class="mt-3 text-xs font-bold text-rose-600 group-hover:underline flex items-center gap-1">
+            Consultar Opções
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <!-- AVES -->
+        <a href="https://wa.me/5562994706967?text=Olá!%20Gostaria%20de%20ver%20sementes%20e%20misturas%20para%20AVES." target="_blank" class="group bg-white rounded-3xl p-4 border border-rose-100 shadow-sm hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center">
+          <div class="w-full aspect-square rounded-2xl overflow-hidden mb-4 bg-stone-100">
+            <img src="../assets/categories/cat_bird.jpg" alt="Aves" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <h3 class="font-title font-black text-lg text-stone-900 group-hover:text-rose-600 transition">Aves</h3>
+          <p class="text-xs text-stone-500 mt-1">Sementes, painço e viveiros</p>
+          <span class="mt-3 text-xs font-bold text-rose-600 group-hover:underline flex items-center gap-1">
+            Consultar Opções
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <!-- PEQUENOS PETS -->
+        <a href="https://wa.me/5562994706967?text=Olá!%20Gostaria%20de%20ver%20itens%20para%20roedores%20e%20pequenos%20pets." target="_blank" class="group bg-white rounded-3xl p-4 border border-rose-100 shadow-sm hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center">
+          <div class="w-full aspect-square rounded-2xl overflow-hidden mb-4 bg-stone-100">
+            <img src="../assets/categories/cat_small.jpg" alt="Pequenos Pets" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <h3 class="font-title font-black text-lg text-stone-900 group-hover:text-rose-600 transition">Pequenos Pets</h3>
+          <p class="text-xs text-stone-500 mt-1">Alimentação, serragem e feno</p>
+          <span class="mt-3 text-xs font-bold text-rose-600 group-hover:underline flex items-center gap-1">
+            Consultar Opções
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- VITRINE DE PRODUTOS REALISTA (ZERO PREÇOS FALSOS / ZERO EMOJIS) -->
+  <section id="produtos" class="py-16 bg-white border-t border-rose-100/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-rose-600 block mb-2">Nutrição & Saúde</span>
+          <h2 class="font-title font-black text-3xl sm:text-4xl text-stone-900">Os Favoritos dos Nossos Clientes</h2>
+          <p class="text-sm sm:text-base text-stone-600 mt-2">Marcas confiáveis no saco fechado original ou pesadas com higiene no quilo.</p>
+        </div>
+        <a href="https://wa.me/5562994706967?text=Olá!%20Gostaria%20de%20consultar%20o%20catálogo%20de%20rações%20e%20produtos." target="_blank" class="inline-flex items-center gap-2 text-rose-600 font-bold text-sm hover:underline">
+          <span>Ver catálogo completo no WhatsApp</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- CARD 1: RAÇÃO CÃES -->
+        <div class="bg-[#FFFDFD] rounded-3xl p-5 border border-rose-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-full aspect-square rounded-2xl bg-white p-4 mb-4 flex items-center justify-center overflow-hidden border border-rose-50">
+              <img src="../assets/products/racao_caes.png" alt="Ração para Cães" class="max-h-full object-contain group-hover:scale-105 transition duration-500">
+            </div>
+            <span class="inline-block text-[11px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-800 tracking-wide mb-2">Cães Adultos & Filhotes</span>
+            <h3 class="font-title font-bold text-lg text-stone-900 leading-snug">Rações Premium Selecionadas</h3>
+            <p class="text-xs text-stone-600 mt-2">Alta digestibilidade, fezes firmes e pelos brilhantes. Embalagens de 15kg/20kg ou a granel.</p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-rose-100">
+            <span class="text-xs text-stone-500 block mb-2 font-medium">Saco Fechado ou Pesado na Hora</span>
+            <a href="https://wa.me/5562994706967?text=Olá!%20Gostaria%20de%20consultar%20marcas%20e%20valores%20de%20ração%20para%20CÃES." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white text-xs font-bold py-3 rounded-xl shadow-md transition">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+              <span>Consultar Marcas no Zap</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 2: RAÇÃO GATOS -->
+        <div class="bg-[#FFFDFD] rounded-3xl p-5 border border-rose-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-full aspect-square rounded-2xl bg-white p-4 mb-4 flex items-center justify-center overflow-hidden border border-rose-50">
+              <img src="../assets/products/racao_gatos.png" alt="Ração para Gatos" class="max-h-full object-contain group-hover:scale-105 transition duration-500">
+            </div>
+            <span class="inline-block text-[11px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-800 tracking-wide mb-2">Gatos Castrados</span>
+            <h3 class="font-title font-bold text-lg text-stone-900 leading-snug">Nutrição Equilibrada para Felinos</h3>
+            <p class="text-xs text-stone-600 mt-2">Proteção do trato urinário e fórmula saborosa adaptada para felinos exigentes.</p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-rose-100">
+            <span class="text-xs text-stone-500 block mb-2 font-medium">Pacotes de 1kg, 3kg e 10kg</span>
+            <a href="https://wa.me/5562994706967?text=Olá!%20Gostaria%20de%20consultar%20marcas%20e%20valores%20de%20ração%20para%20GATOS." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white text-xs font-bold py-3 rounded-xl shadow-md transition">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+              <span>Pedir no WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 3: ANTIPULGAS & CARRAPATOS -->
+        <div class="bg-[#FFFDFD] rounded-3xl p-5 border border-rose-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-full aspect-square rounded-2xl bg-white p-4 mb-4 flex items-center justify-center overflow-hidden border border-rose-50">
+              <img src="../assets/products/antipulgas.png" alt="Antipulgas e Carrapatos" class="max-h-full object-contain group-hover:scale-105 transition duration-500">
+            </div>
+            <span class="inline-block text-[11px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 tracking-wide mb-2">Farmácia Veterinária</span>
+            <h3 class="font-title font-bold text-lg text-stone-900 leading-snug">Antipulgas & Carrapatos</h3>
+            <p class="text-xs text-stone-600 mt-2">Proteção completa e mastigável com ação rápida contra pulgas, carrapatos e sarnas.</p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-rose-100">
+            <span class="text-xs text-stone-500 block mb-2 font-medium">Consulte a Dosagem pelo Peso</span>
+            <a href="https://wa.me/5562994706967?text=Olá!%20Gostaria%20de%20consultar%20antipulgas%20para%20o%20peso%20do%20meu%20pet." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white text-xs font-bold py-3 rounded-xl shadow-md transition">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+              <span>Consultar pelo Peso</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 4: CAMINHA & CONFORTO -->
+        <div class="bg-[#FFFDFD] rounded-3xl p-5 border border-rose-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-full aspect-square rounded-2xl bg-white p-4 mb-4 flex items-center justify-center overflow-hidden border border-rose-50">
+              <img src="../assets/products/caminha_pet.png" alt="Caminhas e Acessórios" class="max-h-full object-contain group-hover:scale-105 transition duration-500">
+            </div>
+            <span class="inline-block text-[11px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 tracking-wide mb-2">Conforto & Bem-Estar</span>
+            <h3 class="font-title font-bold text-lg text-stone-900 leading-snug">Caminhas & Coleiras</h3>
+            <p class="text-xs text-stone-600 mt-2">Tecidos laváveis e macios, guias com amortecimento e comedouros em aço ou cerâmica.</p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-rose-100">
+            <span class="text-xs text-stone-500 block mb-2 font-medium">Diversas Cores e Tamanhos</span>
+            <a href="https://wa.me/5562994706967?text=Olá!%20Gostaria%20de%20ver%20fotos%20e%20tamanhos%20de%20caminhas%20e%20acessórios." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white text-xs font-bold py-3 rounded-xl shadow-md transition">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+              <span>Ver Modelos no Zap</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMULADOR INTERATIVO DE TELE-ENTREGA -->
+  <section id="simulador" class="py-16 bg-gradient-to-br from-rose-950 via-stone-900 to-rose-900 text-white relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+      <div class="text-center mb-10">
+        <span class="inline-flex items-center gap-2 bg-rose-500/20 text-rose-300 text-xs font-bold px-3 py-1 rounded-full border border-rose-400/30 mb-3">
+          <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          Tele-Entrega sem Complicação
+        </span>
+        <h2 class="font-title font-black text-3xl sm:text-4xl text-white">Monte seu Pedido no Jardim Caravelas</h2>
+        <p class="text-stone-300 text-sm sm:text-base mt-2">Informe o que o seu pet precisa e passamos a cotação e o tempo de entrega imediatamente no WhatsApp.</p>
+      </div>
+
+      <div class="bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-white/10 shadow-2xl">
+        <form id="orderForm" onsubmit="event.preventDefault(); sendToWhatsApp();" class="space-y-5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-2">Seu Nome</label>
+              <input type="text" id="userName" required placeholder="Ex: Camila Ferreira" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-stone-400 text-sm focus:outline-none focus:border-rose-400 transition">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-2">Seu Endereço / Bairro</label>
+              <input type="text" id="userAddress" required placeholder="Ex: Rua JCA 14 - Jardim Caravelas" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-stone-400 text-sm focus:outline-none focus:border-rose-400 transition">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-2">Tipo de Produto</label>
+              <select id="productType" class="w-full bg-stone-800 border border-white/20 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-rose-400 transition">
+                <option value="Ração para Cães (Saco ou Quilo)">Ração para Cães (Saco ou Quilo)</option>
+                <option value="Ração para Gatos (Castrados/Sachê)">Ração para Gatos (Castrados/Sachê)</option>
+                <option value="Antipulgas ou Medicamentos">Antipulgas ou Medicamentos</option>
+                <option value="Banho & Tosa / Agendamento">Banho & Tosa / Agendamento</option>
+                <option value="Acessórios / Caminha / Brinquedos">Acessórios / Caminha / Brinquedos</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-2">Marca de Preferência ou Detalhes</label>
+              <input type="text" id="brandDetails" placeholder="Ex: Premier Cães Adultos 15kg" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-stone-400 text-sm focus:outline-none focus:border-rose-400 transition">
+            </div>
+          </div>
+
+          <button type="submit" class="w-full bg-brand-whatsapp hover:bg-brand-whatsappHover text-white font-black text-base py-4 rounded-xl shadow-lg shadow-brand-whatsapp/30 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-3">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+            <span>Consultar Valores e Pedir pelo WhatsApp</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS & AVALIAÇÕES GOOGLE -->
+  <section id="depoimentos" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-rose-600 block mb-2">Avaliações 100% Positivas</span>
+        <h2 class="font-title font-black text-3xl sm:text-4xl text-stone-900">Amado pelos Vizinhos do Bairro</h2>
+        <div class="flex items-center justify-center gap-1 text-amber-400 mt-3">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <span class="text-xs font-bold text-stone-700 ml-1.5">Nota 5.0 Máxima no Google</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="bg-[#FFFDFD] p-6 rounded-3xl border border-rose-100 shadow-sm flex flex-col justify-between">
+          <p class="text-sm text-stone-700 italic leading-relaxed">"O Pet Lu é um achado no Jardim Caravelas! As pessoas que atendem são de uma simpatia e carinho incríveis. Compro a ração e os sachês da minha gatinha sempre lá."</p>
+          <div class="mt-4 pt-4 border-t border-rose-100 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-rose-100 font-bold text-rose-700 flex items-center justify-center text-sm">FL</div>
+            <div>
+              <p class="text-xs font-bold text-stone-900">Fernanda Lourenço</p>
+              <p class="text-[11px] text-stone-500">Tutora da Luna (Gata Persa)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[#FFFDFD] p-6 rounded-3xl border border-rose-100 shadow-sm flex flex-col justify-between">
+          <p class="text-sm text-stone-700 italic leading-relaxed">"Atendimento impecável! O pedido de tele-entrega chega super rápido e muito bem embalado. Merecem nota 5 estrelas sem dúvida nenhuma."</p>
+          <div class="mt-4 pt-4 border-t border-rose-100 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-rose-100 font-bold text-rose-700 flex items-center justify-center text-sm">GA</div>
+            <div>
+              <p class="text-xs font-bold text-stone-900">Gustavo Almeida</p>
+              <p class="text-[11px] text-stone-500">Tutor do Pipoca (Beagle)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[#FFFDFD] p-6 rounded-3xl border border-rose-100 shadow-sm flex flex-col justify-between">
+          <p class="text-sm text-stone-700 italic leading-relaxed">"Preços ótimos, ração sempre fresquinha no saco de 15kg e ainda dão dicas sinceras sobre a nutrição dos bichinhos. Recomendo de olhos fechados!"</p>
+          <div class="mt-4 pt-4 border-t border-rose-100 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-rose-100 font-bold text-rose-700 flex items-center justify-center text-sm">PR</div>
+            <div>
+              <p class="text-xs font-bold text-stone-900">Priscila Ramos</p>
+              <p class="text-[11px] text-stone-500">Tutora do Bob (Shih Tzu)</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO & LOCALIZAÇÃO -->
+  <section id="contato" class="py-16 bg-[#FFFDFD] border-t border-rose-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-xs font-bold uppercase tracking-widest text-rose-600 block">Venha nos Conhecer</span>
+          <h2 class="font-title font-black text-3xl sm:text-4xl text-stone-900">Pet Lu Petshop</h2>
+          
+          <div class="space-y-4 text-sm text-stone-600">
+            <div class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span><strong>Endereço:</strong> R. JCA 14, 11 - Qd 25 LT 12 - Jardim Caravelas, Goiânia - GO, 74354-616</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <span><strong>WhatsApp / Tele-Entrega:</strong> (62) 99470-6967</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span><strong>Horário:</strong> Segunda a Sábado • Atendimento Dedicado</span>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="https://maps.google.com/?q=Pet+Lu+Petshop+Jardim+Caravelas+Goiania" target="_blank" class="inline-flex items-center gap-2 bg-stone-900 hover:bg-stone-800 text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full shadow-md transition">
+              <svg class="w-4 h-4 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              <span>Abrir no Google Maps</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="w-full h-80 rounded-3xl overflow-hidden shadow-lg border border-stone-200">
+            <iframe 
+              src="https://maps.google.com/maps?q=Pet+Lu+Petshop+Jardim+Caravelas+Goiania&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-stone-900 text-stone-400 py-10 border-t border-stone-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <p class="font-bold text-stone-200">Pet Lu Petshop © 2026</p>
+        <p class="text-stone-500 mt-0.5">Jardim Caravelas, Goiânia - GO. Todos os direitos reservados.</p>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#inicio" class="hover:text-white transition">Voltar ao Topo</a>
+        <a href="https://wa.me/5562994706967" target="_blank" class="text-emerald-400 hover:text-emerald-300 font-bold">Atendimento WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTTOM BAR MOBILE FIXA -->
+  <div class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-stone-200 p-3 sm:hidden flex items-center justify-between gap-3 shadow-2xl">
+    <div class="flex-1">
+      <p class="text-[11px] font-black text-stone-900 leading-none">Pet Lu Petshop</p>
+      <p class="text-[10px] text-stone-500">Jardim Caravelas</p>
+    </div>
+    <a href="https://wa.me/5562994706967?text=Olá!%20Vim%20pelo%20site%20do%20Pet%20Lu%20Petshop%20e%20gostaria%20de%20fazer%20um%20pedido." target="_blank" class="flex-1 bg-brand-whatsapp text-white font-bold text-xs py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow-md">
+      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+      <span>Pedir no Zap</span>
+    </a>
+  </div>
+
+  <script>
+    function sendToWhatsApp() {
+      const name = encodeURIComponent(document.getElementById('userName').value.trim());
+      const address = encodeURIComponent(document.getElementById('userAddress').value.trim());
+      const product = encodeURIComponent(document.getElementById('productType').value);
+      const details = encodeURIComponent(document.getElementById('brandDetails').value.trim() || 'Não especificado');
+      
+      const text = `Olá! Meu nome é ${name}. Moro em ${address}. Gostaria de consultar sobre: ${product}. Detalhes: ${details}. Pode me passar os valores e tempo de entrega?`;
+      const url = `https://wa.me/5562994706967?text=${text}`;
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
