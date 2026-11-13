@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Bicholândia Pet Shop | O Mundo do Seu Pet no Jardim Caravelas (Nota 5.0 ★)</title>
-  <meta name="description" content="Bicholândia Pet Shop no Jardim Caravelas, Goiânia. Rações no quilo e saco lacrado, banho e tosa carinhoso, farmácia pet e tele-entrega rápida. Fale no WhatsApp!">
+  <title>Bicholândia Pet Shop | Rações Nobres, Estética & Cuidados no Jardim Caravelas</title>
+  <meta name="description" content="Bicholândia Pet Shop no Jardim Caravelas, Goiânia (Nota 5.0 ★). Rações das melhores marcas no quilo e saco fechado, banho relaxante sem estresse, farmácia veterinária e tele-entrega expressa no seu portão!">
   <meta name="theme-color" content="#059669">
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Bicholândia Pet Shop | Cuidado 5 Estrelas para Seu Companheiro">
-  <meta property="og:description" content="O pet shop de confiança da sua família no Jardim Caravelas. Rações selecionadas, estética e tele-entrega rápida.">
+  <meta property="og:title" content="Bicholândia Pet Shop | Felicidade e Cuidado para Seu Pet">
+  <meta property="og:description" content="Tudo o que seu pet precisa entregue no seu portão no Jardim Caravelas. Peça pelo WhatsApp!">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Fontes Google -->
+  <!-- Fontes Google Modernas (Outfit para títulos + Plus Jakarta Sans para leitura) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -28,15 +28,17 @@
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
           },
           colors: {
-            bicholandia: {
-              cream: '#F0FDF4',
-              mint: '#DCFCE7',
+            brand: {
+              cream: '#FEFDF8',
+              warm: '#F7F4EB',
+              mint: '#E6F7F0',
               primary: '#059669',
-              primaryDark: '#047857',
-              accent: '#34D399',
-              gold: '#F59E0B',
-              dark: '#064E3B',
-              night: '#022C22',
+              primaryHover: '#047857',
+              accent: '#10B981',
+              yellow: '#F59E0B',
+              yellowLight: '#FEF3C7',
+              dark: '#0F172A',
+              navy: '#1E293B',
               whatsapp: '#25D366',
               whatsappHover: '#20BA56',
             }
@@ -48,148 +50,242 @@
 
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    h1, h2, h3, .font-display { font-family: 'Outfit', sans-serif; }
+    h1, h2, h3, h4, .font-display { font-family: 'Outfit', sans-serif; }
     .hide-scrollbar::-webkit-scrollbar { display: none; }
     .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-    .pulse-glow-zap {
+    .pulse-zap {
       animation: pulseZap 2.2s infinite;
     }
     @keyframes pulseZap {
-      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
       70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
       100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
+    .float-slow {
+      animation: float 4s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
   </style>
 </head>
-<body class="bg-[#FBFDFB] text-slate-800 antialiased selection:bg-emerald-600 selection:text-white pb-20 sm:pb-0">
+<body class="bg-brand-cream text-slate-800 antialiased selection:bg-brand-primary selection:text-white pb-20 sm:pb-0">
 
-  <!-- TOP BAR -->
-  <div class="bg-gradient-to-r from-emerald-950 via-emerald-900 to-teal-950 text-emerald-100 text-xs py-2 px-4 shadow-sm">
-    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+  <!-- TOP BAR DE ANÚNCIO SUPERIOR -->
+  <div class="bg-gradient-to-r from-emerald-800 via-emerald-700 to-teal-900 text-emerald-50 text-xs py-2 px-4 shadow-sm">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
       <div class="flex items-center gap-2 truncate">
-        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span class="truncate">🐾 <strong>Bicholândia Pet Shop:</strong> Nota 5.0 no Google! Rações no quilo, banho & tosa e tele-entrega no Jardim Caravelas</span>
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-300 animate-pulse"></span>
+        <span class="truncate">🐾 <strong>Bicholândia Pet Shop:</strong> Tele-entrega rápida no Jardim Caravelas e região • Rações lacradas e no quilo!</span>
       </div>
-      <a href="https://wa.me/556232881078?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20ou%20agendamento%20no%20Bicholândia." target="_blank" class="hidden sm:inline-flex items-center gap-1.5 bg-emerald-400 hover:bg-emerald-300 text-slate-950 px-3 py-1 rounded-full text-[11px] font-black transition">
-        <span>📲 Atendimento: (62) 3288-1078</span>
-      </a>
+      <div class="flex items-center gap-3 shrink-0">
+        <span class="hidden md:inline-flex items-center gap-1 text-[11px] text-emerald-200">
+          ⭐ Nota 5.0 no Google (Avaliação Máxima)
+        </span>
+        <a href="https://wa.me/556232881078?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20no%20Bicholândia%20Pet%20Shop." target="_blank" class="inline-flex items-center gap-1.5 bg-amber-400 hover:bg-amber-300 text-slate-900 px-3 py-1 rounded-full text-[11px] font-black transition">
+          <span>📲 WhatsApp: (62) 3288-1078</span>
+        </a>
+      </div>
     </div>
   </div>
 
-  <!-- NAVBAR -->
-  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-emerald-100 shadow-sm transition-all duration-300">
+  <!-- NAVBAR LIMPA COM LOGO VETORIAL ELEGANTE -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- LOGO VETORIAL CRISTALINO -->
       <a href="#inicio" class="flex items-center gap-3 group">
-        <img src="logo.png" alt="Bicholândia Pet Shop Logo" class="h-14 w-auto object-contain drop-shadow-sm group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null; this.src='logo.jpg'">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center text-white shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform duration-300">
+          <!-- Ícone Vetorial de Pata e Coração Nobre -->
+          <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
         <div>
-          <span class="block font-display font-black text-xl tracking-tight text-emerald-950 leading-none">BICHOLÂNDIA</span>
-          <span class="block text-[10px] uppercase font-bold tracking-widest text-emerald-700 mt-1">Pet Shop & Estética Animal</span>
+          <span class="block font-display font-black text-2xl tracking-tight text-slate-900 leading-none">BICHOLÂNDIA</span>
+          <span class="block text-[11px] uppercase font-bold tracking-widest text-emerald-600 mt-1">Pet Shop & Estética Animal</span>
         </div>
       </a>
 
-      <!-- Menu Desktop -->
-      <div class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600">
-        <a href="#inicio" class="hover:text-emerald-700 transition">Início</a>
-        <a href="#racoes" class="hover:text-emerald-700 transition">Rações & Quilo</a>
-        <a href="#estetica" class="hover:text-emerald-700 transition">Banho & Tosa</a>
-        <a href="#depoimentos" class="hover:text-emerald-700 transition">Avaliações 5.0 ★</a>
-        <a href="#contato" class="hover:text-emerald-700 transition">Onde Estamos</a>
+      <!-- MENU DESK -->
+      <div class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="#inicio" class="hover:text-emerald-600 transition">Início</a>
+        <a href="#categorias" class="hover:text-emerald-600 transition">Categorias</a>
+        <a href="#ofertas" class="hover:text-emerald-600 transition">Ofertas</a>
+        <a href="#produtos" class="hover:text-emerald-600 transition">Rações & Farmácia</a>
+        <a href="#estetica" class="hover:text-emerald-600 transition">Banho & Tosa</a>
+        <a href="#avaliacoes" class="hover:text-emerald-600 transition">Depoimentos</a>
+        <a href="#contato" class="hover:text-emerald-600 transition">Localização</a>
       </div>
 
-      <!-- CTA Desktop -->
-      <div class="hidden md:flex items-center gap-3">
-        <a href="https://wa.me/556232881078?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20para%20entrega." target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-700 hover:to-emerald-600 text-white font-bold px-5 py-2.5 rounded-full text-sm shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+      <!-- BOTÃO DIRETO WHATSAPP -->
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/556232881078?text=Olá!%20Gostaria%20de%20pedir%20uma%20ração%20ou%20agendar%20um%20banho." target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-700 hover:to-emerald-600 text-white font-black text-xs sm:text-sm px-4 sm:px-6 py-2.5 sm:py-3 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
           <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-          Pedir Ração
+          <span>Pedir no WhatsApp</span>
         </a>
       </div>
 
-      <!-- Botão Mobile Direto -->
-      <a href="https://wa.me/556232881078?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20no%20Bicholândia." target="_blank" class="md:hidden flex items-center gap-1.5 bg-emerald-600 text-white font-bold px-3 py-1.5 rounded-full text-xs shadow-sm">
-        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-        WhatsApp
-      </a>
     </div>
   </nav>
 
-  <!-- HERO SECTION -->
-  <section id="inicio" class="relative overflow-hidden bg-gradient-to-b from-emerald-950 via-slate-900 to-emerald-950 text-white pt-12 pb-20 lg:pt-20 lg:pb-28">
-    <div class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:24px_24px]"></div>
-    <div class="absolute -top-32 -left-32 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl pointer-events-none"></div>
+  <!-- HERO SECTION CINEMATOGRÁFICA COM O PET PROTAGONISTA -->
+  <section id="inicio" class="relative overflow-hidden bg-gradient-to-b from-brand-warm via-white to-brand-cream pt-8 sm:pt-14 pb-16 lg:pb-24">
+    <!-- Efeitos de fundo e formas orgânicas suaves -->
+    <div class="absolute -top-20 -right-20 w-96 h-96 bg-emerald-200/40 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 -left-20 w-80 h-80 bg-amber-200/40 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
-        <!-- Texto Hero -->
-        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-          <div class="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-400/30 px-3.5 py-1.5 rounded-full text-xs font-semibold text-emerald-300">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-            <span>Rua JCA 11 • Jardim Caravelas, Goiânia</span>
+        <!-- COLUNA DA ESQUERDA: COPY E CONVERSÃO -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left z-10">
+          
+          <!-- Selo de Destaque -->
+          <div class="inline-flex items-center gap-2 bg-emerald-100/80 border border-emerald-300 text-emerald-800 px-4 py-1.5 rounded-full text-xs font-bold tracking-wide">
+            <span class="text-sm">⭐</span>
+            <span>Nota 5.0 no Google • Jardim Caravelas, Goiânia</span>
           </div>
 
-          <h1 class="font-display font-black text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.1] text-white">
-            O universo completo de carinho, <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-200 to-emerald-400">rações & estética</span> para o seu pet
+          <!-- Título Principal -->
+          <h1 class="font-display font-black text-3xl sm:text-5xl lg:text-6xl text-slate-900 tracking-tight leading-[1.08]">
+            Felicidade em <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">quatro patas</span> entregue no seu portão.
           </h1>
 
-          <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
-            No <strong>Bicholândia Pet Shop</strong> você encontra nutrição selecionada no quilo e saco lacrado, banho morno com toalhas esterilizadas, farmácia completa e tele-entrega rápida no Jardim Caravelas.
+          <!-- Descrição -->
+          <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
+            No <strong>Bicholândia Pet Shop</strong> você encontra tudo o que seu pet ama: rações das melhores marcas no quilo ou saco lacrado, banho morno com toalhas esterilizadas, farmácia veterinária e tele-entrega expressa.
           </p>
 
-          <!-- Badges de Qualidade -->
-          <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-medium text-slate-300">
-            <div class="flex items-center gap-1.5 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">
-              <span class="text-amber-400">⭐</span>
-              <span>Nota 5.0 Máxima no Google</span>
+          <!-- Badges de Vantagem Rápida -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-1 text-xs font-semibold text-slate-700">
+            <div class="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-xl border border-slate-200 shadow-sm">
+              <span class="text-emerald-600">🛵</span>
+              <span>Entrega Rápida no Bairro</span>
             </div>
-            <div class="flex items-center gap-1.5 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">
-              <span class="text-emerald-400">⚖️</span>
-              <span>Ração no Quilo & Saco Fechado</span>
+            <div class="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-xl border border-slate-200 shadow-sm">
+              <span class="text-amber-500">⚖️</span>
+              <span>Rações Frescas no Quilo</span>
             </div>
-            <div class="flex items-center gap-1.5 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">
-              <span class="text-emerald-400">🛵</span>
-              <span>Tele-Entrega Ágil no Portão</span>
+            <div class="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-xl border border-slate-200 shadow-sm">
+              <span class="text-blue-500">🛁</span>
+              <span>Banho com Água Morna</span>
             </div>
           </div>
 
-          <!-- CTAs -->
-          <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5">
-            <a href="https://wa.me/556232881078?text=Olá!%20Gostaria%20de%20pedir%20uma%20ração%20para%20entrega." target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-black text-base px-8 py-4 rounded-xl shadow-xl hover:shadow-emerald-500/25 transition-all transform hover:-translate-y-0.5 pulse-glow-zap">
+          <!-- Botões de Ação -->
+          <div class="pt-3 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5">
+            <a href="https://wa.me/556232881078?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20de%20ração%20para%20entrega." target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-700 hover:to-emerald-600 text-white font-black text-base px-8 py-4 rounded-2xl shadow-xl hover:shadow-emerald-500/25 transition-all transform hover:-translate-y-0.5 pulse-zap">
               <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
               <span>Pedir Ração pelo WhatsApp</span>
             </a>
-            <a href="#racoes" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-800/90 hover:bg-slate-700 text-slate-100 font-bold text-base px-6 py-4 rounded-xl border border-slate-600 transition">
-              <span>Ver Produtos</span>
+            <a href="#produtos" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-800 font-bold text-base px-7 py-4 rounded-2xl border border-slate-200 shadow-sm transition">
+              <span>Ver Produtos & Preços</span>
             </a>
+          </div>
+
+          <!-- Estatística do Google -->
+          <div class="pt-2 flex items-center justify-center lg:justify-start gap-4 text-xs text-slate-500">
+            <div class="flex items-center gap-1 text-amber-500 text-sm">
+              ★★★★★
+            </div>
+            <span><strong>5.0 de 5 estrelas</strong> em avaliações verificadas</span>
+          </div>
+
+        </div>
+
+        <!-- COLUNA DA DIREITA: O PET PROTAGONISTA GIGANTE TRANSBORDANDO -->
+        <div class="lg:col-span-5 relative flex justify-center items-center">
+          
+          <!-- Elemento Orgânico / Círculo Amarelo e Esmeralda de Fundo (Estilo Paddington & Barana) -->
+          <div class="relative w-[320px] sm:w-[420px] lg:w-[460px] aspect-square flex items-center justify-center">
+            
+            <!-- Círculo Colorido de Fundo -->
+            <div class="absolute inset-4 rounded-full bg-gradient-to-tr from-amber-400 via-amber-300 to-emerald-400 opacity-90 shadow-2xl"></div>
+            
+            <!-- Anel externo sutil -->
+            <div class="absolute inset-0 rounded-full border-4 border-dashed border-emerald-400/30 animate-[spin_60s_linear_infinite]"></div>
+
+            <!-- FOTO DO PET RECORTADO EM ALTA RESOLUÇÃO TRANSBORDANDO PARA FORA -->
+            <img 
+              src="pet_hero.png" 
+              alt="Cachorro Golden e Gatinho felizes - Bicholândia Pet Shop" 
+              class="relative z-20 w-full h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+            >
+
+            <!-- Badge Flutuante 1: Primeira Compra -->
+            <div class="absolute -top-2 left-0 sm:left-4 z-30 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-2xl shadow-xl border border-amber-200 float-slow flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-xl bg-amber-100 flex items-center justify-center text-amber-600 font-black text-sm">
+                🎁
+              </div>
+              <div>
+                <span class="block text-[10px] uppercase font-bold text-slate-400 leading-none">Vantagem</span>
+                <span class="block text-xs font-black text-slate-900 leading-tight">Brinde no 1º Pedido</span>
+              </div>
+            </div>
+
+            <!-- Badge Flutuante 2: Tele-Entrega Rápida -->
+            <div class="absolute -bottom-4 right-2 sm:right-6 z-30 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-xl border border-emerald-200 float-slow flex items-center gap-3" style="animation-delay: 2s;">
+              <div class="w-9 h-9 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-600 text-lg">
+                🛵
+              </div>
+              <div>
+                <span class="block text-xs font-black text-slate-900 leading-tight">Tele-Entrega Ágil</span>
+                <span class="block text-[11px] font-bold text-emerald-600">Jardim Caravelas</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BARRA DE DIFERENCIAIS E GARANTIAS (Estilo PawVita & Pawfect) -->
+  <section class="py-6 bg-white border-y border-slate-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        
+        <div class="flex items-center gap-3.5 p-3 rounded-2xl hover:bg-slate-50 transition">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl shrink-0">
+            🚚
+          </div>
+          <div>
+            <h4 class="font-display font-black text-slate-900 text-sm">Entrega Rápida</h4>
+            <p class="text-slate-500 text-xs">No seu portão sem você carregar peso</p>
           </div>
         </div>
 
-        <!-- Card Logo & Destaque Visual -->
-        <div class="lg:col-span-5 flex justify-center">
-          <div class="relative w-full max-w-sm">
-            <div class="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 to-teal-300/10 rounded-3xl blur-2xl transform rotate-2"></div>
-            <div class="relative bg-gradient-to-b from-slate-900/90 to-emerald-950/90 border border-emerald-400/30 rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-2xl text-center space-y-5">
-              <div class="w-36 h-36 mx-auto bg-slate-800/70 rounded-2xl p-2 flex items-center justify-center border border-emerald-400/20 shadow-inner">
-                <img src="logo.png" alt="Bicholândia Pet Shop Logo" class="w-full h-full object-contain filter drop-shadow-md" onerror="this.onerror=null; this.src='logo.jpg'">
-              </div>
-              <div class="space-y-2">
-                <h3 class="font-display font-black text-xl text-emerald-200">BICHOLÂNDIA PET SHOP</h3>
-                <p class="text-xs text-slate-300">Rua JCA 11, S/N Qd 12 LT 3 • Jardim Caravelas</p>
-                <div class="inline-flex items-center gap-1.5 text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30 px-3 py-1 rounded-full">
-                  <span>⭐ 5.0 (Nota Máxima) no Google</span>
-                </div>
-              </div>
-              <div class="pt-2 border-t border-slate-800 grid grid-cols-2 gap-2 text-center text-xs">
-                <div class="bg-slate-800/50 p-2.5 rounded-xl">
-                  <span class="block font-bold text-emerald-400 text-sm">Rações Frescas</span>
-                  <span class="text-slate-400 text-[11px]">Quilo & Saco</span>
-                </div>
-                <div class="bg-slate-800/50 p-2.5 rounded-xl">
-                  <span class="block font-bold text-emerald-400 text-sm">Banho & Tosa</span>
-                  <span class="text-slate-400 text-[11px]">Cuidado Total</span>
-                </div>
-              </div>
-            </div>
+        <div class="flex items-center gap-3.5 p-3 rounded-2xl hover:bg-slate-50 transition">
+          <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl shrink-0">
+            🔒
+          </div>
+          <div>
+            <h4 class="font-display font-black text-slate-900 text-sm">100% Originais</h4>
+            <p class="text-slate-500 text-xs">Sacos lacrados com garantia de fábrica</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3.5 p-3 rounded-2xl hover:bg-slate-50 transition">
+          <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl shrink-0">
+            💳
+          </div>
+          <div>
+            <h4 class="font-display font-black text-slate-900 text-sm">Pague na Entrega</h4>
+            <p class="text-slate-500 text-xs">Pix, Cartão de Débito/Crédito ou Dinheiro</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3.5 p-3 rounded-2xl hover:bg-slate-50 transition">
+          <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center text-2xl shrink-0">
+            💖
+          </div>
+          <div>
+            <h4 class="font-display font-black text-slate-900 text-sm">Nota 5.0 Máxima</h4>
+            <p class="text-slate-500 text-xs">Avaliação impecável no Google Reviews</p>
           </div>
         </div>
 
@@ -197,210 +293,489 @@
     </div>
   </section>
 
-  <!-- SEÇÃO DE PRODUTOS & RAÇÕES -->
-  <section id="racoes" class="py-16 bg-[#F4FBF6]">
+  <!-- SELETOR VISUAL DE CATEGORIAS: "QUEM VIVE COM VOCÊ?" (Estilo Pawzo & PawVita) -->
+  <section id="categorias" class="py-14 bg-brand-cream">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto space-y-3 mb-10">
-        <span class="text-xs font-bold tracking-widest text-emerald-700 uppercase bg-emerald-100 px-3 py-1 rounded-full">Tudo para Seu Animal</span>
-        <h2 class="font-display font-black text-2xl sm:text-4xl text-slate-900 tracking-tight">Rações Nobres & Cuidados Especiais</h2>
-        <p class="text-slate-600 text-sm sm:text-base">Variedade de rações para cães, gatos e aves com garantia de procedência e pesagem transparente.</p>
-      </div>
-
-      <div class="flex overflow-x-auto pb-6 gap-5 snap-x snap-mandatory hide-scrollbar md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-visible">
-        
-        <!-- Card 1: Rações para Cães -->
-        <div class="min-w-[270px] sm:min-w-[290px] md:min-w-0 bg-white rounded-2xl p-5 border border-emerald-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between snap-start">
-          <div>
-            <div class="h-32 bg-emerald-50 rounded-xl flex items-center justify-center p-4 mb-4 text-4xl">
-              🐕
-            </div>
-            <span class="text-[11px] font-bold text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-full uppercase">Cães de Todas as Raças</span>
-            <h3 class="font-display font-bold text-lg text-slate-900 mt-2">Rações Caninas Selecionadas</h3>
-            <p class="text-xs text-slate-500 mt-1 leading-relaxed">
-              Premier, Golden, Special Dog, Gran Plus e Magnus. Rações para filhotes, adultos e idosos, além de opções específicas para controle de peso.
-            </p>
-          </div>
-          <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
-            <span class="text-xs font-semibold text-slate-600">No quilo ou saco lacrado</span>
-            <a href="https://wa.me/556232881078?text=Olá!%20Gostaria%20de%20consultar%20valores%20de%20ração%20para%20cão." target="_blank" class="p-2 rounded-lg bg-emerald-100 text-emerald-800 hover:bg-emerald-600 hover:text-white transition">
-              📲
-            </a>
-          </div>
-        </div>
-
-        <!-- Card 2: Nutrição Felina -->
-        <div class="min-w-[270px] sm:min-w-[290px] md:min-w-0 bg-white rounded-2xl p-5 border border-emerald-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between snap-start">
-          <div>
-            <div class="h-32 bg-teal-50 rounded-xl flex items-center justify-center p-4 mb-4 text-4xl">
-              🐈
-            </div>
-            <span class="text-[11px] font-bold text-teal-800 bg-teal-100 px-2.5 py-0.5 rounded-full uppercase">Nutrição Felina</span>
-            <h3 class="font-display font-bold text-lg text-slate-900 mt-2">Rações para Gatos</h3>
-            <p class="text-xs text-slate-500 mt-1 leading-relaxed">
-              Whiskas, Cat Chow, Golden Gatos Castrados e Gran Plus Gourmet. Areia higiênica, sachês saborosos e petiscos crocantes.
-            </p>
-          </div>
-          <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
-            <span class="text-xs font-semibold text-slate-600">Alta palatabilidade</span>
-            <a href="https://wa.me/556232881078?text=Olá!%20Gostaria%20de%20consultar%20ração%20para%20gatos." target="_blank" class="p-2 rounded-lg bg-emerald-100 text-emerald-800 hover:bg-emerald-600 hover:text-white transition">
-              📲
-            </a>
-          </div>
-        </div>
-
-        <!-- Card 3: Banho & Tosa -->
-        <div id="estetica" class="min-w-[270px] sm:min-w-[290px] md:min-w-0 bg-white rounded-2xl p-5 border border-emerald-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between snap-start">
-          <div>
-            <div class="h-32 bg-cyan-50 rounded-xl flex items-center justify-center p-4 mb-4 text-4xl">
-              🛁
-            </div>
-            <span class="text-[11px] font-bold text-cyan-800 bg-cyan-100 px-2.5 py-0.5 rounded-full uppercase">Estética & Higiene</span>
-            <h3 class="font-display font-bold text-lg text-slate-900 mt-2">Banho & Tosa com Amor</h3>
-            <p class="text-xs text-slate-500 mt-1 leading-relaxed">
-              Profissionais pacientes e cuidadosos. Água quentinha, toalhas individuais esterilizadas, tosa na tesoura, higiênica e corte de unhas.
-            </p>
-          </div>
-          <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
-            <span class="text-xs font-semibold text-slate-600">Agende seu horário</span>
-            <a href="https://wa.me/556232881078?text=Olá!%20Gostaria%20de%20agendar%20um%20banho%20ou%20tosa%20no%20Bicholândia." target="_blank" class="p-2 rounded-lg bg-emerald-100 text-emerald-800 hover:bg-emerald-600 hover:text-white transition">
-              📅
-            </a>
-          </div>
-        </div>
-
-        <!-- Card 4: Farmácia Veterinária -->
-        <div class="min-w-[270px] sm:min-w-[290px] md:min-w-0 bg-white rounded-2xl p-5 border border-emerald-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between snap-start">
-          <div>
-            <div class="h-32 bg-emerald-50 rounded-xl flex items-center justify-center p-4 mb-4 text-4xl">
-              💊
-            </div>
-            <span class="text-[11px] font-bold text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-full uppercase">Farmácia Básica</span>
-            <h3 class="font-display font-bold text-lg text-slate-900 mt-2">Antipulgas & Remédios</h3>
-            <p class="text-xs text-slate-500 mt-1 leading-relaxed">
-              Simparic, Bravecto, Nexgard, vermífugos de amplo espectro, sprays antissépticos, shampoos dermatológicos e suplementos.
-            </p>
-          </div>
-          <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
-            <span class="text-xs font-semibold text-slate-600">Pronta entrega</span>
-            <a href="https://wa.me/556232881078?text=Olá!%20Gostaria%20de%20consultar%20remédios%20ou%20antipulgas%20no%20Bicholândia." target="_blank" class="p-2 rounded-lg bg-emerald-100 text-emerald-800 hover:bg-emerald-600 hover:text-white transition">
-              📲
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="mt-4 text-center md:hidden">
-        <span class="text-xs text-slate-400 font-medium">👉 Deslize para o lado para ver todos os serviços</span>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SIMULADOR INTERATIVO DE PEDIDO / TELE-ENTREGA -->
-  <section class="py-16 bg-white border-y border-emerald-100">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-200 rounded-3xl p-6 sm:p-10 shadow-lg">
-        
-        <div class="text-center space-y-2 mb-8">
-          <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-900 rounded-full text-xs font-bold uppercase tracking-wider">Tele-Entrega no Jardim Caravelas</span>
-          <h2 class="font-display font-black text-2xl sm:text-3xl text-slate-900">Faça Seu Pedido no Bicholândia</h2>
-          <p class="text-slate-600 text-xs sm:text-sm">Envie a sua lista pelo WhatsApp e receba no seu portão sem complicações.</p>
-        </div>
-
-        <div class="space-y-6">
-          <!-- Passo 1: O que você precisa -->
-          <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">1. O que você gostaria de pedir?</label>
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-              <button type="button" onclick="selecionarItem('Ração a Granel (No Quilo)', this)" class="item-btn p-3 rounded-xl border border-emerald-500 bg-emerald-50 text-emerald-900 font-semibold text-xs flex flex-col items-center gap-1 transition active">
-                <span class="text-xl">⚖️</span>
-                <span>Ração no Quilo</span>
-              </button>
-              <button type="button" onclick="selecionarItem('Saco Fechado de Ração', this)" class="item-btn p-3 rounded-xl border border-slate-200 bg-white hover:border-emerald-400 text-slate-800 font-semibold text-xs flex flex-col items-center gap-1 transition">
-                <span class="text-xl">📦</span>
-                <span>Saco Lacrado</span>
-              </button>
-              <button type="button" onclick="selecionarItem('Banho e Tosa', this)" class="item-btn p-3 rounded-xl border border-slate-200 bg-white hover:border-emerald-400 text-slate-800 font-semibold text-xs flex flex-col items-center gap-1 transition">
-                <span class="text-xl">🛁</span>
-                <span>Banho & Tosa</span>
-              </button>
-              <button type="button" onclick="selecionarItem('Antipulgas / Remédio', this)" class="item-btn p-3 rounded-xl border border-slate-200 bg-white hover:border-emerald-400 text-slate-800 font-semibold text-xs flex flex-col items-center gap-1 transition">
-                <span class="text-xl">💊</span>
-                <span>Farmácia Pet</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Passo 2: Marca ou Detalhes -->
-          <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">2. Detalhes do item ou marca:</label>
-            <input type="text" id="detalhesInput" placeholder="Ex: Premier 15kg, 3kg de Golden, Simparic..." class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
-          </div>
-
-          <!-- Passo 3: Endereço ou Bairro -->
-          <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">3. Seu endereço ou quadra no Jardim Caravelas:</label>
-            <input type="text" id="enderecoInput" placeholder="Ex: Rua JCA 14, Qd 20 Lt 5..." class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
-          </div>
-
-          <!-- Botão Disparo WhatsApp -->
-          <button type="button" onclick="enviarPedidoWhatsApp()" class="w-full bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-700 hover:to-emerald-600 text-white font-extrabold text-base py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2">
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-            <span>Enviar Pedido pelo WhatsApp</span>
-          </button>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- AVALIAÇÕES GOOGLE 5.0 -->
-  <section id="depoimentos" class="py-16 bg-[#F4FBF6]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
-        <span class="text-xs font-bold text-emerald-700 bg-emerald-100 border border-emerald-200 px-3 py-1 rounded-full uppercase">Google Avaliações</span>
-        <h2 class="font-display font-black text-2xl sm:text-3xl text-slate-900">100% de Clientes Satisfeitos</h2>
+        <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full uppercase tracking-wider">Navegação Rápida</span>
+        <h2 class="font-display font-black text-2xl sm:text-4xl text-slate-900 tracking-tight">Quem faz a alegria da sua casa?</h2>
+        <p class="text-slate-600 text-sm">Selecione o seu companheiro para ver rações, petiscos e cuidados dedicados:</p>
+      </div>
+
+      <!-- CARROSSEL DE CATEGORIAS -->
+      <div class="flex overflow-x-auto pb-4 gap-4 snap-x snap-mandatory hide-scrollbar md:grid md:grid-cols-5 md:overflow-visible">
+        
+        <!-- Categoria Cães -->
+        <a href="#produtos" class="min-w-[150px] md:min-w-0 bg-white p-5 rounded-3xl border border-slate-200 text-center hover:border-emerald-500 hover:shadow-lg transition-all duration-300 group flex flex-col items-center snap-start">
+          <div class="w-20 h-20 rounded-2xl bg-amber-100 flex items-center justify-center text-4xl mb-3 group-hover:scale-110 transition-transform">
+            🐕
+          </div>
+          <h3 class="font-display font-bold text-slate-900 text-base">Cães</h3>
+          <span class="text-[11px] text-slate-400 mt-0.5">Rações & Sachês</span>
+        </a>
+
+        <!-- Categoria Gatos -->
+        <a href="#produtos" class="min-w-[150px] md:min-w-0 bg-white p-5 rounded-3xl border border-slate-200 text-center hover:border-emerald-500 hover:shadow-lg transition-all duration-300 group flex flex-col items-center snap-start">
+          <div class="w-20 h-20 rounded-2xl bg-teal-100 flex items-center justify-center text-4xl mb-3 group-hover:scale-110 transition-transform">
+            🐈
+          </div>
+          <h3 class="font-display font-bold text-slate-900 text-base">Gatos</h3>
+          <span class="text-[11px] text-slate-400 mt-0.5">Castrados & Areia</span>
+        </a>
+
+        <!-- Categoria Pássaros -->
+        <a href="#produtos" class="min-w-[150px] md:min-w-0 bg-white p-5 rounded-3xl border border-slate-200 text-center hover:border-emerald-500 hover:shadow-lg transition-all duration-300 group flex flex-col items-center snap-start">
+          <div class="w-20 h-20 rounded-2xl bg-emerald-100 flex items-center justify-center text-4xl mb-3 group-hover:scale-110 transition-transform">
+            🦜
+          </div>
+          <h3 class="font-display font-bold text-slate-900 text-base">Aves</h3>
+          <span class="text-[11px] text-slate-400 mt-0.5">Sementes Nobres</span>
+        </a>
+
+        <!-- Categoria Farmácia -->
+        <a href="#produtos" class="min-w-[150px] md:min-w-0 bg-white p-5 rounded-3xl border border-slate-200 text-center hover:border-emerald-500 hover:shadow-lg transition-all duration-300 group flex flex-col items-center snap-start">
+          <div class="w-20 h-20 rounded-2xl bg-rose-100 flex items-center justify-center text-4xl mb-3 group-hover:scale-110 transition-transform">
+            💊
+          </div>
+          <h3 class="font-display font-bold text-slate-900 text-base">Farmácia</h3>
+          <span class="text-[11px] text-slate-400 mt-0.5">Simparic & Remédios</span>
+        </a>
+
+        <!-- Categoria Banho & Tosa -->
+        <a href="#estetica" class="min-w-[150px] md:min-w-0 bg-white p-5 rounded-3xl border border-slate-200 text-center hover:border-emerald-500 hover:shadow-lg transition-all duration-300 group flex flex-col items-center snap-start">
+          <div class="w-20 h-20 rounded-2xl bg-sky-100 flex items-center justify-center text-4xl mb-3 group-hover:scale-110 transition-transform">
+            🛁
+          </div>
+          <h3 class="font-display font-bold text-slate-900 text-base">Banho & Tosa</h3>
+          <span class="text-[11px] text-slate-400 mt-0.5">Com Carinho & Amor</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MOSAICO DE BANNERS PROMOCIONAIS (Estilo Ziggy & Barana) -->
+  <section id="ofertas" class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Banner 1: Rações 15kg/20kg -->
+        <div class="relative overflow-hidden bg-gradient-to-br from-amber-400 to-amber-500 text-slate-900 rounded-3xl p-7 shadow-lg flex flex-col justify-between min-h-[220px]">
+          <div class="space-y-2 z-10">
+            <span class="inline-block bg-white text-slate-900 px-3 py-1 rounded-full text-xs font-black uppercase">Mais Vendido</span>
+            <h3 class="font-display font-black text-2xl text-slate-950 leading-tight">Sacos Fechados de 15kg e 20kg</h3>
+            <p class="text-xs text-amber-950 font-medium">Premier, Golden e Special Dog com preço direto de atacado no balcão ou entrega.</p>
+          </div>
+          <div class="pt-4 z-10">
+            <a href="https://wa.me/556232881078?text=Olá!%20Gostaria%20de%20consultar%20valores%20de%20sacos%20de%2015kg%20e%2020kg." target="_blank" class="inline-flex items-center gap-2 bg-slate-950 hover:bg-slate-800 text-white font-bold text-xs px-5 py-2.5 rounded-full transition">
+              <span>Consultar Marcas</span>
+              <span>→</span>
+            </a>
+          </div>
+          <span class="absolute -bottom-4 -right-2 text-7xl opacity-20 pointer-events-none">📦</span>
+        </div>
+
+        <!-- Banner 2: Banho & Tosa Relaxante -->
+        <div class="relative overflow-hidden bg-gradient-to-br from-emerald-600 to-teal-700 text-white rounded-3xl p-7 shadow-lg flex flex-col justify-between min-h-[220px]">
+          <div class="space-y-2 z-10">
+            <span class="inline-block bg-white/20 text-white px-3 py-1 rounded-full text-xs font-black uppercase backdrop-blur-sm">Estética Animal</span>
+            <h3 class="font-display font-black text-2xl text-white leading-tight">Banho Suave com Água Morna</h3>
+            <p class="text-xs text-emerald-100 font-medium">Toalhas individuais esterilizadas e tosa na tesoura sem traumas para seu companheiro.</p>
+          </div>
+          <div class="pt-4 z-10">
+            <a href="https://wa.me/556232881078?text=Olá!%20Gostaria%20de%20agendar%20um%20banho%20relaxante." target="_blank" class="inline-flex items-center gap-2 bg-white text-emerald-900 font-bold text-xs px-5 py-2.5 rounded-full hover:bg-emerald-50 transition">
+              <span>Agendar Horário</span>
+              <span>→</span>
+            </a>
+          </div>
+          <span class="absolute -bottom-4 -right-2 text-7xl opacity-20 pointer-events-none">🛁</span>
+        </div>
+
+        <!-- Banner 3: Farmácia Antipulgas -->
+        <div class="relative overflow-hidden bg-gradient-to-br from-blue-600 to-indigo-700 text-white rounded-3xl p-7 shadow-lg flex flex-col justify-between min-h-[220px] md:col-span-2 lg:col-span-1">
+          <div class="space-y-2 z-10">
+            <span class="inline-block bg-white/20 text-white px-3 py-1 rounded-full text-xs font-black uppercase backdrop-blur-sm">Proteção Completa</span>
+            <h3 class="font-display font-black text-2xl text-white leading-tight">Simparic & Bravecto</h3>
+            <p class="text-xs text-blue-100 font-medium">Mantenha seu cão protegido contra pulgas e carrapatos com os melhores medicamentos.</p>
+          </div>
+          <div class="pt-4 z-10">
+            <a href="https://wa.me/556232881078?text=Olá!%20Gostaria%20de%20consultar%20valores%20de%20Simparic/Bravecto." target="_blank" class="inline-flex items-center gap-2 bg-white text-blue-950 font-bold text-xs px-5 py-2.5 rounded-full hover:bg-blue-50 transition">
+              <span>Pedir Antipulgas</span>
+              <span>→</span>
+            </a>
+          </div>
+          <span class="absolute -bottom-4 -right-2 text-7xl opacity-20 pointer-events-none">🛡️</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VITRINE DE PRODUTOS BEST SELLERS COM PREÇOS REAIS (Estilo PawPure & PawVita) -->
+  <section id="produtos" class="py-16 bg-brand-cream border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full uppercase tracking-wider">Produtos em Destaque</span>
+          <h2 class="font-display font-black text-2xl sm:text-4xl text-slate-900 tracking-tight mt-2">Os Favoritos dos Nossos Clientes</h2>
+          <p class="text-slate-600 text-sm mt-1">Valores transparentes e entrega rápida em todo o Jardim Caravelas.</p>
+        </div>
+        <a href="https://wa.me/556232881078?text=Olá!%20Gostaria%20de%20ver%20o%20catálogo%20completo%20de%20produtos." target="_blank" class="inline-flex items-center gap-2 text-emerald-700 font-bold text-sm hover:underline">
+          <span>Ver catálogo completo no WhatsApp</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <!-- GRID DE PRODUTOS -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        
+        <!-- Produto 1: Golden Formula 15kg -->
+        <div class="bg-white rounded-3xl p-4 sm:p-5 border border-slate-200 shadow-sm hover:shadow-xl hover:border-emerald-300 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="relative bg-amber-50/60 rounded-2xl p-4 mb-3 flex items-center justify-center text-5xl h-40">
+              🐕
+              <span class="absolute top-2 left-2 bg-emerald-600 text-white text-[10px] font-black px-2 py-0.5 rounded-full uppercase">15% OFF</span>
+            </div>
+            <div class="flex items-center gap-1 text-amber-500 text-xs mb-1">
+              ★★★★★ <span class="text-slate-400 text-[10px]">(48)</span>
+            </div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-slate-900 group-hover:text-emerald-700 transition">Ração Golden Formula Adultos 15kg</h3>
+            <p class="text-xs text-slate-500 mt-1">Frango & Arroz • Cães Adultos</p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <div>
+              <span class="block text-[11px] text-slate-400 line-through">R$ 184,90</span>
+              <span class="block font-display font-black text-emerald-700 text-base sm:text-lg">R$ 159,90</span>
+            </div>
+            <a href="https://wa.me/556232881078?text=Olá!%20Quero%20pedir%201%20saco%20de%20Golden%20Formula%2015kg%20por%20R$%20159,90." target="_blank" class="w-10 h-10 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white flex items-center justify-center shadow-md transition" title="Pedir no WhatsApp">
+              📲
+            </a>
+          </div>
+        </div>
+
+        <!-- Produto 2: Premier Formula 15kg -->
+        <div class="bg-white rounded-3xl p-4 sm:p-5 border border-slate-200 shadow-sm hover:shadow-xl hover:border-emerald-300 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="relative bg-blue-50/60 rounded-2xl p-4 mb-3 flex items-center justify-center text-5xl h-40">
+              ✨
+              <span class="absolute top-2 left-2 bg-blue-600 text-white text-[10px] font-black px-2 py-0.5 rounded-full uppercase">Super Premium</span>
+            </div>
+            <div class="flex items-center gap-1 text-amber-500 text-xs mb-1">
+              ★★★★★ <span class="text-slate-400 text-[10px]">(62)</span>
+            </div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-slate-900 group-hover:text-emerald-700 transition">Premier Formula Adultos 15kg</h3>
+            <p class="text-xs text-slate-500 mt-1">Carne & Arroz • Alta Digestibilidade</p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <div>
+              <span class="block text-[11px] text-slate-400 line-through">R$ 269,90</span>
+              <span class="block font-display font-black text-emerald-700 text-base sm:text-lg">R$ 234,90</span>
+            </div>
+            <a href="https://wa.me/556232881078?text=Olá!%20Quero%20pedir%201%20saco%20de%20Premier%2015kg%20por%20R$%20234,90." target="_blank" class="w-10 h-10 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white flex items-center justify-center shadow-md transition" title="Pedir no WhatsApp">
+              📲
+            </a>
+          </div>
+        </div>
+
+        <!-- Produto 3: Golden Gatos Castrados 10.1kg -->
+        <div class="bg-white rounded-3xl p-4 sm:p-5 border border-slate-200 shadow-sm hover:shadow-xl hover:border-emerald-300 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="relative bg-teal-50/60 rounded-2xl p-4 mb-3 flex items-center justify-center text-5xl h-40">
+              🐈
+              <span class="absolute top-2 left-2 bg-teal-600 text-white text-[10px] font-black px-2 py-0.5 rounded-full uppercase">Gatos</span>
+            </div>
+            <div class="flex items-center gap-1 text-amber-500 text-xs mb-1">
+              ★★★★★ <span class="text-slate-400 text-[10px]">(35)</span>
+            </div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-slate-900 group-hover:text-emerald-700 transition">Golden Gatos Castrados 10.1kg</h3>
+            <p class="text-xs text-slate-500 mt-1">Sabor Salmão • Controle Urinário</p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <div>
+              <span class="block text-[11px] text-slate-400 line-through">R$ 189,90</span>
+              <span class="block font-display font-black text-emerald-700 text-base sm:text-lg">R$ 162,90</span>
+            </div>
+            <a href="https://wa.me/556232881078?text=Olá!%20Quero%20pedir%201%20saco%20de%20Golden%20Gatos%2010.1kg." target="_blank" class="w-10 h-10 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white flex items-center justify-center shadow-md transition" title="Pedir no WhatsApp">
+              📲
+            </a>
+          </div>
+        </div>
+
+        <!-- Produto 4: Simparic 10 a 20kg -->
+        <div class="bg-white rounded-3xl p-4 sm:p-5 border border-slate-200 shadow-sm hover:shadow-xl hover:border-emerald-300 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="relative bg-rose-50/60 rounded-2xl p-4 mb-3 flex items-center justify-center text-5xl h-40">
+              💊
+              <span class="absolute top-2 left-2 bg-rose-600 text-white text-[10px] font-black px-2 py-0.5 rounded-full uppercase">Proteção 35d</span>
+            </div>
+            <div class="flex items-center gap-1 text-amber-500 text-xs mb-1">
+              ★★★★★ <span class="text-slate-400 text-[10px]">(89)</span>
+            </div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-slate-900 group-hover:text-emerald-700 transition">Antipulgas Simparic 10 a 20kg</h3>
+            <p class="text-xs text-slate-500 mt-1">Mata pulgas, carrapatos e sarnas</p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <div>
+              <span class="block text-[11px] text-slate-400 line-through">R$ 110,00</span>
+              <span class="block font-display font-black text-emerald-700 text-base sm:text-lg">R$ 89,90</span>
+            </div>
+            <a href="https://wa.me/556232881078?text=Olá!%20Gostaria%20de%20pedir%20Simparic%2010-20kg%20por%20R$%2089,90." target="_blank" class="w-10 h-10 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white flex items-center justify-center shadow-md transition" title="Pedir no WhatsApp">
+              📲
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Banner de Ração no Quilo Fracionada -->
+      <div class="mt-8 bg-gradient-to-r from-emerald-900 via-teal-900 to-emerald-950 rounded-3xl p-6 sm:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+        <div class="space-y-2 text-center md:text-left">
+          <span class="inline-block bg-amber-400 text-slate-900 px-3 py-1 rounded-full text-xs font-black uppercase">Economia Direta</span>
+          <h3 class="font-display font-black text-xl sm:text-2xl text-white">Prefere levar ração no quilo fracionada?</h3>
+          <p class="text-slate-300 text-xs sm:text-sm max-w-xl">
+            Temos tambores herméticos sempre renovados para garantir crocância e frescor. Pesagem transparente na sua frente ou entrega na sua casa a partir de 1kg!
+          </p>
+        </div>
+        <a href="https://wa.me/556232881078?text=Olá!%20Gostaria%20de%20saber%20quais%20rações%20vocês%20têm%20no%20quilo." target="_blank" class="shrink-0 bg-white hover:bg-emerald-50 text-emerald-900 font-extrabold text-sm px-7 py-4 rounded-2xl shadow-md transition">
+          Consultar Rações no Quilo
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE ESTÉTICA ANIMAL: BANHO & TOSA COM AMOR -->
+  <section id="estetica" class="py-16 bg-white border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Lado Esquerdo: Imagem / Destaque Visual -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-md bg-gradient-to-br from-sky-50 to-emerald-50 border border-sky-100 rounded-3xl p-8 text-center space-y-4 shadow-xl">
+            <div class="w-32 h-32 mx-auto rounded-3xl bg-white shadow-md flex items-center justify-center text-6xl">
+              🐶🛁
+            </div>
+            <div class="space-y-1">
+              <span class="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">Experiência Relaxante</span>
+              <h3 class="font-display font-black text-2xl text-slate-900">Banho Sem Estresse</h3>
+              <p class="text-xs text-slate-600">Água quentinha ajustada para a temperatura perfeita do seu animal.</p>
+            </div>
+            <div class="pt-2 grid grid-cols-2 gap-2 text-left text-xs font-semibold text-slate-700">
+              <div class="flex items-center gap-2 bg-white p-2.5 rounded-xl border border-slate-200">
+                <span class="text-emerald-600">✓</span>
+                <span>Toalhas descartáveis</span>
+              </div>
+              <div class="flex items-center gap-2 bg-white p-2.5 rounded-xl border border-slate-200">
+                <span class="text-emerald-600">✓</span>
+                <span>Corte de unhas seguro</span>
+              </div>
+              <div class="flex items-center gap-2 bg-white p-2.5 rounded-xl border border-slate-200">
+                <span class="text-emerald-600">✓</span>
+                <span>Limpeza de ouvidos</span>
+              </div>
+              <div class="flex items-center gap-2 bg-white p-2.5 rounded-xl border border-slate-200">
+                <span class="text-emerald-600">✓</span>
+                <span>Perfume hipoalergênico</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lado Direito: Tabela de Serviços e Agendamento -->
+        <div class="lg:col-span-7 space-y-6">
+          <span class="text-xs font-bold text-sky-700 bg-sky-100 px-3 py-1 rounded-full uppercase tracking-wider">Centro de Estética</span>
+          <h2 class="font-display font-black text-2xl sm:text-4xl text-slate-900 tracking-tight">O cuidado e a beleza que seu amigo merece</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Nossa equipe é treinada para lidar com cães e gatos de forma afetuosa e calma, respeitando os limites de cada animalzinho para que a visita ao pet shop seja um momento de carinho e diversão.
+          </p>
+
+          <!-- Cards de Serviços com Preços Transparentes -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-200 hover:border-emerald-300 transition">
+              <div>
+                <h4 class="font-display font-bold text-slate-900 text-sm sm:text-base">Banho Tradicional Relaxante</h4>
+                <p class="text-xs text-slate-500">Shampoo neutro, condicionador, secagem calma, unhas e ouvidos</p>
+              </div>
+              <div class="text-right shrink-0">
+                <span class="block font-display font-black text-emerald-700 text-base sm:text-lg">A partir de R$ 45</span>
+                <a href="https://wa.me/556232881078?text=Olá!%20Gostaria%20de%20agendar%20um%20banho%20tradicional." target="_blank" class="text-xs text-emerald-600 font-bold hover:underline">Agendar →</a>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-200 hover:border-emerald-300 transition">
+              <div>
+                <h4 class="font-display font-bold text-slate-900 text-sm sm:text-base">Banho + Tosa Higiênica</h4>
+                <p class="text-xs text-slate-500">Limpeza das patinhas, região íntima e barriguinha para higiene diária</p>
+              </div>
+              <div class="text-right shrink-0">
+                <span class="block font-display font-black text-emerald-700 text-base sm:text-lg">A partir de R$ 60</span>
+                <a href="https://wa.me/556232881078?text=Olá!%20Gostaria%20de%20agendar%20banho%20e%20tosa%20higiênica." target="_blank" class="text-xs text-emerald-600 font-bold hover:underline">Agendar →</a>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-200 hover:border-emerald-300 transition">
+              <div>
+                <h4 class="font-display font-bold text-slate-900 text-sm sm:text-base">Tosa Geral / Bebê na Tesoura</h4>
+                <p class="text-xs text-slate-500">Acabamento artístico e suave na tesoura que valoriza a carinha de filhote</p>
+              </div>
+              <div class="text-right shrink-0">
+                <span class="block font-display font-black text-emerald-700 text-base sm:text-lg">A partir de R$ 85</span>
+                <a href="https://wa.me/556232881078?text=Olá!%20Gostaria%20de%20agendar%20uma%20tosa%20na%20tesoura." target="_blank" class="text-xs text-emerald-600 font-bold hover:underline">Agendar →</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS REAIS 5.0 GOOGLE (Estilo PawPure) -->
+  <section id="avaliacoes" class="py-16 bg-brand-cream border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+        <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full uppercase tracking-wider">Depoimentos Verificados</span>
+        <h2 class="font-display font-black text-2xl sm:text-4xl text-slate-900 tracking-tight">O que dizem os tutores do Caravelas</h2>
         <div class="flex items-center justify-center gap-1 text-amber-500 text-lg">
-          ★★★★★ <span class="text-slate-800 text-sm font-bold ml-1">5.0 de 5 estrelas</span>
+          ★★★★★ <span class="text-slate-800 text-sm font-bold ml-1">Nota 5.0 Máxima no Google Reviews</span>
         </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded-2xl border border-emerald-100 shadow-sm space-y-3">
-          <div class="flex items-center gap-1 text-amber-400 text-sm">★★★★★</div>
-          <p class="text-xs sm:text-sm text-slate-600 italic">"Atendimento maravilhoso! As rações são sempre fresquinhas e a entrega é super pontual. O melhor do Caravelas!"</p>
-          <div class="text-xs font-bold text-slate-800">— Renata L., Jardim Caravelas</div>
+        
+        <div class="bg-white p-7 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+          <div class="flex items-center gap-1 text-amber-500 text-sm">★★★★★</div>
+          <p class="text-slate-600 text-sm italic leading-relaxed">
+            "Excelente atendimento! O pessoal do Bicholândia tem um amor imenso pelos animais. Meu cachorro volta do banho cheiroso, calmo e muito feliz. As rações têm preço justo e a entrega é pontual!"
+          </p>
+          <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center font-bold text-emerald-800">
+              RL
+            </div>
+            <div>
+              <strong class="block text-slate-900 text-sm">Renata Lima</strong>
+              <span class="text-[11px] text-slate-400">Tutora do Thor (Shih-Tzu)</span>
+            </div>
+          </div>
         </div>
-        <div class="bg-white p-6 rounded-2xl border border-emerald-100 shadow-sm space-y-3">
-          <div class="flex items-center gap-1 text-amber-400 text-sm">★★★★★</div>
-          <p class="text-xs sm:text-sm text-slate-600 italic">"Meu cachorro adorou o banho, voltou super calmo e muito cheiroso. Pessoal muito cuidadoso e atencioso!"</p>
-          <div class="text-xs font-bold text-slate-800">— Thiago M., Goiânia</div>
+
+        <div class="bg-white p-7 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+          <div class="flex items-center gap-1 text-amber-500 text-sm">★★★★★</div>
+          <p class="text-slate-600 text-sm italic leading-relaxed">
+            "Compro as rações dos meus cães e gatos sempre no Bicholândia. A tele-entrega salva meu dia quando fico sem ração. Pessoal de confiança nota 10!"
+          </p>
+          <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center font-bold text-amber-800">
+              TM
+            </div>
+            <div>
+              <strong class="block text-slate-900 text-sm">Thiago Martins</strong>
+              <span class="text-[11px] text-slate-400">Morador do Jardim Caravelas</span>
+            </div>
+          </div>
         </div>
-        <div class="bg-white p-6 rounded-2xl border border-emerald-100 shadow-sm space-y-3">
-          <div class="flex items-center gap-1 text-amber-400 text-sm">★★★★★</div>
-          <p class="text-xs sm:text-sm text-slate-600 italic">"Preço excelente, variedade imensa de produtos e atendimento acolhedor. Sou cliente fiel há anos!"</p>
-          <div class="text-xs font-bold text-slate-800">— Claudia S., Tutora</div>
+
+        <div class="bg-white p-7 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+          <div class="flex items-center gap-1 text-amber-500 text-sm">★★★★★</div>
+          <p class="text-slate-600 text-sm italic leading-relaxed">
+            "A tosa na tesoura ficou simplesmente impecável. Espaço limpo, sem cheiro forte, tudo muito organizado. Recomendo de olhos fechados para todo mundo da região!"
+          </p>
+          <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center font-bold text-blue-800">
+              CS
+            </div>
+            <div>
+              <strong class="block text-slate-900 text-sm">Claudia Soares</strong>
+              <span class="text-[11px] text-slate-400">Tutora da Mel (Poodle)</span>
+            </div>
+          </div>
         </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SIMULADOR INTERATIVO DE PEDIDO E ENTREGA -->
+  <section class="py-16 bg-white border-t border-slate-100">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-br from-emerald-50 via-teal-50 to-white border border-emerald-200 rounded-3xl p-6 sm:p-10 shadow-xl">
+        
+        <div class="text-center space-y-2 mb-8">
+          <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-900 rounded-full text-xs font-bold uppercase tracking-wider">Monte Seu Pedido Rápido</span>
+          <h2 class="font-display font-black text-2xl sm:text-3xl text-slate-900">Pedir no WhatsApp em 1 Clique</h2>
+          <p class="text-slate-600 text-xs sm:text-sm">Selecione o que precisa e envie com sua mensagem pronta para o atendente.</p>
+        </div>
+
+        <div class="space-y-6">
+          
+          <!-- Passo 1: O que precisa -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">1. O que você gostaria de pedir?</label>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+              <button type="button" onclick="selecionarOpcao('Saco Fechado de Ração', this)" class="opt-btn p-3 rounded-2xl border border-emerald-600 bg-emerald-50 text-emerald-950 font-semibold text-xs flex flex-col items-center gap-1 transition active">
+                <span class="text-2xl">📦</span>
+                <span>Saco Fechado</span>
+              </button>
+              <button type="button" onclick="selecionarOpcao('Ração a Granel (No Quilo)', this)" class="opt-btn p-3 rounded-2xl border border-slate-200 bg-white hover:border-emerald-400 text-slate-800 font-semibold text-xs flex flex-col items-center gap-1 transition">
+                <span class="text-2xl">⚖️</span>
+                <span>Ração no Quilo</span>
+              </button>
+              <button type="button" onclick="selecionarOpcao('Banho & Tosa', this)" class="opt-btn p-3 rounded-2xl border border-slate-200 bg-white hover:border-emerald-400 text-slate-800 font-semibold text-xs flex flex-col items-center gap-1 transition">
+                <span class="text-2xl">🛁</span>
+                <span>Banho & Tosa</span>
+              </button>
+              <button type="button" onclick="selecionarOpcao('Antipulgas / Remédio', this)" class="opt-btn p-3 rounded-2xl border border-slate-200 bg-white hover:border-emerald-400 text-slate-800 font-semibold text-xs flex flex-col items-center gap-1 transition">
+                <span class="text-2xl">💊</span>
+                <span>Antipulgas / Pet</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Passo 2: Item ou Marca -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">2. Marca ou detalhes do produto/serviço:</label>
+            <input type="text" id="detalhesInput" placeholder="Ex: Golden 15kg, Simparic 10-20kg, 2kg de ração..." class="w-full bg-white border border-slate-300 rounded-2xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+          </div>
+
+          <!-- Passo 3: Endereço -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">3. Seu endereço ou quadra para tele-entrega:</label>
+            <input type="text" id="enderecoInput" placeholder="Ex: Rua JCA 14, Qd 20 Lt 5 - Jardim Caravelas..." class="w-full bg-white border border-slate-300 rounded-2xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+          </div>
+
+          <!-- Botão Disparo -->
+          <button type="button" onclick="enviarPedidoWhatsApp()" class="w-full bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-700 hover:to-emerald-600 text-white font-black text-base py-4 rounded-2xl shadow-xl transition-all flex items-center justify-center gap-2.5">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span>Enviar Pedido pelo WhatsApp</span>
+          </button>
+
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ONDE ESTAMOS & LOCALIZAÇÃO -->
-  <section id="contato" class="py-16 bg-white">
+  <!-- ONDE ESTAMOS & LOCALIZAÇÃO COM MAPA -->
+  <section id="contato" class="py-16 bg-brand-cream border-t border-slate-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         
         <div class="lg:col-span-5 space-y-5">
-          <span class="text-xs font-bold uppercase tracking-widest text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full">Venha nos Conhecer</span>
-          <h2 class="font-display font-black text-2xl sm:text-4xl text-slate-900 tracking-tight">O cantinho dos bichos no Jardim Caravelas</h2>
+          <span class="text-xs font-bold uppercase tracking-widest text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full">Venha nos Visitar</span>
+          <h2 class="font-display font-black text-2xl sm:text-4xl text-slate-900 tracking-tight">Estamos no Jardim Caravelas</h2>
           <p class="text-slate-600 text-sm leading-relaxed">
-            Estamos na Rua JCA 11 no Jardim Caravelas em Goiânia, com espaço completo para cuidar com muito carinho do seu amigo de 4 patas.
+            Localização de fácil acesso na Rua JCA 11 em Goiânia, com estacionamento tranquilo e atendimento sempre acolhedor no balcão.
           </p>
 
           <div class="space-y-3 pt-2 text-sm text-slate-700">
-            <div class="flex items-start gap-3 bg-[#F4FBF6] p-3.5 rounded-xl border border-emerald-100">
+            <div class="flex items-start gap-3 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
               <span class="text-emerald-600 text-xl">📍</span>
               <div>
                 <strong class="block text-slate-900 font-bold">Endereço:</strong>
@@ -408,7 +783,7 @@
               </div>
             </div>
 
-            <div class="flex items-start gap-3 bg-[#F4FBF6] p-3.5 rounded-xl border border-emerald-100">
+            <div class="flex items-start gap-3 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
               <span class="text-emerald-600 text-xl">📱</span>
               <div>
                 <strong class="block text-slate-900 font-bold">Telefone & WhatsApp:</strong>
@@ -416,27 +791,27 @@
               </div>
             </div>
 
-            <div class="flex items-start gap-3 bg-[#F4FBF6] p-3.5 rounded-xl border border-emerald-100">
+            <div class="flex items-start gap-3 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
               <span class="text-emerald-600 text-xl">⏰</span>
               <div>
                 <strong class="block text-slate-900 font-bold">Horário de Funcionamento:</strong>
-                <span>Segunda a Sábado com atendimento ágil</span>
+                <span>Segunda a Sábado com entregas ativas</span>
               </div>
             </div>
           </div>
 
           <div class="pt-2 flex flex-wrap gap-3">
-            <a href="https://www.google.com/maps/place/Bichol%C3%A2ndia+Pet+Shop/data=!4m7!3m6!1s0x935ef7fac866eb89:0x3a85086e0bc3e305!8m2!3d-16.7595123!4d-49.3504301!16s%2Fg%2F11ptslyfbs!19sChIJietmyPr3XpMRBePDC24IhTo" target="_blank" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs px-5 py-3 rounded-xl transition">
+            <a href="https://www.google.com/maps/place/Bichol%C3%A2ndia+Pet+Shop/data=!4m7!3m6!1s0x935ef7fac866eb89:0x3a85086e0bc3e305!8m2!3d-16.7595123!4d-49.3504301!16s%2Fg%2F11ptslyfbs!19sChIJietmyPr3XpMRBePDC24IhTo" target="_blank" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs px-6 py-3.5 rounded-2xl transition">
               <span>🗺️ Ver no Google Maps</span>
             </a>
-            <a href="https://wa.me/556232881078?text=Olá!%20Gostaria%20de%20saber%20a%20localização%20do%20Bicholândia%20Pet%20Shop." target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-5 py-3 rounded-xl transition">
+            <a href="https://wa.me/556232881078?text=Olá!%20Gostaria%20de%20saber%20a%20localização%20do%20Bicholândia%20Pet%20Shop." target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-6 py-3.5 rounded-2xl transition">
               <span>💬 Falar no WhatsApp</span>
             </a>
           </div>
         </div>
 
         <div class="lg:col-span-7">
-          <div class="bg-white p-2 sm:p-3 rounded-3xl border border-emerald-100 shadow-md overflow-hidden">
+          <div class="bg-white p-2.5 sm:p-3 rounded-3xl border border-slate-200 shadow-xl overflow-hidden">
             <iframe 
               src="https://maps.google.com/maps?q=-16.7595123,-49.3504301&hl=pt-BR&z=16&output=embed" 
               class="w-full h-80 sm:h-96 rounded-2xl border-0" 
@@ -451,15 +826,17 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+  <!-- FOOTER ELEGANTE -->
+  <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800 text-center md:text-left">
         <div class="flex items-center gap-3">
-          <img src="logo.png" alt="Bicholândia Pet Shop" class="h-10 w-auto object-contain brightness-110" onerror="this.onerror=null; this.src='logo.jpg'">
+          <div class="w-10 h-10 rounded-xl bg-emerald-600 flex items-center justify-center text-white">
+            🐾
+          </div>
           <div>
-            <span class="block font-display font-bold text-lg text-white">BICHOLÂNDIA PET SHOP</span>
-            <span class="block text-xs text-slate-500">Pet Shop & Estética Animal</span>
+            <span class="block font-display font-black text-xl text-white">BICHOLÂNDIA PET SHOP</span>
+            <span class="block text-xs text-slate-400">Rações Nobres, Estética & Cuidados Animais</span>
           </div>
         </div>
         <div class="text-xs text-slate-400">
@@ -474,12 +851,14 @@
   </footer>
 
   <!-- BOTTOM APP BAR FIXA NO MOBILE -->
-  <div class="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-emerald-100 px-4 py-2.5 flex items-center justify-between shadow-2xl">
-    <div class="flex items-center gap-2 truncate">
-      <img src="logo.png" alt="Bicholândia Pet Shop" class="h-8 w-8 object-contain" onerror="this.onerror=null; this.src='logo.jpg'">
+  <div class="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 px-4 py-2.5 flex items-center justify-between shadow-2xl">
+    <div class="flex items-center gap-2.5 truncate">
+      <div class="w-8 h-8 rounded-full bg-emerald-600 flex items-center justify-center text-white text-xs shrink-0">
+        🐾
+      </div>
       <div class="truncate">
-        <span class="block font-display font-bold text-xs text-slate-900 truncate">Bicholândia</span>
-        <span class="block text-[10px] text-emerald-700 font-semibold truncate">Tele-Entrega Ativa</span>
+        <span class="block font-display font-black text-xs text-slate-900 truncate">Bicholândia Pet Shop</span>
+        <span class="block text-[10px] text-emerald-700 font-bold truncate">Tele-Entrega Ativa</span>
       </div>
     </div>
     <a href="https://wa.me/556232881078?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20no%20Bicholândia." target="_blank" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-4 py-2 rounded-full shadow-md transition">
@@ -489,15 +868,15 @@
   </div>
 
   <script>
-    let itemSelecionado = 'Ração a Granel (No Quilo)';
+    let opcaoSelecionada = 'Saco Fechado de Ração';
 
-    function selecionarItem(nome, btn) {
-      itemSelecionado = nome;
-      document.querySelectorAll('.item-btn').forEach(b => {
-        b.classList.remove('border-emerald-500', 'bg-emerald-50', 'text-emerald-900');
+    function selecionarOpcao(nome, btn) {
+      opcaoSelecionada = nome;
+      document.querySelectorAll('.opt-btn').forEach(b => {
+        b.classList.remove('border-emerald-600', 'bg-emerald-50', 'text-emerald-950');
         b.classList.add('border-slate-200', 'bg-white', 'text-slate-800');
       });
-      btn.classList.add('border-emerald-500', 'bg-emerald-50', 'text-emerald-900');
+      btn.classList.add('border-emerald-600', 'bg-emerald-50', 'text-emerald-950');
       btn.classList.remove('border-slate-200', 'bg-white', 'text-slate-800');
     }
 
@@ -505,10 +884,10 @@
       const detalhes = document.getElementById('detalhesInput').value.trim();
       const endereco = document.getElementById('enderecoInput').value.trim();
 
-      let texto = `Olá, Bicholândia! Gostaria de fazer um pedido pelo site:\n`;
-      texto += `🐾 *Item:* ${itemSelecionado}\n`;
-      if (detalhes) texto += `🔍 *Detalhes:* ${detalhes}\n`;
-      if (endereco) texto += `📍 *Endereço:* ${endereco}\n\n`;
+      let texto = `Olá, Bicholândia Pet Shop! Gostaria de fazer um pedido pelo site:\n`;
+      texto += `🐾 *Categoria:* ${opcaoSelecionada}\n`;
+      if (detalhes) texto += `📦 *Item:* ${detalhes}\n`;
+      if (endereco) texto += `📍 *Endereço/Bairro:* ${endereco}\n\n`;
       texto += `Poderiam me informar valores e tempo de entrega?`;
 
       const url = `https://wa.me/556232881078?text=${encodeURIComponent(texto)}`;
