@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Empório R&J | Rações, Sementes & Acessórios em Aparecida de Goiânia</title>
+  <meta name="description" content="Empório R&J no Setor Aeroporto Sul. Rações premium no saco e no quilo, sementes selecionadas para aves, farmácia pet e tele-entrega rápida pelo WhatsApp!">
+  <meta name="theme-color" content="#B45309">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Empório R&J | Nutrição & Sementes">
+  <meta property="og:description" content="Rações para cães e gatos, misturas de sementes para aves e tele-entrega rápida em Aparecida de Goiânia.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Fontes Google (Outfit + Plus Jakarta Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            title: ['"Outfit"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#FFFBEB',
+              100: '#FEF3C7',
+              200: '#FDE68A',
+              300: '#FCD34D',
+              400: '#FBBF24',
+              500: '#F59E0B',
+              600: '#D97706',
+              700: '#B45309',
+              dark: '#1C1917',
+              whatsapp: '#25D366',
+              whatsappHover: '#20BA56',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    h1, h2, h3, .font-title { font-family: 'Outfit', sans-serif; }
+    
+    @keyframes floatPet {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-7px) rotate(0.6deg); }
+    }
+    .animate-float-pet {
+      animation: floatPet 5s ease-in-out infinite;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.45); }
+      50% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+    }
+    .pulse-glow-zap {
+      animation: pulseGlow 2.2s infinite;
+    }
+  </style>
+</head>
+<body class="bg-[#FCFBF8] text-stone-800 antialiased selection:bg-amber-400 selection:text-stone-900 pb-16 sm:pb-0">
+
+  <!-- TOP BAR INFORMATIVA -->
+  <div class="bg-stone-900 text-stone-300 text-xs py-2.5 px-4 border-b border-stone-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="truncate"><strong>Empório R&J:</strong> R. Brasília • St. Aeroporto Sul, Aparecida de Goiânia</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px] sm:text-xs">
+        <div class="flex items-center gap-1 text-amber-400 font-bold">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <span>Atendimento de Bairro de Confiança</span>
+        </div>
+        <a href="https://wa.me/5562986273759?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20no%20Empório%20R&J." target="_blank" class="hidden sm:inline-flex items-center gap-1.5 bg-amber-500 hover:bg-amber-400 text-stone-950 px-3 py-1 rounded-full font-black transition">
+          <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <span>Tele-Entrega: (62) 98627-3759</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR MODERNA -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-200/80 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- LOGO ELEGANTE -->
+      <a href="#inicio" class="flex items-center gap-3.5 group">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-600 to-amber-800 flex items-center justify-center shadow-md shadow-amber-600/20 group-hover:scale-105 transition transform text-white">
+          <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-title font-black text-2xl text-stone-900 tracking-tight">Empório</span>
+            <span class="font-title font-extrabold text-[11px] uppercase px-2 py-0.5 rounded-md bg-amber-600 text-white tracking-widest">R&J</span>
+          </div>
+          <span class="text-[11px] text-stone-500 font-medium block">Rações, Sementes & Acessórios • St. Aeroporto Sul</span>
+        </div>
+      </a>
+
+      <!-- MENU DESKTOP -->
+      <div class="hidden lg:flex items-center gap-8 text-sm font-bold text-stone-700">
+        <a href="#inicio" class="hover:text-amber-700 transition">Início</a>
+        <a href="#categorias" class="hover:text-amber-700 transition">Categorias</a>
+        <a href="#produtos" class="hover:text-amber-700 transition">Rações & Sementes</a>
+        <a href="#simulador" class="hover:text-amber-700 transition">Tele-Entrega</a>
+        <a href="#depoimentos" class="hover:text-amber-700 transition">Avaliações</a>
+        <a href="#contato" class="hover:text-amber-700 transition">Contato</a>
+      </div>
+
+      <!-- BOTÃO CTA NAVBAR -->
+      <a href="https://wa.me/5562986273759?text=Olá!%20Vim%20pelo%20site%20do%20Empório%20R&J%20e%20gostaria%20de%20fazer%20um%20pedido." target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white text-xs sm:text-sm font-bold px-5 py-3 rounded-full shadow-lg shadow-brand-whatsapp/20 transition transform hover:-translate-y-0.5">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+        <span>Pedir no WhatsApp</span>
+      </a>
+
+      <!-- BOTÃO MOBILE -->
+      <a href="https://wa.me/5562986273759?text=Olá!%20Vim%20pelo%20site%20do%20Empório%20R&J%20e%20gostaria%20de%20fazer%20um%20pedido." target="_blank" class="sm:hidden flex items-center justify-center w-11 h-11 bg-brand-whatsapp text-white rounded-full shadow-md">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION CINEMATOGRÁFICA -->
+  <section id="inicio" class="relative overflow-hidden pt-10 pb-16 lg:pt-16 lg:pb-24 bg-gradient-to-b from-[#FFFDF0] via-[#FEF3C7]/40 to-[#FCFBF8]">
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        
+        <!-- COLUNA ESQUERDA -->
+        <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+          
+          <div class="inline-flex items-center gap-2 bg-amber-100/90 border border-amber-300/60 text-amber-950 text-xs font-bold px-4 py-2 rounded-full shadow-sm">
+            <svg class="w-3.5 h-3.5 text-amber-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span>Rações Frescas no Quilo & Saco Lacrado • Sementes Selecionadas</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-stone-900 tracking-tight leading-[1.1]">
+            O carinho que seu pet merece, <span class="text-amber-700">entregue rapidinho.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-stone-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
+            No <strong>Empório R&J</strong> você encontra nutrição selecionada para cães, gatos e aves, farmácia veterinária básica e tele-entrega expressa no Setor Aeroporto Sul e região.
+          </p>
+
+          <!-- AÇÕES PRINCIPAIS -->
+          <div class="flex flex-col sm:flex-row items-center gap-3.5 pt-2 justify-center lg:justify-start">
+            <a href="https://wa.me/5562986273759?text=Olá!%20Gostaria%20de%20consultar%20as%20rações%20e%20fazer%20um%20pedido%20no%20Empório%20R&J." target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white font-extrabold text-base px-8 py-4 rounded-2xl shadow-xl shadow-brand-whatsapp/25 transition transform hover:-translate-y-0.5 pulse-glow-zap">
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+              <span>Pedir no WhatsApp</span>
+            </a>
+
+            <a href="#produtos" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-amber-50 text-stone-800 font-bold text-sm px-6 py-4 rounded-2xl border border-stone-200 shadow-sm transition">
+              <span>Ver Produtos & Rações</span>
+              <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </a>
+          </div>
+
+          <!-- MINI CARDS DE CONFIANÇA -->
+          <div class="grid grid-cols-3 gap-2 sm:gap-4 pt-4 border-t border-amber-200/60 max-w-lg mx-auto lg:mx-0">
+            <div class="bg-white/80 p-3 rounded-2xl border border-amber-100 text-center">
+              <svg class="w-5 h-5 mx-auto text-amber-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              <p class="font-extrabold text-xs sm:text-sm text-stone-900 mt-1">Tele-Entrega</p>
+              <p class="text-[10px] text-stone-500">St. Aeroporto Sul</p>
+            </div>
+            <div class="bg-white/80 p-3 rounded-2xl border border-amber-100 text-center">
+              <svg class="w-5 h-5 mx-auto text-amber-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <p class="font-extrabold text-xs sm:text-sm text-stone-900 mt-1">Rações Frescas</p>
+              <p class="text-[10px] text-stone-500">No quilo ou saco</p>
+            </div>
+            <div class="bg-white/80 p-3 rounded-2xl border border-amber-100 text-center">
+              <svg class="w-5 h-5 mx-auto text-amber-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+              <p class="font-extrabold text-xs sm:text-sm text-stone-900 mt-1">Pague na Porta</p>
+              <p class="text-[10px] text-stone-500">Pix & Cartão</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- COLUNA DIREITA: PET PROTAGONISTA CINEMATOGRÁFICO -->
+        <div class="lg:col-span-5 relative flex items-center justify-center pt-8 lg:pt-0">
+          
+          <div class="w-72 h-72 sm:w-96 sm:h-96 lg:w-[440px] lg:h-[440px] rounded-full bg-gradient-to-tr from-amber-500 via-amber-400 to-yellow-200 shadow-2xl shadow-amber-600/25 relative flex items-end justify-center">
+            
+            <div class="absolute -inset-4 sm:-inset-6 rounded-full border-2 border-dashed border-amber-300/80 animate-[spin_60s_linear_infinite]"></div>
+
+            <!-- Pet Hero Recortado em PNG Transparente -->
+            <img 
+              src="pet_hero.png" 
+              alt="Cachorrinho Beagle feliz - Empório R&J" 
+              class="relative z-10 w-[135%] sm:w-[150%] max-w-none -mb-3 sm:-mb-6 drop-shadow-[0_25px_35px_rgba(0,0,0,0.22)] animate-float-pet transform scale-110 origin-bottom"
+            />
+
+            <!-- Badge Superior -->
+            <div class="absolute -top-3 -right-2 sm:top-4 sm:-right-4 z-20 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-stone-200 shadow-xl flex items-center gap-2.5 transform rotate-2">
+              <div class="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center text-amber-700">
+                <svg class="w-4 h-4 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg>
+              </div>
+              <div>
+                <p class="text-xs font-black text-stone-900 leading-none">Petiscos & Sementes</p>
+                <p class="text-[10px] text-amber-700 font-bold mt-0.5">Sempre fresquinhos</p>
+              </div>
+            </div>
+
+            <!-- Badge Inferior -->
+            <div class="absolute -bottom-4 -left-2 sm:bottom-6 sm:-left-6 z-20 bg-stone-900 text-white px-4 py-2.5 rounded-2xl shadow-xl flex items-center gap-3 transform -rotate-2">
+              <div class="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center text-white shrink-0">
+                <svg class="w-4 h-4 fill-none stroke-current" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <p class="text-xs font-black text-amber-400 leading-none">Tele-Entrega Ágil</p>
+                <p class="text-[10px] text-stone-300 mt-0.5">St. Aeroporto Sul</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIAS COM FOTOS REAIS -->
+  <section id="categorias" class="py-14 sm:py-20 bg-[#FCFBF8]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-amber-700 font-bold text-xs uppercase tracking-widest">Navegação Rápida</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-stone-900 mt-1">Quem vive com você?</h2>
+        <p class="text-stone-600 text-sm sm:text-base mt-2">Selecione para ver rações no saco fechado, a granel ou sementes.</p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
+        
+        <!-- Cães -->
+        <a href="#produtos" class="bg-white p-4 rounded-3xl border border-stone-200/90 text-center hover:border-amber-400 hover:shadow-xl transition-all duration-300 group flex flex-col items-center">
+          <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden bg-amber-50 mb-3 group-hover:scale-105 transition-transform duration-300">
+            <img src="../assets/categories/cat_dog.jpg" alt="Cães" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-title font-bold text-stone-900 text-base group-hover:text-amber-700 transition">Cães</h3>
+          <span class="text-xs text-stone-500 mt-0.5">Sacos & no Quilo</span>
+          <span class="inline-flex items-center gap-1 mt-2 text-xs font-bold text-amber-700">Ver Rações →</span>
+        </a>
+
+        <!-- Gatos -->
+        <a href="#produtos" class="bg-white p-4 rounded-3xl border border-stone-200/90 text-center hover:border-amber-400 hover:shadow-xl transition-all duration-300 group flex flex-col items-center">
+          <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden bg-teal-50 mb-3 group-hover:scale-105 transition-transform duration-300">
+            <img src="../assets/categories/cat_cat.jpg" alt="Gatos" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-title font-bold text-stone-900 text-base group-hover:text-amber-700 transition">Gatos</h3>
+          <span class="text-xs text-stone-500 mt-0.5">Castrados & Granulados</span>
+          <span class="inline-flex items-center gap-1 mt-2 text-xs font-bold text-amber-700">Ver Linha →</span>
+        </a>
+
+        <!-- Aves -->
+        <a href="#produtos" class="bg-white p-4 rounded-3xl border border-stone-200/90 text-center hover:border-amber-400 hover:shadow-xl transition-all duration-300 group flex flex-col items-center">
+          <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden bg-emerald-50 mb-3 group-hover:scale-105 transition-transform duration-300">
+            <img src="../assets/categories/cat_bird.jpg" alt="Aves" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-title font-bold text-stone-900 text-base group-hover:text-amber-700 transition">Aves</h3>
+          <span class="text-xs text-stone-500 mt-0.5">Sementes & Misturas</span>
+          <span class="inline-flex items-center gap-1 mt-2 text-xs font-bold text-amber-700">Ver Sementes →</span>
+        </a>
+
+        <!-- Pequenos Animais -->
+        <a href="#produtos" class="bg-white p-4 rounded-3xl border border-stone-200/90 text-center hover:border-amber-400 hover:shadow-xl transition-all duration-300 group flex flex-col items-center">
+          <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden bg-rose-50 mb-3 group-hover:scale-105 transition-transform duration-300">
+            <img src="../assets/categories/cat_small.jpg" alt="Pequenos Animais" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-title font-bold text-stone-900 text-base group-hover:text-amber-700 transition">Pequenos Pets</h3>
+          <span class="text-xs text-stone-500 mt-0.5">Roedores & Cuidados</span>
+          <span class="inline-flex items-center gap-1 mt-2 text-xs font-bold text-amber-700">Ver Cuidados →</span>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VITRINE DE PRODUTOS COM FOTOS REAIS (SEM PREÇOS INVENTADOS) -->
+  <section id="produtos" class="py-14 sm:py-20 bg-white border-y border-stone-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <span class="text-amber-700 font-bold text-xs uppercase tracking-widest">Catálogo Selecionado</span>
+          <h2 class="text-3xl sm:text-4xl font-black text-stone-900 mt-1">Destaques do Empório</h2>
+          <p class="text-stone-600 text-sm mt-1">Peça informações de marcas, tamanhos e valores com entrega pelo WhatsApp.</p>
+        </div>
+        <a href="https://wa.me/5562986273759?text=Olá!%20Gostaria%20de%20consultar%20a%20lista%20completa%20de%20rações%20do%20Empório%20R&J." target="_blank" class="inline-flex items-center gap-2 text-sm font-extrabold text-amber-700 hover:text-amber-800 transition">
+          <span>Ver catálogo no WhatsApp</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <!-- GRID DE PRODUTOS -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Produto 1: Ração Cães -->
+        <div class="bg-[#FCFBF8] rounded-3xl p-5 border border-stone-200/90 flex flex-col justify-between hover:shadow-xl transition transform hover:-translate-y-1">
+          <div>
+            <div class="relative bg-white rounded-2xl p-4 mb-4 flex items-center justify-center border border-stone-100 overflow-hidden h-48">
+              <span class="absolute top-3 left-3 bg-stone-900 text-amber-400 text-[10px] font-black px-2.5 py-0.5 rounded-md uppercase">Nutrição Cães</span>
+              <img src="../assets/products/racao_caes.png" alt="Ração Cães" class="h-40 w-auto object-contain">
+            </div>
+            <span class="text-[11px] font-bold text-amber-700 uppercase">Saco Fechado & a Granel</span>
+            <h3 class="font-extrabold text-base text-stone-900 mt-0.5">Rações Premium & Super Premium</h3>
+            <p class="text-xs text-stone-500 mt-1">Premier, Golden, Special Dog e rações frescas fracionadas no quilo.</p>
+          </div>
+          <div class="pt-4 border-t border-stone-200/60 mt-4">
+            <div class="flex items-center justify-between mb-3 text-xs text-stone-600">
+              <span class="font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Em Estoque</span>
+              <span>Tele-Entrega Ágil</span>
+            </div>
+            <a href="https://wa.me/5562986273759?text=Olá!%20Gostaria%20de%20consultar%20valores%20de%20rações%20para%20CÃES." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white text-xs font-bold py-3 rounded-xl shadow transition">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+              <span>Consultar Valores no WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Produto 2: Ração Gatos -->
+        <div class="bg-[#FCFBF8] rounded-3xl p-5 border border-stone-200/90 flex flex-col justify-between hover:shadow-xl transition transform hover:-translate-y-1">
+          <div>
+            <div class="relative bg-white rounded-2xl p-4 mb-4 flex items-center justify-center border border-stone-100 overflow-hidden h-48">
+              <span class="absolute top-3 left-3 bg-stone-900 text-amber-400 text-[10px] font-black px-2.5 py-0.5 rounded-md uppercase">Nutrição Gatos</span>
+              <img src="../assets/products/racao_gatos.png" alt="Ração Gatos" class="h-40 w-auto object-contain">
+            </div>
+            <span class="text-[11px] font-bold text-amber-700 uppercase">Castrados & Areias</span>
+            <h3 class="font-extrabold text-base text-stone-900 mt-0.5">Rações para Gatos & Granulados</h3>
+            <p class="text-xs text-stone-500 mt-1">Salmão, frango, sachês e areia higiênica com alta retenção de odores.</p>
+          </div>
+          <div class="pt-4 border-t border-stone-200/60 mt-4">
+            <div class="flex items-center justify-between mb-3 text-xs text-stone-600">
+              <span class="font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Em Estoque</span>
+              <span>Tele-Entrega Ágil</span>
+            </div>
+            <a href="https://wa.me/5562986273759?text=Olá!%20Gostaria%20de%20consultar%20valores%20de%20rações%20para%20GATOS." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white text-xs font-bold py-3 rounded-xl shadow transition">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+              <span>Consultar Valores no WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Produto 3: Farmácia Antipulgas -->
+        <div class="bg-[#FCFBF8] rounded-3xl p-5 border border-stone-200/90 flex flex-col justify-between hover:shadow-xl transition transform hover:-translate-y-1">
+          <div>
+            <div class="relative bg-white rounded-2xl p-4 mb-4 flex items-center justify-center border border-stone-100 overflow-hidden h-48">
+              <span class="absolute top-3 left-3 bg-stone-900 text-amber-400 text-[10px] font-black px-2.5 py-0.5 rounded-md uppercase">Farmácia Pet</span>
+              <img src="../assets/products/antipulgas.png" alt="Antipulgas" class="h-36 w-auto object-contain">
+            </div>
+            <span class="text-[11px] font-bold text-amber-700 uppercase">Proteção Comprovada</span>
+            <h3 class="font-extrabold text-base text-stone-900 mt-0.5">Antipulgas, Carrapatos & Vermífugos</h3>
+            <p class="text-xs text-stone-500 mt-1">Simparic, Bravecto e remédios veterinários com lacre original de fábrica.</p>
+          </div>
+          <div class="pt-4 border-t border-stone-200/60 mt-4">
+            <div class="flex items-center justify-between mb-3 text-xs text-stone-600">
+              <span class="font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Lacre Original</span>
+              <span>Todos os Pesos</span>
+            </div>
+            <a href="https://wa.me/5562986273759?text=Olá!%20Gostaria%20de%20consultar%20valores%20de%20ANTIPULGAS%20para%20o%20peso%20do%20meu%20pet." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white text-xs font-bold py-3 rounded-xl shadow transition">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+              <span>Consultar Peso no WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Produto 4: Acessórios & Caminhas -->
+        <div class="bg-[#FCFBF8] rounded-3xl p-5 border border-stone-200/90 flex flex-col justify-between hover:shadow-xl transition transform hover:-translate-y-1">
+          <div>
+            <div class="relative bg-white rounded-2xl p-4 mb-4 flex items-center justify-center border border-stone-100 overflow-hidden h-48">
+              <span class="absolute top-3 left-3 bg-stone-900 text-amber-400 text-[10px] font-black px-2.5 py-0.5 rounded-md uppercase">Acessórios</span>
+              <img src="../assets/products/caminha_pet.png" alt="Caminha Pet" class="h-36 w-auto object-contain">
+            </div>
+            <span class="text-[11px] font-bold text-amber-700 uppercase">Conforto Térmico</span>
+            <h3 class="font-extrabold text-base text-stone-900 mt-0.5">Caminhas, Comedouros & Brinquedos</h3>
+            <p class="text-xs text-stone-500 mt-1">Caminhas laváveis, tigelas antiderrapantes e acessórios para o dia a dia.</p>
+          </div>
+          <div class="pt-4 border-t border-stone-200/60 mt-4">
+            <div class="flex items-center justify-between mb-3 text-xs text-stone-600">
+              <span class="font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Diversos Tamanhos</span>
+              <span>P, M e G</span>
+            </div>
+            <a href="https://wa.me/5562986273759?text=Olá!%20Gostaria%20de%20ver%20as%20opções%20de%20caminhas%20e%20acessórios." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white text-xs font-bold py-3 rounded-xl shadow transition">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+              <span>Ver Modelos no WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SIMULADOR INTERATIVO DE TELE-ENTREGA NO WHATSAPP -->
+  <section id="simulador" class="py-14 sm:py-20 bg-stone-900 text-white relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 relative">
+      <div class="text-center max-w-xl mx-auto mb-10">
+        <span class="inline-flex items-center gap-1.5 bg-amber-500/20 text-amber-400 text-xs font-black uppercase px-3 py-1 rounded-full">
+          <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <span>Tele-Entrega St. Aeroporto Sul</span>
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black mt-2">Monte seu Pedido Rápido</h2>
+        <p class="text-stone-400 text-sm mt-1">Selecione o produto, sua rua e receba a cotação com entrega direto no WhatsApp.</p>
+      </div>
+
+      <div class="bg-stone-800/90 border border-stone-700 p-6 sm:p-8 rounded-3xl shadow-2xl backdrop-blur-md">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          
+          <div>
+            <label class="block text-xs font-bold text-stone-300 mb-1.5">Produto que você precisa</label>
+            <select id="sim-prod" class="w-full bg-stone-900 text-white text-xs sm:text-sm font-semibold rounded-xl px-3 py-3 border border-stone-700 focus:border-amber-400 outline-none">
+              <option value="Ração para Cães (Saco Fechado)">Ração para Cães (Saco Fechado)</option>
+              <option value="Ração para Cães no Quilo (Granel)">Ração para Cães no Quilo (Granel)</option>
+              <option value="Ração para Gatos Castrados">Ração para Gatos Castrados</option>
+              <option value="Mistura / Sementes para Aves">Mistura / Sementes para Aves</option>
+              <option value="Medicamento Antipulgas / Vermífugo">Medicamento Antipulgas / Vermífugo</option>
+              <option value="Acessórios e Caminhas">Acessórios e Caminhas</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-stone-300 mb-1.5">Quantidade / Tamanho</label>
+            <select id="sim-tamanho" class="w-full bg-stone-900 text-white text-xs sm:text-sm font-semibold rounded-xl px-3 py-3 border border-stone-700 focus:border-amber-400 outline-none">
+              <option value="Saco Fechado 15kg a 20kg">Saco Fechado 15kg a 20kg</option>
+              <option value="Saco Médio (7kg a 10kg)">Saco Médio (7kg a 10kg)</option>
+              <option value="Pacote Pequeno (1kg a 3kg)">Pacote Pequeno (1kg a 3kg)</option>
+              <option value="No Quilo a Granel">No Quilo a Granel</option>
+              <option value="1 Unidade / Medicamento">1 Unidade / Medicamento</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-stone-300 mb-1.5">Seu Bairro / Rua de Entrega</label>
+            <input type="text" id="sim-rua" placeholder="Ex: St. Aeroporto Sul..." class="w-full bg-stone-900 text-white text-xs sm:text-sm font-semibold rounded-xl px-3 py-3 border border-stone-700 focus:border-amber-400 outline-none placeholder-stone-500">
+          </div>
+
+        </div>
+
+        <div class="mt-6 pt-6 border-t border-stone-700/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-2 text-xs text-stone-400">
+            <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <span>Pagamento no portão: Pix, Cartão ou Dinheiro</span>
+          </div>
+          <button onclick="enviarPedidoEmporio()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white font-extrabold text-sm px-8 py-3.5 rounded-xl shadow-lg transition transform active:scale-95 pulse-glow-zap">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+            <span>Pedir Tele-Entrega no WhatsApp</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section id="depoimentos" class="py-14 sm:py-20 bg-stone-50 border-t border-stone-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-xl mx-auto mb-10">
+        <div class="inline-flex items-center gap-1 text-amber-500 mb-2">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-stone-900">O que dizem os clientes</h2>
+        <p class="text-stone-600 text-sm mt-1">Quem compra no Empório R&J no Setor Aeroporto Sul.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="bg-white p-6 rounded-3xl border border-stone-200/90 shadow-sm flex flex-col justify-between">
+          <p class="text-stone-700 text-xs sm:text-sm leading-relaxed">
+            "Sempre compro ração no quilo aqui. É muito fresquinha, o atendimento é excelente e quando peço tele-entrega chega no mesmo dia no meu portão."
+          </p>
+          <div class="flex items-center gap-3 pt-4 border-t border-stone-100 mt-4">
+            <div class="w-10 h-10 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-xs">
+              GS
+            </div>
+            <div>
+              <p class="font-extrabold text-xs text-stone-900">Gabriel Souza</p>
+              <p class="text-[10px] text-stone-500">St. Aeroporto Sul</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl border border-stone-200/90 shadow-sm flex flex-col justify-between">
+          <p class="text-stone-700 text-xs sm:text-sm leading-relaxed">
+            "Excelente variedade de sementes para calopsitas e canários. Preço justo e ambiente muito acolhedor."
+          </p>
+          <div class="flex items-center gap-3 pt-4 border-t border-stone-100 mt-4">
+            <div class="w-10 h-10 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-xs">
+              RM
+            </div>
+            <div>
+              <p class="font-extrabold text-xs text-stone-900">Renata Miranda</p>
+              <p class="text-[10px] text-stone-500">Aparecida de Goiânia</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl border border-stone-200/90 shadow-sm flex flex-col justify-between">
+          <p class="text-stone-700 text-xs sm:text-sm leading-relaxed">
+            "Gosto muito da rapidez pelo WhatsApp. Tiro dúvidas sobre rações para meus dois gatos e recebo direto em casa sem carregar peso."
+          </p>
+          <div class="flex items-center gap-3 pt-4 border-t border-stone-100 mt-4">
+            <div class="w-10 h-10 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-xs">
+              TF
+            </div>
+            <div>
+              <p class="font-extrabold text-xs text-stone-900">Thiago Ferreira</p>
+              <p class="text-[10px] text-stone-500">St. Aeroporto Sul</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTATO & LOCALIZAÇÃO -->
+  <section id="contato" class="py-14 sm:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        
+        <div class="space-y-5">
+          <span class="text-amber-700 font-bold text-xs uppercase tracking-widest">Localização & Contato</span>
+          <h2 class="text-3xl sm:text-4xl font-black text-stone-900">Visite o Empório R&J</h2>
+          <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
+            Estamos localizados na tradicional <strong>Rua Brasília no Setor Aeroporto Sul</strong> em Aparecida de Goiânia, com fácil estacionamento e atendimento de balcão sempre acolhedor.
+          </p>
+
+          <div class="space-y-3 text-xs sm:text-sm text-stone-700">
+            <div class="flex items-center gap-3 p-3.5 bg-stone-50 rounded-2xl border border-stone-200">
+              <svg class="w-5 h-5 text-amber-700 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <div>
+                <strong>Endereço:</strong> R. Brasília, 914-986 - St. Aeroporto Sul, Aparecida de Goiânia - GO, 74947-350
+              </div>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 bg-stone-50 rounded-2xl border border-stone-200">
+              <svg class="w-5 h-5 text-brand-whatsapp shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+              <div>
+                <strong>WhatsApp / Pedidos:</strong> (62) 98627-3759
+              </div>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 bg-stone-50 rounded-2xl border border-stone-200">
+              <svg class="w-5 h-5 text-amber-700 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <div>
+                <strong>Horário:</strong> Segunda a Sábado com Tele-Entrega rápida
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="https://wa.me/5562986273759?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20de%20ração/sementes." target="_blank" class="inline-flex items-center gap-2 bg-stone-900 hover:bg-stone-800 text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-xl transition">
+              <span>Falar com Atendimento no WhatsApp →</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="rounded-3xl overflow-hidden border border-stone-200 shadow-xl h-80 sm:h-96">
+          <iframe 
+            src="https://www.google.com/maps?q=R.+Bras%C3%ADlia,+914+-+St.+Aeroporto+Sul,+Aparecida+de+Goi%C3%A2nia+-+GO,+74947-350&output=embed" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-stone-950 text-stone-400 text-xs py-12 border-t border-stone-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6 pb-8 border-b border-stone-800">
+        
+        <div class="flex items-center gap-3 text-center sm:text-left">
+          <div class="w-10 h-10 rounded-xl bg-amber-600 flex items-center justify-center text-white font-black text-xl">
+            🐾
+          </div>
+          <div>
+            <span class="font-title font-black text-lg text-white block">Empório R&J</span>
+            <span class="text-[11px] text-amber-400">Rações, Sementes & Acessórios • St. Aeroporto Sul</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-6 text-xs font-semibold">
+          <a href="#inicio" class="hover:text-amber-400 transition">Início</a>
+          <a href="#categorias" class="hover:text-amber-400 transition">Categorias</a>
+          <a href="#produtos" class="hover:text-amber-400 transition">Produtos</a>
+          <a href="#contato" class="hover:text-amber-400 transition">Contato</a>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px]">
+        <p>© 2026 Empório R&J. Todos os direitos reservados.</p>
+        <p class="text-amber-400 font-bold">Tele-Entrega: (62) 98627-3759</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTTOM APP BAR MÓVEL FLUTUANTE -->
+  <div class="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-t border-stone-200 p-3 shadow-2xl">
+    <a href="https://wa.me/5562986273759?text=Olá!%20Vim%20pelo%20site%20do%20Empório%20R&J%20e%20gostaria%20de%20fazer%20um%20pedido." target="_blank" class="w-full flex items-center justify-center gap-2 bg-brand-whatsapp text-white font-extrabold text-sm py-3.5 px-4 rounded-xl shadow-lg shadow-brand-whatsapp/25 pulse-glow-zap active:scale-95 transition">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.96.523 1.944.801 3.037.801 3.181 0 5.768-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.503-4.477 9.98-9.969 9.98-1.742 0-3.376-.451-4.803-1.242l-5.228 1.369 1.393-5.093c-.911-1.487-1.432-3.237-1.432-5.014 0-5.503 4.477-9.98 9.969-9.98 5.492 0 9.969 4.477 9.969 9.98z"/></svg>
+      <span>Pedir Tele-Entrega no WhatsApp</span>
+    </a>
+  </div>
+
+  <script>
+    function enviarPedidoEmporio() {
+      const prod = document.getElementById('sim-prod').value;
+      const tam = document.getElementById('sim-tamanho').value;
+      const rua = document.getElementById('sim-rua').value.trim() || 'St. Aeroporto Sul';
+      const msg = `Olá! Vim pelo site do Empório R&J e gostaria de fazer um pedido:\n\n📦 Item: ${prod}\n⚖️ Quantidade: ${tam}\n📍 Endereço: ${rua}\n\nQual o valor com tele-entrega para hoje?`;
+      const url = `https://wa.me/5562986273759?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
